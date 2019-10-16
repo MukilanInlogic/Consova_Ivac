@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                 "html:cucumber-html-reports/MySample"},tags = {"@MT-83052"},monochrome = true
 )
 
-public class MySampleTest
+public class SmokeModuleCukesTest
 {
 
 }
