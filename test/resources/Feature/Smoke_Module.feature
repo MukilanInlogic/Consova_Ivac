@@ -1,4 +1,4 @@
-Feature: CHF Module
+Feature: Smoke Module
 
   @MT-82538
   Scenario Outline: MT-82538:Login with valid username and password
