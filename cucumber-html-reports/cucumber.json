@@ -1,0 +1,136 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 15847421590,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ActionContainer.before(Scenario)"
+            }
+          }
+        ],
+        "line": 40,
+        "name": "MT-83052:Service Provider able to view the Inbox widget in the Home page",
+        "description": "",
+        "id": "chf-module;mt-83052:service-provider-able-to-view-the-inbox-widget-in-the-home-page;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 217908,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ActionContainer.after(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2696821423,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I am on manage my health home page",
+            "match": {
+              "location": "SampleSteps.iAmOnManageMyHealthHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 16899994309,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I Enter DP:LOGIN.PROVIDERNAME, DP:LOGIN.PROVIDERPASSWORD valid credentials in Manage my health page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DP:LOGIN.PROVIDERNAME",
+                  "offset": 8
+                },
+                {
+                  "val": "DP:LOGIN.PROVIDERPASSWORD",
+                  "offset": 31
+                }
+              ],
+              "location": "SampleSteps.iEnterUserNamePasswordValidCredentialsInManageMyHealthPage(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7637452385,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I click Login button",
+            "match": {
+              "location": "SampleSteps.iClickLoginButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 49616402,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I should see home page of Managemyhealth",
+            "match": {
+              "location": "SampleSteps.iShouldSeeHomePageOfManagemyhealth()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 46650376,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I sholuld see Inbox widget defaultly available",
+            "match": {
+              "location": "SampleSteps.iSholuldSeeInboxWidgetDefaultlyAvailable()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3700894728,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I click Logout button",
+            "match": {
+              "location": "SampleSteps.iClickLogoutButton()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 29,
+            "name": "@MT-83052"
+          }
+        ]
+      }
+    ],
+    "name": "CHF Module",
+    "description": "",
+    "id": "chf-module",
+    "keyword": "Feature",
+    "uri": "test/resources/Feature/CHF Module.feature"
+  }
+]

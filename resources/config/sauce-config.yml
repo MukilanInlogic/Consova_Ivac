@@ -1,0 +1,44 @@
+SAUCE_ID: dilliraja
+SAUCE_KEY: 4ba32228-1178-4de0-81de-f3a00f66fe59
+firefox:
+ platform: Windows 7
+ version: 30
+chrome:
+ platform: Windows 7
+ version: 39
+ie:
+ platform: Windows 7
+ version: 10
+samsungs4:
+ deviceName: Samsung Galaxy S4 Emulator
+ deviceOrientation: portrait
+ browserName: Android
+ version: 4.4
+ platform: Linux
+samsungtab:
+ deviceName: Samsung Galaxy Tab 3 Emulator
+ deviceOrientation: portrait
+ browserName: Android
+ version: 4.2
+ platform: Linux
+iphone5:
+ deviceName: iPhone 5
+ deviceOrientation: portrait
+ appiumVersion: 1.4.13
+ platformVersion: 8.4
+ platformName: iOS
+ browserName: Safari
+iphone6:
+ deviceName: iPhone 6
+ deviceOrientation: portrait
+ appiumVersion: 1.4.13
+ platformVersion: 8.4
+ platformName: iOS
+ browserName: Safari
+iPad2:
+ deviceName: iPad 2
+ deviceOrientation: portrait
+ appiumVersion: 1.4.13
+ platformVersion: 8.4
+ platformName: iOS
+ browserName: Safari

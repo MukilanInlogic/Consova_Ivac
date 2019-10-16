@@ -1,0 +1,8 @@
+LOGIN:
+  URL: "https://www.managemyhealth.com.au"
+  USERNAME: "patient@mail.com"
+  PASSWORD: "Medtech123"
+  PROVIDERNAME: "medtest50@gmail.com"
+  PROVIDERPASSWORD: "Medtech123"
+LEFTPANE:
+  SETUPHEADER: "Set-Up Menu"
