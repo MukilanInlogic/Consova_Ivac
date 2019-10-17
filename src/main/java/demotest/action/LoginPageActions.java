@@ -30,7 +30,6 @@ public class LoginPageActions extends LoginPageUI {
 
     public boolean enterUserNameInMMH(String strUsername) throws InterruptedException {
         Boolean isEntered = false;
-        Sync.waitForSeconds(5);
         if (txtUserName.isDisplayed()) {
             isEntered = Textbox.enterValue(driver, txtUserName, strUsername);
         } else {
@@ -48,7 +47,6 @@ public class LoginPageActions extends LoginPageUI {
 
     public boolean enterPasswordInMMH(String strPassword) throws InterruptedException {
         Boolean isEntered = false;
-        Sync.waitForSeconds(5);
         if (txtPassword.isDisplayed()) {
             isEntered = Textbox.enterValue(driver, txtPassword, strPassword);
         } else {

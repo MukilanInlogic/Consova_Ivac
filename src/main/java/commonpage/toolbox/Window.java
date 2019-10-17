@@ -154,4 +154,26 @@ public class Window {
         }
         return blResult;
     }
+
+    public static boolean alertaccept(WebDriver driver){
+        boolean isalert = false;
+        try{
+            driver.switchTo().alert().accept();
+            isalert=true;
+        }catch (Exception e){
+            log.error("AcceptAlert"+e);
+        }
+        return isalert;
+    }
+
+    public static boolean alertdismiss(WebDriver driver){
+        boolean isalert = false;
+        try{
+            driver.switchTo().alert().dismiss();
+            isalert=true;
+        }catch (Exception e){
+            log.error("AcceptDismiss"+e);
+        }
+        return isalert;
+    }
 }

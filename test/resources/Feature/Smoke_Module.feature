@@ -52,6 +52,20 @@ Feature: Smoke Module
       | ProviderName          | ProviderPassword          |
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
 
+  @MT-82548
+  Scenario Outline: MT-82548:Service Provider should able to update the Profile details
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I Click My Account Main Menu
+    Then I sholuld see My Account page
+    And I click Update Profile
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
   @MT-82549
   Scenario Outline: MT-82549:Verify My Health Center tab is opened under My Account page
     Given I am on manage my health home page
@@ -75,7 +89,40 @@ Feature: Smoke Module
     And I Click My Account Main Menu
     When I click Access Information Tab
     Then Access Information tab opened
+    And I click Logout button
 
     Examples:
       | ProviderName          | ProviderPassword          |
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+  @MT-82551
+  Scenario Outline: MT-82551:Verify Emergency Contacts tab is opened under My Account page
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I Click My Account Main Menu
+    When I click Emergency Contacts Tab
+    Then Emergeny Contacts tab opened
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+  @MT-82552
+  Scenario Outline: MT-82552:User should able to add the Emergency Contact
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I Click My Account Main Menu
+    When I click Emergency Contacts Tab
+    Then Emergeny Contacts tab opened
+    And click Add icon the Emergency contact Tab
+    And Enter the required details in the Emergency contacts tab: <FirstName>, <MobilePhone>, <Relationship>, <LastName>
+    Then I should see added emergency contacts in the Emergency Contacts tab
+    And Delete the Emergency Contacts
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          | FirstName                      | MobilePhone                      | Relationship                      | LastName                      |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |

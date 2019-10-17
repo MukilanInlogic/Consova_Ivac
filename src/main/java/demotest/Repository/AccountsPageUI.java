@@ -32,6 +32,44 @@ public class AccountsPageUI {
     @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Access Information')]")
     protected WebElement lblAccessInformation;
 
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_lnkEmergencyContacts']")
+    protected WebElement eleEMERGENCYCONTACTS;
+
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Emergency Contacts')]")
+    protected WebElement lblEmergencyContacts;
+
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_EmergencyContacts1_lnkAdd']//img")
+    protected WebElement btnAddEmergencyContacts;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_EmergencyContacts1_txtFirstNameAdd']")
+    protected WebElement txtFirstName;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='txtMobilePhoneAdd']")
+    protected WebElement txtMobilePhone;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_EmergencyContacts1_txtRelationshipAdd']")
+    protected WebElement txtRelationship;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_EmergencyContacts1_txtLastNameAdd']")
+    protected WebElement txtLastName;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_EmergencyContacts1_btnSaveAdd']")
+    protected WebElement btnSave;
+
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_EmergencyContacts1_rptEmergencyContact_ctl00_lnkDelete']")
+    protected WebElement btnDelete;
+
+    @FindBy(how = How.XPATH, using = "//span[@id='ctl01_MainContent_EmergencyContacts1_rptEmergencyContact_ctl00_lblFirstName']")
+    protected WebElement lblEmergenyContactsAdded;
+
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_UserProfile1_lnkEditProfile']")
+    protected WebElement lblUpdateProfile;
+
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_LinkButton1'][contains(text(),'Edit Profile Details')]")
+    protected WebElement lblEditProfileDetails;
+
+
+
 
 
 }
