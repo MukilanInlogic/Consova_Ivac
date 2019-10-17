@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 15847421590,
+              "duration": 15683683348,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 40,
-        "name": "MT-83052:Service Provider able to view the Inbox widget in the Home page",
+        "line": 130,
+        "name": "MT-82552:User should able to add the Emergency Contact",
         "description": "",
-        "id": "chf-module;mt-83052:service-provider-able-to-view-the-inbox-widget-in-the-home-page;;2",
+        "id": "smoke-module;mt-82552:user-should-able-to-add-the-emergency-contact;;2",
         "after": [
           {
             "result": {
-              "duration": 217908,
+              "duration": 223264,
               "status": "passed"
             },
             "match": {
@@ -34,22 +34,22 @@
         "steps": [
           {
             "result": {
-              "duration": 2696821423,
+              "duration": 4894355147,
               "status": "passed"
             },
-            "line": 31,
+            "line": 116,
             "name": "I am on manage my health home page",
             "match": {
-              "location": "SampleSteps.iAmOnManageMyHealthHomePage()"
+              "location": "LoginPageSteps.iAmOnManageMyHealthHomePage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 16899994309,
+              "duration": 7121318159,
               "status": "passed"
             },
-            "line": 32,
+            "line": 117,
             "name": "I Enter DP:LOGIN.PROVIDERNAME, DP:LOGIN.PROVIDERPASSWORD valid credentials in Manage my health page",
             "match": {
               "arguments": [
@@ -62,7 +62,7 @@
                   "offset": 31
                 }
               ],
-              "location": "SampleSteps.iEnterUserNamePasswordValidCredentialsInManageMyHealthPage(String,String)"
+              "location": "LoginPageSteps.iEnterUserNamePasswordValidCredentialsInManageMyHealthPage(String,String)"
             },
             "matchedColumns": [
               0,
@@ -72,65 +72,149 @@
           },
           {
             "result": {
-              "duration": 7637452385,
+              "duration": 7966485356,
               "status": "passed"
             },
-            "line": 33,
+            "line": 118,
             "name": "I click Login button",
             "match": {
-              "location": "SampleSteps.iClickLoginButton()"
+              "location": "LoginPageSteps.iClickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4828588786,
+              "status": "passed"
+            },
+            "line": 119,
+            "name": "I Click My Account Main Menu",
+            "match": {
+              "location": "HomePageSteps.iClickMyAccountMainMenu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5039128368,
+              "status": "passed"
+            },
+            "line": 120,
+            "name": "I click Emergency Contacts Tab",
+            "match": {
+              "location": "AccountsPageSteps.iClickEmergencyContactsTab()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 49616402,
+              "duration": 153985606,
               "status": "passed"
             },
-            "line": 34,
-            "name": "I should see home page of Managemyhealth",
+            "line": 121,
+            "name": "Emergeny Contacts tab opened",
             "match": {
-              "location": "SampleSteps.iShouldSeeHomePageOfManagemyhealth()"
+              "location": "AccountsPageSteps.emergenyContactsTabOpened()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 46650376,
+              "duration": 5269393473,
               "status": "passed"
             },
-            "line": 35,
-            "name": "I sholuld see Inbox widget defaultly available",
+            "line": 122,
+            "name": "click Add icon the Emergency contact Tab",
             "match": {
-              "location": "SampleSteps.iSholuldSeeInboxWidgetDefaultlyAvailable()"
+              "location": "AccountsPageSteps.clickAddIconTheEmergencyContactTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19974337072,
+              "status": "passed"
+            },
+            "line": 123,
+            "name": "Enter the required details in the Emergency contacts tab: DP:EMERGENCYCONTACTS.FIRSTNAME, DP:EMERGENCYCONTACTS.MOBILEPHONE, DP:EMERGENCYCONTACTS.RELATIONSHIP, DP:EMERGENCYCONTACTS.LASTNAME",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DP:EMERGENCYCONTACTS.FIRSTNAME",
+                  "offset": 58
+                },
+                {
+                  "val": "DP:EMERGENCYCONTACTS.MOBILEPHONE",
+                  "offset": 90
+                },
+                {
+                  "val": "DP:EMERGENCYCONTACTS.RELATIONSHIP",
+                  "offset": 124
+                },
+                {
+                  "val": "DP:EMERGENCYCONTACTS.LASTNAME",
+                  "offset": 159
+                }
+              ],
+              "location": "AccountsPageSteps.enterTheRequiredDetailsInTheEmergencyContactsTabFirstNameMobilePhoneRelationshipLastName(String,String,String,String)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 194629288,
+              "status": "passed"
+            },
+            "line": 124,
+            "name": "I should see added emergency contacts in the Emergency Contacts tab",
+            "match": {
+              "location": "AccountsPageSteps.iShouldSeeAddedEmergencyContactsInTheEmergencyContactsTab()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 3700894728,
+              "duration": 225105607,
               "status": "passed"
             },
-            "line": 36,
+            "line": 125,
+            "name": "Delete the Emergency Contacts",
+            "match": {
+              "location": "AccountsPageSteps.deleteTheEmergencyContacts()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11549516988,
+              "status": "passed"
+            },
+            "line": 126,
             "name": "I click Logout button",
             "match": {
-              "location": "SampleSteps.iClickLogoutButton()"
+              "location": "HomePageSteps.iClickLogoutButton()"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "line": 29,
-            "name": "@MT-83052"
+            "line": 114,
+            "name": "@MT-82552"
           }
         ]
       }
     ],
-    "name": "CHF Module",
+    "name": "Smoke Module",
     "description": "",
-    "id": "chf-module",
+    "id": "smoke-module",
     "keyword": "Feature",
-    "uri": "test/resources/Feature/CHF Module.feature"
+    "uri": "test/resources/Feature/Smoke_Module.feature"
   }
 ]

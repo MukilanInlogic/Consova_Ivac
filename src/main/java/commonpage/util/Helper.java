@@ -82,7 +82,6 @@ public class Helper {
             strBrowser = Constants.CHROME;
             log.error("getBrowser "+e);
         }
-        System.out.println("dddddddd"+strBrowser);
         return strBrowser;
     }
 

@@ -19,7 +19,7 @@ Feature: Smoke Module
     Given I am on manage my health home page
     And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
     When I click Login button
-    Then I sholuld see <SETUPHEADER> Header in left pane
+    Then I should see <SETUPHEADER> Header in left pane
     And I click Logout button
 
     Examples:
@@ -32,7 +32,7 @@ Feature: Smoke Module
     And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
     When I click Login button
     Then I should see home page of Managemyhealth
-    Then I sholuld see Inbox widget defaultly available
+    Then I should see Inbox widget defaultly available
     And I click Logout button
 
     Examples:
@@ -45,7 +45,7 @@ Feature: Smoke Module
     And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
     And I click Login button
     When I Click My Account Main Menu
-    Then I sholuld see My Account page
+    Then I should see My Account page
     And I click Logout button
 
     Examples:
@@ -58,8 +58,10 @@ Feature: Smoke Module
     And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
     And I click Login button
     When I Click My Account Main Menu
-    Then I sholuld see My Account page
+    Then I should see My Account page
     And I click Update Profile
+    Then I see Update Profile page
+
     And I click Logout button
 
     Examples:

@@ -1,107 +1,138 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("test/resources/Feature/CHF Module.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("test/resources/Feature/Smoke_Module.feature");
 formatter.feature({
   "line": 1,
-  "name": "CHF Module",
+  "name": "Smoke Module",
   "description": "",
-  "id": "chf-module",
+  "id": "smoke-module",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "line": 30,
-  "name": "MT-83052:Service Provider able to view the Inbox widget in the Home page",
+  "line": 115,
+  "name": "MT-82552:User should able to add the Emergency Contact",
   "description": "",
-  "id": "chf-module;mt-83052:service-provider-able-to-view-the-inbox-widget-in-the-home-page",
+  "id": "smoke-module;mt-82552:user-should-able-to-add-the-emergency-contact",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 29,
-      "name": "@MT-83052"
+      "line": 114,
+      "name": "@MT-82552"
     }
   ]
 });
 formatter.step({
-  "line": 31,
+  "line": 116,
   "name": "I am on manage my health home page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 32,
+  "line": 117,
   "name": "I Enter \u003cProviderName\u003e, \u003cProviderPassword\u003e valid credentials in Manage my health page",
   "keyword": "And "
 });
 formatter.step({
-  "line": 33,
+  "line": 118,
   "name": "I click Login button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 119,
+  "name": "I Click My Account Main Menu",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 120,
+  "name": "I click Emergency Contacts Tab",
   "keyword": "When "
 });
 formatter.step({
-  "line": 34,
-  "name": "I should see home page of Managemyhealth",
+  "line": 121,
+  "name": "Emergeny Contacts tab opened",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 35,
-  "name": "I sholuld see Inbox widget defaultly available",
+  "line": 122,
+  "name": "click Add icon the Emergency contact Tab",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 123,
+  "name": "Enter the required details in the Emergency contacts tab: \u003cFirstName\u003e, \u003cMobilePhone\u003e, \u003cRelationship\u003e, \u003cLastName\u003e",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 124,
+  "name": "I should see added emergency contacts in the Emergency Contacts tab",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 36,
+  "line": 125,
+  "name": "Delete the Emergency Contacts",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 126,
   "name": "I click Logout button",
   "keyword": "And "
 });
 formatter.examples({
-  "line": 38,
+  "line": 128,
   "name": "",
   "description": "",
-  "id": "chf-module;mt-83052:service-provider-able-to-view-the-inbox-widget-in-the-home-page;",
+  "id": "smoke-module;mt-82552:user-should-able-to-add-the-emergency-contact;",
   "rows": [
     {
       "cells": [
         "ProviderName",
         "ProviderPassword",
-        "SETUPHEADER"
+        "FirstName",
+        "MobilePhone",
+        "Relationship",
+        "LastName"
       ],
-      "line": 39,
-      "id": "chf-module;mt-83052:service-provider-able-to-view-the-inbox-widget-in-the-home-page;;1"
+      "line": 129,
+      "id": "smoke-module;mt-82552:user-should-able-to-add-the-emergency-contact;;1"
     },
     {
       "cells": [
         "DP:LOGIN.PROVIDERNAME",
         "DP:LOGIN.PROVIDERPASSWORD",
-        "DP:LEFTPANE.SETUPHEADER"
+        "DP:EMERGENCYCONTACTS.FIRSTNAME",
+        "DP:EMERGENCYCONTACTS.MOBILEPHONE",
+        "DP:EMERGENCYCONTACTS.RELATIONSHIP",
+        "DP:EMERGENCYCONTACTS.LASTNAME"
       ],
-      "line": 40,
-      "id": "chf-module;mt-83052:service-provider-able-to-view-the-inbox-widget-in-the-home-page;;2"
+      "line": 130,
+      "id": "smoke-module;mt-82552:user-should-able-to-add-the-emergency-contact;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 15847421590,
+  "duration": 15683683348,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 40,
-  "name": "MT-83052:Service Provider able to view the Inbox widget in the Home page",
+  "line": 130,
+  "name": "MT-82552:User should able to add the Emergency Contact",
   "description": "",
-  "id": "chf-module;mt-83052:service-provider-able-to-view-the-inbox-widget-in-the-home-page;;2",
+  "id": "smoke-module;mt-82552:user-should-able-to-add-the-emergency-contact;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 29,
-      "name": "@MT-83052"
+      "line": 114,
+      "name": "@MT-82552"
     }
   ]
 });
 formatter.step({
-  "line": 31,
+  "line": 116,
   "name": "I am on manage my health home page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 32,
+  "line": 117,
   "name": "I Enter DP:LOGIN.PROVIDERNAME, DP:LOGIN.PROVIDERPASSWORD valid credentials in Manage my health page",
   "matchedColumns": [
     0,
@@ -110,30 +141,61 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 33,
+  "line": 118,
   "name": "I click Login button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 119,
+  "name": "I Click My Account Main Menu",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 120,
+  "name": "I click Emergency Contacts Tab",
   "keyword": "When "
 });
 formatter.step({
-  "line": 34,
-  "name": "I should see home page of Managemyhealth",
+  "line": 121,
+  "name": "Emergeny Contacts tab opened",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 35,
-  "name": "I sholuld see Inbox widget defaultly available",
+  "line": 122,
+  "name": "click Add icon the Emergency contact Tab",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 123,
+  "name": "Enter the required details in the Emergency contacts tab: DP:EMERGENCYCONTACTS.FIRSTNAME, DP:EMERGENCYCONTACTS.MOBILEPHONE, DP:EMERGENCYCONTACTS.RELATIONSHIP, DP:EMERGENCYCONTACTS.LASTNAME",
+  "matchedColumns": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 124,
+  "name": "I should see added emergency contacts in the Emergency Contacts tab",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 36,
+  "line": 125,
+  "name": "Delete the Emergency Contacts",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 126,
   "name": "I click Logout button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "SampleSteps.iAmOnManageMyHealthHomePage()"
+  "location": "LoginPageSteps.iAmOnManageMyHealthHomePage()"
 });
 formatter.result({
-  "duration": 2696821423,
+  "duration": 4894355147,
   "status": "passed"
 });
 formatter.match({
@@ -147,42 +209,95 @@ formatter.match({
       "offset": 31
     }
   ],
-  "location": "SampleSteps.iEnterUserNamePasswordValidCredentialsInManageMyHealthPage(String,String)"
+  "location": "LoginPageSteps.iEnterUserNamePasswordValidCredentialsInManageMyHealthPage(String,String)"
 });
 formatter.result({
-  "duration": 16899994309,
+  "duration": 7121318159,
   "status": "passed"
 });
 formatter.match({
-  "location": "SampleSteps.iClickLoginButton()"
+  "location": "LoginPageSteps.iClickLoginButton()"
 });
 formatter.result({
-  "duration": 7637452385,
+  "duration": 7966485356,
   "status": "passed"
 });
 formatter.match({
-  "location": "SampleSteps.iShouldSeeHomePageOfManagemyhealth()"
+  "location": "HomePageSteps.iClickMyAccountMainMenu()"
 });
 formatter.result({
-  "duration": 49616402,
+  "duration": 4828588786,
   "status": "passed"
 });
 formatter.match({
-  "location": "SampleSteps.iSholuldSeeInboxWidgetDefaultlyAvailable()"
+  "location": "AccountsPageSteps.iClickEmergencyContactsTab()"
 });
 formatter.result({
-  "duration": 46650376,
+  "duration": 5039128368,
   "status": "passed"
 });
 formatter.match({
-  "location": "SampleSteps.iClickLogoutButton()"
+  "location": "AccountsPageSteps.emergenyContactsTabOpened()"
 });
 formatter.result({
-  "duration": 3700894728,
+  "duration": 153985606,
+  "status": "passed"
+});
+formatter.match({
+  "location": "AccountsPageSteps.clickAddIconTheEmergencyContactTab()"
+});
+formatter.result({
+  "duration": 5269393473,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "DP:EMERGENCYCONTACTS.FIRSTNAME",
+      "offset": 58
+    },
+    {
+      "val": "DP:EMERGENCYCONTACTS.MOBILEPHONE",
+      "offset": 90
+    },
+    {
+      "val": "DP:EMERGENCYCONTACTS.RELATIONSHIP",
+      "offset": 124
+    },
+    {
+      "val": "DP:EMERGENCYCONTACTS.LASTNAME",
+      "offset": 159
+    }
+  ],
+  "location": "AccountsPageSteps.enterTheRequiredDetailsInTheEmergencyContactsTabFirstNameMobilePhoneRelationshipLastName(String,String,String,String)"
+});
+formatter.result({
+  "duration": 19974337072,
+  "status": "passed"
+});
+formatter.match({
+  "location": "AccountsPageSteps.iShouldSeeAddedEmergencyContactsInTheEmergencyContactsTab()"
+});
+formatter.result({
+  "duration": 194629288,
+  "status": "passed"
+});
+formatter.match({
+  "location": "AccountsPageSteps.deleteTheEmergencyContacts()"
+});
+formatter.result({
+  "duration": 225105607,
+  "status": "passed"
+});
+formatter.match({
+  "location": "HomePageSteps.iClickLogoutButton()"
+});
+formatter.result({
+  "duration": 11549516988,
   "status": "passed"
 });
 formatter.after({
-  "duration": 217908,
+  "duration": 223264,
   "status": "passed"
 });
 });

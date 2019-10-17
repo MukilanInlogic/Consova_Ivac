@@ -32,13 +32,13 @@ public class HomePageSteps {
         assertTrue(actionContainer.homePageActions.verifySetupMenu());
     }
 
-    @Then("^I sholuld see (.*) Header in left pane$")
-    public void iSholuldSeeHeaderHeaderInLeftPane(String strHeader) throws Throwable {
+    @Then("^I should see (.*) Header in left pane$")
+    public void iShouldSeeHeaderHeaderInLeftPane(String strHeader) throws Throwable {
         assertTrue(actionContainer.homePageActions.verifyHeaderInLeftPane(Testdata.getValue(strHeader)));
     }
 
-    @Then("^I sholuld see Inbox widget defaultly available$")
-    public void iSholuldSeeInboxWidgetDefaultlyAvailable() throws Throwable {
+    @Then("^I should see Inbox widget defaultly available$")
+    public void iShouldSeeInboxWidgetDefaultlyAvailable() throws Throwable {
         assertTrue(actionContainer.homePageActions.verifyInboxwidget());
     }
 

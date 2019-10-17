@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "test/resources/Feature/Smoke_Module.feature",
         glue = {"demotest.stepdefinition","demotest.util"},
         format = {"json:cucumber-html-reports/cucumber.json",
-                "html:cucumber-html-reports/MySample"},tags={"@MT-82552"},monochrome = true
+                "html:cucumber-html-reports/MySample"},monochrome = true
 )
 
 public class SmokeModuleCukesTest

@@ -55,12 +55,13 @@ public class AccountsPageActions extends AccountsPageUI {
     }
 
     public boolean verifyAccessInformationPage() {
-        Boolean isClicked = false;
+        Boolean isVerified = false;
         if (lblAccessInformation.isDisplayed()) {
-            isClicked = Element.click(driver, lblAccessInformation);
+            isVerified = true;
         }
-        return isClicked;
+        return isVerified;
     }
+
 
     public boolean clickEmergencyContactsTab() {
         Boolean isClicked = false;
@@ -71,11 +72,11 @@ public class AccountsPageActions extends AccountsPageUI {
     }
 
     public boolean verifyEmergencyContactsPage() {
-        Boolean isClicked = false;
+        Boolean isVerified = false;
         if (lblEmergencyContacts.isDisplayed()) {
-            isClicked = Element.click(driver, lblEmergencyContacts);
+            isVerified = true;
         }
-        return isClicked;
+        return isVerified;
     }
 
     public boolean clickAddEmergencyContacts() {
@@ -143,19 +144,36 @@ public class AccountsPageActions extends AccountsPageUI {
     }
 
     public boolean verifyEmergencyContactsAdded() {
-        Boolean isClicked = false;
+        Boolean isVerified = false;
         if (lblEmergenyContactsAdded.isDisplayed()) {
-            isClicked = Element.click(driver, lblEmergenyContactsAdded);
+            isVerified = true;
+        }
+        return isVerified;
+    }
+
+    public boolean AcceptAlert() {
+        boolean isAccept = false;
+        isAccept = Alert.acceptAlert(driver);
+        return isAccept;
+    }
+
+    public boolean clickUpdateProfile() {
+        Boolean isClicked = false;
+        if (lblUpdateProfile.isDisplayed()) {
+            isClicked = Element.click(driver, lblUpdateProfile);
         }
         return isClicked;
     }
 
-    public boolean AcceptAlert()
-    {
-        boolean isAccept=false;
-        isAccept=Alert.acceptAlert(driver);
-        return isAccept;
+    public boolean verifyUpdateProfilePage() {
+        Boolean isVerified = false;
+        if (lblEditProfileDetails.isDisplayed()) {
+            isVerified = true;
+        }
+        return isVerified;
     }
+
+}
 
 //
 //
@@ -188,4 +206,3 @@ public class AccountsPageActions extends AccountsPageUI {
 //        }
 //        return isEntered;
 //    }
-}

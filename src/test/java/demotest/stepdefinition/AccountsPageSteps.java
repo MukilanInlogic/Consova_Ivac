@@ -6,6 +6,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import demotest.util.ActionContainer;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import java.util.List;
@@ -20,8 +21,8 @@ public class AccountsPageSteps {
     }
 
 
-    @Then("^I sholuld see My Account page$")
-    public void iSholuldSeeMyAccountPage() throws Throwable {
+    @Then("^I should see My Account page$")
+    public void iShouldSeeMyAccountPage() throws Throwable {
         assertTrue(actionContainer.accountsPageActions.verifyMyAccountPage());
     }
 
@@ -76,9 +77,20 @@ public class AccountsPageSteps {
     }
 
     @And("^Delete the Emergency Contacts$")
-    public void deleteTheEmergencyContacts() {
+    public void deleteTheEmergencyContacts() throws Throwable{
         assertTrue(actionContainer.accountsPageActions.clickDeleteEmergencyContacts());
         assertTrue(actionContainer.accountsPageActions.AcceptAlert());
+    }
+
+    @And("^I click Update Profile$")
+    public void iClickUpdateProfile() throws Throwable{
+        assertTrue(actionContainer.accountsPageActions.clickUpdateProfile());
+
+    }
+
+    @Then("^I see Update Profile page$")
+    public void iSeeUpdateProfilePage() throws Throwable {
+        assertTrue(actionContainer.accountsPageActions.verifyUpdateProfilePage());
 
     }
 }

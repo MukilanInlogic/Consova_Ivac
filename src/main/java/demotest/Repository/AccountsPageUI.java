@@ -69,6 +69,12 @@ public class AccountsPageUI {
     protected WebElement lblEditProfileDetails;
 
 
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_EditBasicProfile1_txtMobileNumber']")
+    protected WebElement txtMobilePhoneEditProfileDetails;
+
+
+
+
 
 
 
