@@ -173,7 +173,6 @@ public class Element implements Comparator {
         } catch (Exception e) {
             log.error(e);
         }
-        System.out.println("click boolean value is:" +blResult);
         return blResult;
     }
 
@@ -197,7 +196,6 @@ public class Element implements Comparator {
         } catch (Exception e) {
             log.error(e);
         }
-        System.out.println("mouseClick bool value is"+blResult);
         return blResult;
     }
 

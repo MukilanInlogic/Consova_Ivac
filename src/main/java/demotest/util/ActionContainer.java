@@ -4,7 +4,7 @@ import commonpage.util.SharedDriver;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import demotest.action.SampleActions;
+import demotest.action.*;
 import org.openqa.selenium.OutputType;
 
 import java.util.LinkedHashMap;
@@ -13,7 +13,13 @@ import java.util.Map;
 public class ActionContainer {
 
     private SharedDriver sharedDriver;
-    public SampleActions SampleActions;
+    public AppointmentsPageActions appointmentsPageActions;
+    public AccountsPageActions accountsPageActions;
+    public DashBoardPageActions dashBoardPageActions;
+    public HomePageActions homePageActions;
+    public InboxPageActions inboxPageActions;
+    public LoginPageActions loginPageActions;
+    public UsersPageActions usersPageActions;
 
     static public int i = 0;
     public static LinkedHashMap<String, String> printTestDataMap = new LinkedHashMap<String, String>();
@@ -33,9 +39,14 @@ public class ActionContainer {
      * Author Name:Sankar Ganesh
      * Date of Development:13-Aug-2019
      */
-    private void initPages()
-    {
-        SampleActions = new SampleActions(sharedDriver);
+    private void initPages() {
+        accountsPageActions = new AccountsPageActions(sharedDriver);
+        appointmentsPageActions = new AppointmentsPageActions(sharedDriver);
+        dashBoardPageActions = new DashBoardPageActions(sharedDriver);
+        homePageActions = new HomePageActions(sharedDriver);
+        inboxPageActions = new InboxPageActions(sharedDriver);
+        loginPageActions = new LoginPageActions(sharedDriver);
+        usersPageActions = new UsersPageActions(sharedDriver);
     }
 
     /**
@@ -59,9 +70,9 @@ public class ActionContainer {
     /**
      * Description:This method is to clear all the existing scenario count of last execution
      * and get the scenario count of current execution before each scenario gets executed(printTestDataMap -> scenario count and name)
-     * @param scenario1
-     * Author Name:Sankar Ganesh
-     * Date of Development:13-Aug-2019
+     *
+     * @param scenario1 Author Name:Sankar Ganesh
+     *                  Date of Development:13-Aug-2019
      */
     @Before
     public static void before(Scenario scenario1) {

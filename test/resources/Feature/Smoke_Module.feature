@@ -51,3 +51,31 @@ Feature: Smoke Module
     Examples:
       | ProviderName          | ProviderPassword          |
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+  @MT-82549
+  Scenario Outline: MT-82549:Verify My Health Center tab is opened under My Account page
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I Click My Account Main Menu
+    When I Click My Health Center tab in the My Account Page
+    Then Administrative Staff is present in the My Health Center Tab
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+  @MT-82550
+
+  Scenario Outline: MT-82550:Verify Access Information tab is opened under My Account page
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I Click My Account Main Menu
+    When I click Access Information Tab
+    Then Access Information tab opened
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
