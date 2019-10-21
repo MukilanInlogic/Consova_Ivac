@@ -173,6 +173,16 @@ public class AccountsPageActions extends AccountsPageUI {
         return isVerified;
     }
 
+    public boolean enterMobilePhoneNumberInEditProfileDetails(String strMobilePhoneEditProfileDetails){
+        Boolean isEntered = false;
+        if (txtMobilePhoneEditProfileDetails.isDisplayed()) {
+            isEntered = Textbox.enterValue(driver, txtMobilePhoneEditProfileDetails, strMobilePhoneEditProfileDetails);
+        } else {
+            isEntered = false;
+        }
+        return isEntered;
+    }
+
 }
 
 //

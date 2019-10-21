@@ -33,6 +33,7 @@ public class LoginPageSteps {
         assertTrue(actionContainer.loginPageActions.enterPasswordInMMH(Testdata.getValue(strPassword)));
 
     }
+
     @And("^I Enter (.*), (.*) valid credentials in Manage my health page$")
     public void iEnterUserNamePasswordValidCredentialsInManageMyHealthPage(String strUserName, String strPassword) throws Throwable {
         assertTrue(actionContainer.loginPageActions.enterUserNameInMMH(Testdata.getValue(strUserName)));
@@ -44,5 +45,13 @@ public class LoginPageSteps {
     public void iClickLoginButton() throws Throwable {
         assertTrue(actionContainer.loginPageActions.clickLoginBtn());
 
+    }
+
+    @Given("^I Login with valid username (.*) and password (.*)$")
+    public void iLoginWithValidUsernameProviderNameAndPasswordProviderPassword(String strUserName, String strPassword) throws Throwable {
+        assertTrue(actionContainer.loginPageActions.clickSecureLoginBtn());
+        assertTrue(actionContainer.loginPageActions.enterUserNameInMMH(Testdata.getValue(strUserName)));
+        assertTrue(actionContainer.loginPageActions.enterPasswordInMMH(Testdata.getValue(strPassword)));
+        assertTrue(actionContainer.loginPageActions.clickLoginBtn());
     }
 }

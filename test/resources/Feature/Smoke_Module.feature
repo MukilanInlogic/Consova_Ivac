@@ -54,14 +54,14 @@ Feature: Smoke Module
 
   @MT-82548
   Scenario Outline: MT-82548:Service Provider should able to update the Profile details
-    Given I am on manage my health home page
-    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
-    And I click Login button
+    Given I Login with valid username <ProviderName> and password <ProviderPassword>
     When I Click My Account Main Menu
     Then I should see My Account page
     And I click Update Profile
     Then I see Update Profile page
-
+    And I Change the Required Details<MobilePhoneNumber>
+    When I Click Update Profile button
+    Then I should see updated profile details
     And I click Logout button
 
     Examples:

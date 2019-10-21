@@ -8,6 +8,7 @@ import cucumber.api.java.en.When;
 import demotest.util.ActionContainer;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.stringtemplate.v4.ST;
 
 import java.util.List;
 
@@ -77,13 +78,13 @@ public class AccountsPageSteps {
     }
 
     @And("^Delete the Emergency Contacts$")
-    public void deleteTheEmergencyContacts() throws Throwable{
+    public void deleteTheEmergencyContacts() throws Throwable {
         assertTrue(actionContainer.accountsPageActions.clickDeleteEmergencyContacts());
         assertTrue(actionContainer.accountsPageActions.AcceptAlert());
     }
 
     @And("^I click Update Profile$")
-    public void iClickUpdateProfile() throws Throwable{
+    public void iClickUpdateProfile() throws Throwable {
         assertTrue(actionContainer.accountsPageActions.clickUpdateProfile());
 
     }
@@ -92,5 +93,11 @@ public class AccountsPageSteps {
     public void iSeeUpdateProfilePage() throws Throwable {
         assertTrue(actionContainer.accountsPageActions.verifyUpdateProfilePage());
 
+    }
+
+
+    @And("^I Change the Required Details(.*)$")
+    public void iChangeTheRequiredDetailsMobilePhoneNumber(String strMobilePhoneEditProfileDetails) throws Throwable {
+        assertTrue(actionContainer.accountsPageActions.enterMobilePhoneNumberInEditProfileDetails(Testdata.getValue(strMobilePhoneEditProfileDetails)));
     }
 }
