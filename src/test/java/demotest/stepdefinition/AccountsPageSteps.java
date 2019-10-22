@@ -23,49 +23,49 @@ public class AccountsPageSteps {
 
 
     @Then("^I should see My Account page$")
-    public void iShouldSeeMyAccountPage() throws Throwable {
+    public void iShouldSeeMyAccountPage() {
         assertTrue(actionContainer.accountsPageActions.verifyMyAccountPage());
     }
 
     @When("^I Click My Health Center tab in the My Account Page$")
-    public void iClickMyHealthCenterTabInTheMyAccountPage() throws Throwable {
+    public void iClickMyHealthCenterTabInTheMyAccountPage() {
         assertTrue(actionContainer.accountsPageActions.clickMyHealthCentresTab());
     }
 
     @Then("^Administrative Staff is present in the My Health Center Tab$")
-    public void administrativeStaffIsPresentInTheMyHealthCenterTab() throws Throwable {
+    public void administrativeStaffIsPresentInTheMyHealthCenterTab() {
         assertTrue(actionContainer.accountsPageActions.verifyClinicalStaffPresentasRole());
     }
 
     @When("^I click Access Information Tab$")
-    public void iClickAccessInformationTab() throws Throwable {
+    public void iClickAccessInformationTab() {
         assertTrue(actionContainer.accountsPageActions.clickAccessInformationTab());
     }
 
     @Then("^Access Information tab opened$")
-    public void accessInformationTabOpened() throws Throwable {
+    public void accessInformationTabOpened() {
         assertTrue(actionContainer.accountsPageActions.verifyAccessInformationPage());
     }
 
     @When("^I click Emergency Contacts Tab$")
-    public void iClickEmergencyContactsTab() throws Throwable {
+    public void iClickEmergencyContactsTab() {
         assertTrue(actionContainer.accountsPageActions.clickEmergencyContactsTab());
 
     }
 
     @Then("^Emergeny Contacts tab opened$")
-    public void emergenyContactsTabOpened() throws Throwable {
+    public void emergenyContactsTabOpened() {
         assertTrue(actionContainer.accountsPageActions.verifyEmergencyContactsPage());
     }
 
     @And("^click Add icon the Emergency contact Tab$")
-    public void clickAddIconTheEmergencyContactTab() throws Throwable {
+    public void clickAddIconTheEmergencyContactTab() {
         assertTrue(actionContainer.accountsPageActions.clickAddEmergencyContacts());
     }
 
 
     @And("^Enter the required details in the Emergency contacts tab: (.*), (.*), (.*), (.*)$")
-    public void enterTheRequiredDetailsInTheEmergencyContactsTabFirstNameMobilePhoneRelationshipLastName(String strFirstName, String strMobilePhone, String strRelationship, String strLastName) throws Throwable {
+    public void enterTheRequiredDetailsInTheEmergencyContactsTabFirstNameMobilePhoneRelationshipLastName(String strFirstName, String strMobilePhone, String strRelationship, String strLastName) throws InterruptedException {
         assertTrue(actionContainer.accountsPageActions.enterFirstNameInAddEmergencyContacts(Testdata.getValue(strFirstName)));
         assertTrue(actionContainer.accountsPageActions.enterMobilePhoneInAddEmergencyContacts(Testdata.getValue(strMobilePhone)));
         assertTrue(actionContainer.accountsPageActions.enterRelationshipInAddEmergencyContacts(Testdata.getValue(strRelationship)));
@@ -74,31 +74,31 @@ public class AccountsPageSteps {
     }
 
     @Then("^I should see added emergency contacts in the Emergency Contacts tab$")
-    public void iShouldSeeAddedEmergencyContactsInTheEmergencyContactsTab() throws Throwable {
+    public void iShouldSeeAddedEmergencyContactsInTheEmergencyContactsTab() {
         assertTrue(actionContainer.accountsPageActions.verifyEmergencyContactsAdded());
     }
 
     @And("^Delete the Emergency Contacts$")
-    public void deleteTheEmergencyContacts() throws Throwable {
+    public void deleteTheEmergencyContacts() {
         assertTrue(actionContainer.accountsPageActions.clickDeleteEmergencyContacts());
         assertTrue(actionContainer.accountsPageActions.AcceptAlert());
     }
 
     @And("^I click Update Profile$")
-    public void iClickUpdateProfile() throws Throwable {
+    public void iClickUpdateProfile() {
         assertTrue(actionContainer.accountsPageActions.clickUpdateProfile());
 
     }
 
     @Then("^I see Update Profile page$")
-    public void iSeeUpdateProfilePage() throws Throwable {
+    public void iSeeUpdateProfilePage() {
         assertTrue(actionContainer.accountsPageActions.verifyUpdateProfilePage());
 
     }
 
 
     @And("^I Change the Required Details(.*)$")
-    public void iChangeTheRequiredDetailsMobilePhoneNumber(String strMobilePhoneEditProfileDetails) throws Throwable {
+    public void iChangeTheRequiredDetailsMobilePhoneNumber(String strMobilePhoneEditProfileDetails) {
         assertTrue(actionContainer.accountsPageActions.enterMobilePhoneNumberInEditProfileDetails(Testdata.getValue(strMobilePhoneEditProfileDetails)));
     }
 
@@ -113,7 +113,7 @@ public class AccountsPageSteps {
     }
 
     @And("^Remove the Updated profile details$")
-    public void removeTheUpdatedProfileDetails()throws Throwable {
+    public void removeTheUpdatedProfileDetails() {
         assertTrue(actionContainer.accountsPageActions.clickUpdateProfile());
         assertTrue(actionContainer.accountsPageActions.clearMobilePhoneNumberInEditProfileDetails());
         assertTrue(actionContainer.accountsPageActions.clickUpdateProfileButton());

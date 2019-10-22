@@ -1,9 +1,5 @@
 package demotest.Repository;
 
-/**
- * created by Magesh 09-08-2019
- */
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,9 +12,6 @@ public class HomePageUI {
 
     protected final WebDriver driver;
 
-    /**
-     * @param driver
-     */
     public HomePageUI(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;

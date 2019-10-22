@@ -17,38 +17,38 @@ public class HomePageSteps {
 
 
     @Then("^I should see home page of Managemyhealth$")
-    public void iShouldSeeHomePageOfManagemyhealth() throws Throwable {
+    public void iShouldSeeHomePageOfManagemyhealth(){
         assertTrue(actionContainer.homePageActions.verifyHomePage());
     }
 
     @And("^I click Logout button$")
-    public void iClickLogoutButton() throws Throwable {
+    public void iClickLogoutButton(){
         assertTrue(actionContainer.homePageActions.clickLogoutBtn());
     }
 
 
     @Then("^I should see SetUpmenu$")
-    public void iShouldSeeSetUpmenu() throws Throwable {
+    public void iShouldSeeSetUpmenu(){
         assertTrue(actionContainer.homePageActions.verifySetupMenu());
     }
 
     @Then("^I should see (.*) Header in left pane$")
-    public void iShouldSeeHeaderHeaderInLeftPane(String strHeader) throws Throwable {
+    public void iShouldSeeHeaderHeaderInLeftPane(String strHeader){
         assertTrue(actionContainer.homePageActions.verifyHeaderInLeftPane(Testdata.getValue(strHeader)));
     }
 
     @Then("^I should see Inbox widget defaultly available$")
-    public void iShouldSeeInboxWidgetDefaultlyAvailable() throws Throwable {
+    public void iShouldSeeInboxWidgetDefaultlyAvailable(){
         assertTrue(actionContainer.homePageActions.verifyInboxwidget());
     }
 
     @When("^I Click My Account Main Menu$")
-    public void iClickMyAccountMainMenu()throws Throwable {
+    public void iClickMyAccountMainMenu(){
         assertTrue(actionContainer.homePageActions.clickMyAccountMenu());
     }
 
     @And("^I click Provider Inbox link$")
-    public void iClickProviderInboxLink()throws Throwable {
+    public void iClickProviderInboxLink(){
         assertTrue(actionContainer.homePageActions.clickProviderInboxMenu());
     }
 }
