@@ -165,6 +165,14 @@ public class AccountsPageActions extends AccountsPageUI {
         return isClicked;
     }
 
+    public boolean clickUpdateProfileButton() {
+        Boolean isClicked = false;
+        if (btnUpdateProfile.isDisplayed()) {
+            isClicked = Element.click(driver, btnUpdateProfile);
+        }
+        return isClicked;
+    }
+
     public boolean verifyUpdateProfilePage() {
         Boolean isVerified = false;
         if (lblEditProfileDetails.isDisplayed()) {
@@ -177,6 +185,24 @@ public class AccountsPageActions extends AccountsPageUI {
         Boolean isEntered = false;
         if (txtMobilePhoneEditProfileDetails.isDisplayed()) {
             isEntered = Textbox.enterValue(driver, txtMobilePhoneEditProfileDetails, strMobilePhoneEditProfileDetails);
+        } else {
+            isEntered = false;
+        }
+        return isEntered;
+    }
+
+    public boolean verifyUpdatedProfileDetails(){
+        Boolean isVerified = false;
+        if(lblUpdatedMobilePhone.isDisplayed()){
+            isVerified = true;
+        }
+        return isVerified;
+    }
+
+    public boolean clearMobilePhoneNumberInEditProfileDetails(){
+        Boolean isEntered = false;
+        if (txtMobilePhoneEditProfileDetails.isDisplayed()) {
+            isEntered = Textbox.clearValue(driver, txtMobilePhoneEditProfileDetails);
         } else {
             isEntered = false;
         }

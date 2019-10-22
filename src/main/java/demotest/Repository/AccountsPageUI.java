@@ -65,12 +65,17 @@ public class AccountsPageUI {
     @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_UserProfile1_lnkEditProfile']")
     protected WebElement lblUpdateProfile;
 
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_EditBasicProfile1_btnUpdateProfile']")
+    protected WebElement btnUpdateProfile;
+
     @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_LinkButton1'][contains(text(),'Edit Profile Details')]")
     protected WebElement lblEditProfileDetails;
 
-
     @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_EditBasicProfile1_txtMobileNumber']")
     protected WebElement txtMobilePhoneEditProfileDetails;
+
+    @FindBy(how = How.XPATH, using = "//span[@id='ctl01_MainContent_UserProfile1_lblMobileNumber']")
+    protected WebElement lblUpdatedMobilePhone;
 
 
 

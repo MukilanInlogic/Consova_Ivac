@@ -62,11 +62,12 @@ Feature: Smoke Module
     And I Change the Required Details<MobilePhoneNumber>
     When I Click Update Profile button
     Then I should see updated profile details
+    And Remove the Updated profile details
     And I click Logout button
 
     Examples:
-      | ProviderName          | ProviderPassword          |
-      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+      | ProviderName          | ProviderPassword          | MobilePhoneNumber                  |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EDITPROFILEDETAILS.MOBILENUMBER |
 
   @MT-82549
   Scenario Outline: MT-82549:Verify My Health Center tab is opened under My Account page
@@ -128,3 +129,26 @@ Feature: Smoke Module
     Examples:
       | ProviderName          | ProviderPassword          | FirstName                      | MobilePhone                      | Relationship                      | LastName                      |
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |
+
+  @MT-84335
+  Scenario Outline: MT-84335:User should able to send the Message to the Clinical Provider
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I click Provider Inbox link
+    And I click compose Tab
+    And I select healthcenter<HealthCentre> and Location<Location>
+    And I select the Services in the dropdown<ServiceName>
+    And I select To as Clinical Provider<To>
+    And I select UserName<UserName>
+    And I Enter manadory fields<Message>
+    When I click Send Message Button
+    Then I should see Send successfully
+    And I click Reuturn to Inbox Button
+    And I click sent Tab
+    And I click delete Button
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          | HealthCentre                  | Location                  | ServiceName                  | To                               | UserName                  | Message                  |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:PROVIDERINBOX.HEALTHCENTRE | DP:PROVIDERINBOX.LOCATION | DP:PROVIDERINBOX.SERVICENAME | DP:PROVIDERINBOX.HEALTHCENTRE.TO | DP:PROVIDERINBOX.USERNAME | DP:PROVIDERINBOX.MESSAGE |

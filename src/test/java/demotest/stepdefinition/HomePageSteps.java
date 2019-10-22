@@ -47,4 +47,8 @@ public class HomePageSteps {
         assertTrue(actionContainer.homePageActions.clickMyAccountMenu());
     }
 
+    @And("^I click Provider Inbox link$")
+    public void iClickProviderInboxLink()throws Throwable {
+        assertTrue(actionContainer.homePageActions.clickProviderInboxMenu());
+    }
 }

@@ -76,6 +76,7 @@ public class Combobox {
             if (!Helper.getBrowser().equalsIgnoreCase("FIREFOX")) {
                 Sync.waitForSeconds(10);
             }
+            System.out.println("entry");
             Select sel = new Select(element);
             sel.selectByValue(strValue);
             isTextSelected = true;

@@ -71,5 +71,11 @@ public class HomePageActions extends HomePageUI {
         return isClicked;
     }
 
+    public boolean clickProviderInboxMenu() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, eleProviderInbox);
+        return isClicked;
+    }
+
 
 }

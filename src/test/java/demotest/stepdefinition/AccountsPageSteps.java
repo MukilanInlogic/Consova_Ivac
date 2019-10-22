@@ -50,6 +50,7 @@ public class AccountsPageSteps {
     @When("^I click Emergency Contacts Tab$")
     public void iClickEmergencyContactsTab() throws Throwable {
         assertTrue(actionContainer.accountsPageActions.clickEmergencyContactsTab());
+
     }
 
     @Then("^Emergeny Contacts tab opened$")
@@ -99,5 +100,22 @@ public class AccountsPageSteps {
     @And("^I Change the Required Details(.*)$")
     public void iChangeTheRequiredDetailsMobilePhoneNumber(String strMobilePhoneEditProfileDetails) throws Throwable {
         assertTrue(actionContainer.accountsPageActions.enterMobilePhoneNumberInEditProfileDetails(Testdata.getValue(strMobilePhoneEditProfileDetails)));
+    }
+
+    @When("^I Click Update Profile button$")
+    public void iClickUpdateProfileButton() {
+        assertTrue(actionContainer.accountsPageActions.clickUpdateProfileButton());
+    }
+
+    @Then("^I should see updated profile details$")
+    public void iShouldSeeUpdatedProfileDetails() {
+        assertTrue(actionContainer.accountsPageActions.verifyUpdatedProfileDetails());
+    }
+
+    @And("^Remove the Updated profile details$")
+    public void removeTheUpdatedProfileDetails()throws Throwable {
+        assertTrue(actionContainer.accountsPageActions.clickUpdateProfile());
+        assertTrue(actionContainer.accountsPageActions.clearMobilePhoneNumberInEditProfileDetails());
+        assertTrue(actionContainer.accountsPageActions.clickUpdateProfileButton());
     }
 }

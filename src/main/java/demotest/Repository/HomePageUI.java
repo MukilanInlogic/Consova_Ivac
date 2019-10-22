@@ -49,6 +49,9 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'My Account')]")
     protected WebElement eleMyAccount;
 
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Provider Inbox')]")
+    protected WebElement eleProviderInbox;
+
     @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_UserProfile1_lnkEditProfile']")
     protected WebElement iconUpdateProfile;
 
