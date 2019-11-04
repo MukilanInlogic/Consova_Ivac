@@ -77,5 +77,58 @@ public class HomePageActions extends HomePageUI {
         return isClicked;
     }
 
+    public boolean clickPatientInboxMenu() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, elePatientInbox);
+        return isClicked;
+    }
+
+    public boolean clickCalenderMenu() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, eleCalender);
+        return isClicked;
+    }
+
+    public boolean clickJournalMenu() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, eleJournal);
+        return isClicked;
+    }
+
+    public boolean clickPracticeMenu() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, elePractice);
+        return isClicked;
+    }
+
+    public boolean clickDownloadsMenu() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, eleDownloads);
+        return isClicked;
+    }
+
+    public boolean clickClinicalMenu() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, eleClinicalMenu);
+        return isClicked;
+    }
+
+    public boolean clickSetupMenu() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, eleSetupMenu);
+        return isClicked;
+    }
+
+    public boolean clickAppointmentinbox() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, eleAppointmentinbox);
+        return isClicked;
+    }
+
+    public boolean clickSetupEservices() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, eleSetupeService);
+        return isClicked;
+    }
 
 }

@@ -68,5 +68,74 @@ public class InboxPageUI {
     @FindBy(how = How.XPATH, using = "//iframe[@id='ctl01_MainContent_ucCompose_EditBody_ctl02_ctl00']")
     protected WebElement iframeSentMessageProviderInbox;
 
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Provider Inbox')]")
+    protected WebElement lblProviderInbox;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucCompose_cbo1']")
+    protected WebElement txtPatientName;
+
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Patient Inbox')]")
+    protected WebElement lblPatientInbox;
+
+    @FindBy(how = How.XPATH, using = "//span[@id='ctl01_SiteMapPath1']//span[contains(text(),'Calendar')]")
+    protected WebElement lblCalender;
+
+    @FindBy(how = How.XPATH, using = "//*[contains(@class,'fc-today ui-state-highlight')]")
+    protected WebElement eleEventToday;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='txtTitle']")
+    protected WebElement txtEventTitle;
+
+    @FindBy(how = How.XPATH, using = "//textarea[@id='txtDescription']")
+    protected WebElement txtEventDescription;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='btnSaveEvent']")
+    protected WebElement btnEventSave;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='fc-content']")
+    protected WebElement eleEvent;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='btnDeleteEvent']")
+    protected WebElement btnDeleteEvent;
+
+    @FindBy(how = How.XPATH, using = "//span[@id='ctl01_SiteMapPath1']//span[contains(text(),'Journal')]")
+    protected WebElement lblJournal;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='hs_addnew']//a//img")
+    protected WebElement btnAddJournal;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucJournalAddEntry_txtSubject']")
+    protected WebElement txtSubjectJournal;
+
+    @FindBy(how = How.XPATH, using = "//select[@id='ctl01_MainContent_ucJournalAddEntry_ddl_Category']")
+    protected WebElement ddbCategoryJournal;
+
+    @FindBy(how = How.XPATH, using = "//textarea[@id='ctl01_MainContent_ucJournalAddEntry_txtDescription']")
+    protected WebElement txtNoteJournal;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucJournalAddEntry_btnAddnewEntry']")
+    protected WebElement btnSaveEntry;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Test')]")
+    protected WebElement eleAddedJournal;
+
+    @FindBy(how = How.XPATH, using = "//tr[@class='ob_gR']//img[@id='btnDelete']")
+    protected WebElement btnDeleteJournal;
+
+    @FindBy(how = How.XPATH, using = "//option[contains(text(),'Medtech')]")
+    protected WebElement eleHealthCenter;
+
+    @FindBy(how = How.XPATH, using = "//span[@id='ctl01_SiteMapPath1']//span[contains(text(),'Practice')]")
+    protected WebElement lblPractice;
+
+    @FindBy(how = How.XPATH, using = "//span[@id='ctl01_SiteMapPath1']//span[contains(text(),'Downloads')]")
+    protected WebElement lblDownloads;
+
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Setup e-Services')]")
+    protected WebElement lblSetupEservices;
+
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_ServiceType1_btnAdd']//img")
+    protected WebElement btnAddEsevices;
+
 
 }

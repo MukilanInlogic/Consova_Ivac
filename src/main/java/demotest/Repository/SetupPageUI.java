@@ -6,20 +6,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class AppointmentsPageUI {
+public class SetupPageUI {
     protected final WebDriver driver;
 
     /**
      * @param driver
      */
-    public AppointmentsPageUI(WebDriver driver) {
+    public SetupPageUI(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
-
-
-    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Appointment Inbox')]")
-    protected WebElement lblAppointmentInbox;
-
-
 }
+
+
+

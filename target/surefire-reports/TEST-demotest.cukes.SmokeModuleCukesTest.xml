@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="12" failures="0" name="demotest.cukes.SmokeModuleCukesTest" time="83.885" errors="0" skipped="0">
+<testsuite tests="73" failures="0" name="demotest.cukes.SmokeModuleCukesTest" time="340.941" errors="0" skipped="10">
   <properties>
     <property name="PROCESSOR_ARCHITECTURE" value="AMD64"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -31,16 +31,16 @@
     <property name="PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 37 Stepping 5, GenuineIntel"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="LOCALAPPDATA" value="C:\Users\nganeshbabu\AppData\Local"/>
-    <property name="RUN_CHANGES_DISPLAY_URL" value="http://localhost:8080/job/MMH-Smoke_Module/9/display/redirect?page=changes"/>
+    <property name="RUN_CHANGES_DISPLAY_URL" value="http://localhost:8080/job/MMH-Smoke_Module/12/display/redirect?page=changes"/>
     <property name="user.timezone" value="Asia/Calcutta"/>
     <property name="user.script" value=""/>
     <property name="path.separator" value=";"/>
     <property name="NUMBER_OF_PROCESSORS" value="4"/>
-    <property name="BUILD_TAG" value="jenkins-MMH-Smoke_Module-9"/>
+    <property name="BUILD_TAG" value="jenkins-MMH-Smoke_Module-12"/>
     <property name="windows_tracing_flags" value="3"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="PYTHON_VARIABLE" value="C:\Users\v-codoid\AppData\Local\Programs\Python\Python36-32\Lib"/>
-    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\Program Files\jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven C:\Users\nganeshbabu\Downloads\agent.jar C:\Program Files\jenkins\maven35-interceptor.jar C:\Program Files\jenkins\maven3-interceptor-commons.jar 59496"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\Program Files\jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven C:\Users\nganeshbabu\Downloads\agent.jar C:\Program Files\jenkins\maven35-interceptor.jar C:\Program Files\jenkins\maven3-interceptor-commons.jar 60660"/>
     <property name="HUDSON_URL" value="http://localhost:8080/"/>
     <property name="JENKINS_SERVER_COOKIE" value="cfaa366881689e1e"/>
     <property name="EXECUTOR_NUMBER" value="0"/>
@@ -50,13 +50,13 @@
     <property name="user.language" value="en"/>
     <property name="line.separator" value="
 "/>
-    <property name="BUILD_URL" value="http://localhost:8080/job/MMH-Smoke_Module/9/"/>
+    <property name="BUILD_URL" value="http://localhost:8080/job/MMH-Smoke_Module/12/"/>
     <property name="M2_HOME" value="C:\Program Files\jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven"/>
     <property name="=C:" value="C:\Users\nganeshbabu\Desktop"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="sun.desktop" value="windows"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="BUILD_DISPLAY_NAME" value="#9"/>
+    <property name="BUILD_DISPLAY_NAME" value="#12"/>
     <property name="OS" value="Windows_NT"/>
     <property name="easy_api_log" value="C:\Program Files\MedtechAUEvolution\Bin\Tools\HICOnline\log\easy_cDLL.log"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -78,7 +78,7 @@
     <property name="os.name" value="Windows 7"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="BUILD_NUMBER" value="9"/>
+    <property name="BUILD_NUMBER" value="12"/>
     <property name="maven3.interceptor" value="C:\Program Files\jenkins\maven35-interceptor.jar"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven/bin;D:\Scripts\;D:\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\MT32_AU\Bin\Tools\HICOnline;C:\MT32_AU\Bin\Tools\HICOnline\Bin;C:\MT32_AU\Bin\Tools\HICOnline\Lib;C:\MT32_AU\Bin\Tools\HICOnline\LogicPack;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\C:\Users\v-codoid\AppData\Local\Programs\Python\Python36-32\Lib\;C:\Program Files\MedtechAUEvolution\Bin\Tools\HICOnline;C:\Program Files\MedtechAUEvolution\Bin\Tools\HICOnline\Bin;C:\Program Files\MedtechAUEvolution\Bin\Tools\HICOnline\Lib;C:\Program Files\MedtechAUEvolution\Bin\Tools\HICOnline\LogicPack;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Git\cmd;C:\Program Files\apache-maven-3.5.2\bin;;."/>
     <property name="HOMEDRIVE" value="C:"/>
@@ -87,9 +87,9 @@
     <property name="java.class.version" value="52.0"/>
     <property name="JOB_URL" value="http://localhost:8080/job/MMH-Smoke_Module/"/>
     <property name="OneDrive" value="C:\Users\nganeshbabu\OneDrive"/>
-    <property name="RUN_DISPLAY_URL" value="http://localhost:8080/job/MMH-Smoke_Module/9/display/redirect"/>
+    <property name="RUN_DISPLAY_URL" value="http://localhost:8080/job/MMH-Smoke_Module/12/display/redirect"/>
     <property name="JENKINS_HOME" value="C:\Users\smohanapriya\.jenkins"/>
-    <property name="BUILD_ID" value="9"/>
+    <property name="BUILD_ID" value="12"/>
     <property name="TEMP" value="C:\Users\NGANES~2\AppData\Local\Temp"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -147,16 +147,97 @@
     <property name="POM_DISPLAYNAME" value="framework"/>
     <property name="sun.arch.data.model" value="64"/>
   </properties>
-  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="Given I am on manage my health home page" time="0.027"/>
+  <testcase classname="| DP:LOGIN.USERNAME | DP:LOGIN.PASSWORD |" name="Given I am on manage my health home page" time="0"/>
+  <testcase classname="| DP:LOGIN.USERNAME | DP:LOGIN.PASSWORD |" name="And I Enter DP:LOGIN.USERNAME\u002C DP:LOGIN.PASSWORD valid credentials in Manage my health page" time="0"/>
+  <testcase classname="| DP:LOGIN.USERNAME | DP:LOGIN.PASSWORD |" name="When I click Login button" time="0"/>
+  <testcase classname="| DP:LOGIN.USERNAME | DP:LOGIN.PASSWORD |" name="Then I should see home page of Managemyhealth" time="0"/>
+  <testcase classname="| DP:LOGIN.USERNAME | DP:LOGIN.PASSWORD |" name="And I click Logout button" time="0"/>
+  <testcase classname="| DP:LOGIN.USERNAME | DP:LOGIN.PASSWORD |" name="| DP:LOGIN.USERNAME | DP:LOGIN.PASSWORD |" time="0.002"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:LEFTPANE.SETUPHEADER |" name="Given I am on manage my health home page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:LEFTPANE.SETUPHEADER |" name="And I Enter DP:LOGIN.PROVIDERNAME\u002C DP:LOGIN.PROVIDERPASSWORD valid credentials in Manage my health page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:LEFTPANE.SETUPHEADER |" name="When I click Login button" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:LEFTPANE.SETUPHEADER |" name="Then I should see DP:LEFTPANE.SETUPHEADER Header in left pane" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:LEFTPANE.SETUPHEADER |" name="And I click Logout button" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:LEFTPANE.SETUPHEADER |" name="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:LEFTPANE.SETUPHEADER |" time="0.002"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Given I am on manage my health home page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I Enter DP:LOGIN.PROVIDERNAME\u002C DP:LOGIN.PROVIDERPASSWORD valid credentials in Manage my health page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="When I click Login button" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Then I should see home page of Managemyhealth" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Then I should see Inbox widget defaultly available" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I click Logout button" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" time="0.001"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Given I am on manage my health home page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I Enter DP:LOGIN.PROVIDERNAME\u002C DP:LOGIN.PROVIDERPASSWORD valid credentials in Manage my health page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I click Login button" time="0.001"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="When I Click My Account Main Menu" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Then I should see My Account page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I click Logout button" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Given I Login with valid username DP:LOGIN.PROVIDERNAME and password DP:LOGIN.PROVIDERPASSWORD" time="0.012">
+    <skipped/>
+  </testcase>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="When I Click My Account Main Menu" time="0.012">
+    <skipped/>
+  </testcase>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Then I should see My Account page" time="0.012">
+    <skipped/>
+  </testcase>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I click Update Profile" time="0.012">
+    <skipped/>
+  </testcase>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Then I see Update Profile page" time="0.012">
+    <skipped/>
+  </testcase>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I Change the Required Details&lt;MobilePhoneNumber&gt;" time="0.012">
+    <skipped/>
+  </testcase>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="When I Click Update Profile button" time="0.012">
+    <skipped/>
+  </testcase>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Then I should see updated profile details" time="0.012">
+    <skipped/>
+  </testcase>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I click Logout button" time="0.012">
+    <skipped/>
+  </testcase>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" time="0.012">
+    <skipped/>
+  </testcase>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" time="0.012"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Given I am on manage my health home page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I Enter DP:LOGIN.PROVIDERNAME\u002C DP:LOGIN.PROVIDERPASSWORD valid credentials in Manage my health page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I click Login button" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I Click My Account Main Menu" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="When I Click My Health Center tab in the My Account Page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Then Administrative Staff is present in the My Health Center Tab" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I click Logout button" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Given I am on manage my health home page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I Enter DP:LOGIN.PROVIDERNAME\u002C DP:LOGIN.PROVIDERPASSWORD valid credentials in Manage my health page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I click Login button" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I Click My Account Main Menu" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="When I click Access Information Tab" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Then Access Information tab opened" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I click Logout button" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" time="0.004"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Given I am on manage my health home page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I Enter DP:LOGIN.PROVIDERNAME\u002C DP:LOGIN.PROVIDERPASSWORD valid credentials in Manage my health page" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I click Login button" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I Click My Account Main Menu" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="When I click Emergency Contacts Tab" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="Then Emergeny Contacts tab opened" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="And I click Logout button" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" name="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |" time="0.002"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="Given I am on manage my health home page" time="0"/>
   <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="And I Enter DP:LOGIN.PROVIDERNAME\u002C DP:LOGIN.PROVIDERPASSWORD valid credentials in Manage my health page" time="0"/>
   <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="And I click Login button" time="0"/>
   <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="And I Click My Account Main Menu" time="0"/>
   <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="When I click Emergency Contacts Tab" time="0"/>
-  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="Then Emergeny Contacts tab opened" time="0.002"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="Then Emergeny Contacts tab opened" time="0.001"/>
   <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="And click Add icon the Emergency contact Tab" time="0"/>
   <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="And Enter the required details in the Emergency contacts tab: DP:EMERGENCYCONTACTS.FIRSTNAME\u002C DP:EMERGENCYCONTACTS.MOBILEPHONE\u002C DP:EMERGENCYCONTACTS.RELATIONSHIP\u002C DP:EMERGENCYCONTACTS.LASTNAME" time="0"/>
   <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="Then I should see added emergency contacts in the Emergency Contacts tab" time="0"/>
-  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="And Delete the Emergency Contacts" time="0.002"/>
-  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="And I click Logout button" time="0.015"/>
-  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" time="0.015"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="And Delete the Emergency Contacts" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="And I click Logout button" time="0"/>
+  <testcase classname="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" name="| DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME | DP:EMERGENCYCONTACTS.MOBILEPHONE | DP:EMERGENCYCONTACTS.RELATIONSHIP | DP:EMERGENCYCONTACTS.LASTNAME |" time="0.001"/>
 </testsuite>

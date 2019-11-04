@@ -22,10 +22,10 @@ public class Frame {
         try {
             isFramePresent = driver.getPageSource().contains("iframe");
             if (isFramePresent) {
-                System.out.println("INSIDE IF checkFrame");
+
                 isFramePresent = true;
             } else {
-                System.out.println("INSIDE ELSE checkFrame");
+
                 isFramePresent = false;
             }
         } catch (Exception Ex) {
@@ -92,6 +92,21 @@ public class Frame {
         }
         return isFrameSwitched;
     }
+
+    public static boolean switchToFrameByElement(WebDriver driver,WebElement element)
+    {
+        boolean isSwitched=false;
+        try {
+            driver.switchTo().frame(element);
+            isSwitched= true;
+        } catch (Exception Ex) {
+            log.error(Ex);
+            System.out.println("switchFrameById catch " + Ex.getMessage());
+        }
+        return isSwitched;
+    }
+
+
 
     /**
      * Description:This method is used to Switch to Frame by WebElement

@@ -51,4 +51,49 @@ public class HomePageSteps {
     public void iClickProviderInboxLink(){
         assertTrue(actionContainer.homePageActions.clickProviderInboxMenu());
     }
+
+    @And("^I click Patient Inbox link$")
+    public void iClickPatientInboxLink() {
+        assertTrue(actionContainer.homePageActions.clickPatientInboxMenu());
+    }
+
+    @And("^I click Calender link$")
+    public void iClickCalenderLink() {
+        assertTrue(actionContainer.homePageActions.clickCalenderMenu());
+    }
+
+    @When("^I click Journal link$")
+    public void iClickJournalLink() {
+        assertTrue(actionContainer.homePageActions.clickJournalMenu());
+    }
+
+    @And("^I click Practice link$")
+    public void iClickPracticeLink() {
+        assertTrue(actionContainer.homePageActions.clickPracticeMenu());
+    }
+
+    @And("^I Click Clinical Menu$")
+    public void iClickClinicalMenu() {
+        assertTrue(actionContainer.homePageActions.clickClinicalMenu());
+    }
+
+    @When("^I click Appointment inbox Menu$")
+    public void iClickAppointmentInboxMenu() {
+        assertTrue(actionContainer.homePageActions.clickAppointmentinbox());
+    }
+
+    @And("^I click Downloads Menu$")
+    public void iClickDownloadsMenu() {
+        assertTrue(actionContainer.homePageActions.clickDownloadsMenu());
+    }
+
+    @And("^I click Setup Menu$")
+    public void iClickSetupMenu() {
+        assertTrue(actionContainer.homePageActions.clickSetupMenu());
+    }
+
+    @When("^I click Setup E-services Menu$")
+    public void iClickSetupEServicesMenu() {
+        assertTrue(actionContainer.homePageActions.clickSetupEservices());
+    }
 }

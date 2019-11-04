@@ -48,6 +48,36 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_UserProfile1_lnkEditProfile']")
     protected WebElement iconUpdateProfile;
 
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Patient Inbox')]")
+    protected WebElement elePatientInbox;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Calendar')]")
+    protected WebElement eleCalender;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Journal')]")
+    protected WebElement eleJournal;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='menu-img my-account Practice']//a[contains(text(),'Practice')]")
+    protected WebElement elePractice;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='menu-img my-account Downloads']//a[contains(text(),'Downloads')]")
+    protected WebElement eleDownloads;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Clinical Menu')]")
+    protected WebElement eleClinicalMenu;
+
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Set-Up Menu')]")
+    protected WebElement eleSetupMenu;
+
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Appointment Inbox')]")
+    protected WebElement eleAppointmentinbox;
+
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Setup e-Services')]")
+    protected WebElement eleSetupeService;
+
 
 }
 

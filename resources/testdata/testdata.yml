@@ -11,4 +11,24 @@ EMERGENCYCONTACTS:
   MOBILEPHONE: "0405652175"
   RELATIONSHIP: "cousin"
   LASTNAME: "Babu"
+EDITPROFILEDETAILS:
+  MOBILENUMBER: "9876543210"
+PROVIDERINBOX:
+  HEALTHCENTRE: "Medtech"
+  LOCATION: "Lisa's Surgery"
+  SERVICENAME: "Internal Communication"
+  TO: "Clinical Staff"
+  TOPATIENT: "Patient"
+  SUBJECT: "Clinical Communication"
+  USERNAME: "Dr MedTech"
+  PATIENTNAME: "SHERRY SALES"
+  MESSAGE: "Test"
+CALENDAR:
+  TITLE: "Test"
+  DESCRIPTION: "Test"
+JOURNAL:
+  SUBJECT: "Test"
+  CATEGORY: "General"
+  NOTES: "Test"
+
 

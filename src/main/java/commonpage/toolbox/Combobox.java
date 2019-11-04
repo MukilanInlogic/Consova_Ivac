@@ -48,9 +48,10 @@ public class Combobox {
         try {
             element = Sync.waitForElement(driver, element);
             Sync.waitForAjax(driver);
-            if (!Helper.getBrowser().equalsIgnoreCase("FIREFOX")) {
-                Sync.waitForSeconds(10);
-            }
+//            if (!Helper.getBrowser().equalsIgnoreCase("FIREFOX")) {
+//                Sync.waitForSeconds(10);
+//            }
+
             Select sel = new Select(element);
             sel.selectByVisibleText(strText);
             isTextSelected = true;
