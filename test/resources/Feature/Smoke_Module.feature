@@ -150,8 +150,8 @@ Feature: Smoke Module
     And I click Logout button
 
     Examples:
-      | ProviderName          | ProviderPassword          | HealthCentre                  | Location                  | ServiceName                  | To                               | UserName                  | Message                  |
-      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:PROVIDERINBOX.HEALTHCENTRE | DP:PROVIDERINBOX.LOCATION | DP:PROVIDERINBOX.SERVICENAME | DP:PROVIDERINBOX.HEALTHCENTRE.TO | DP:PROVIDERINBOX.USERNAME | DP:PROVIDERINBOX.MESSAGE |
+      | ProviderName          | ProviderPassword          | HealthCentre                  | Location                  | ServiceName                  | To                  | UserName                  | Message                  |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:PROVIDERINBOX.HEALTHCENTRE | DP:PROVIDERINBOX.LOCATION | DP:PROVIDERINBOX.SERVICENAME | DP:PROVIDERINBOX.TO | DP:PROVIDERINBOX.USERNAME | DP:PROVIDERINBOX.MESSAGE |
 
   @MT-82768
   Scenario Outline: MT-82768:User should able to open the Provider Inbox
