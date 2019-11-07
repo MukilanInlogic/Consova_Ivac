@@ -15,7 +15,7 @@ EDITPROFILEDETAILS:
   MOBILENUMBER: "9876543210"
 PROVIDERINBOX:
   HEALTHCENTRE: "Medtech"
-  LOCATION: "Lisa's Surgery"
+  LOCATION: "sydney"
   SERVICENAME: "Internal Communication"
   TO: "Clinical Staff"
   TOPATIENT: "Patient"
