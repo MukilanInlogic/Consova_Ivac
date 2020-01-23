@@ -30,4 +30,8 @@ public class LoginPageUI {
     @FindBy(how = How.XPATH, using = "//input[@id='Login4_LoginWebControlMMH_LoginButton']")
     protected WebElement btnLogin;
 
+
+    @FindBy(how = How.XPATH, using = "//div[@class='success']")
+    protected WebElement lblLogoutSuccess;
+
 }

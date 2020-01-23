@@ -181,8 +181,25 @@ public class InboxPageSteps {
         assertTrue(actionContainer.inboxPageActions.verifyDownloadsPage());
     }
 
-    @Then("^I should see E-services Page$")
-    public void iShouldSeeEServicesPage() {
-        assertTrue(actionContainer.inboxPageActions.verifySetupEservicesPage());
+
+    @Then("^I should see Group Message Page$")
+    public void iShouldSeeGroupMessagePage() {
+        assertTrue(actionContainer.inboxPageActions.verifyGroupMessagePage());
+    }
+
+    @And("^I Enter required fields(.*), (.*), (.*), (.*)$")
+    public void iEnterRequiredFieldsFromToSubjectMessage(String strFromGroupMessage,String strToGroupMessage,String strGroupMessageSubject,String strGroupMessage) {
+        assertTrue(actionContainer.inboxPageActions.selectValuefromGroupMessage(Testdata.getValue(strFromGroupMessage)));
+        assertTrue(actionContainer.inboxPageActions.selectValueToGroupMessage(Testdata.getValue(strToGroupMessage)));
+        assertTrue(actionContainer.inboxPageActions.enterGroupMessageSubject(Testdata.getValue(strGroupMessageSubject)));
+        assertTrue(actionContainer.inboxPageActions.swithToGroupMessageFrame());
+        assertTrue(actionContainer.inboxPageActions.enterGroupMessage(Testdata.getValue(strGroupMessage)));
+        assertTrue(actionContainer.inboxPageActions.swithToProviderdefault());
+    }
+
+
+    @When("^I click Send Message Button in Group Message$")
+    public void iClickSendMessageButtonInGroupMessage() {
+        assertTrue(actionContainer.inboxPageActions.clickSendMessageGroupMessage());
     }
 }

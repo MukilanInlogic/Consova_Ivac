@@ -64,4 +64,12 @@ public class LoginPageActions extends LoginPageUI {
         isClicked = Element.click(driver, btnLogin);
         return isClicked;
     }
+
+    public boolean verifyLogoutSuccess() {
+        Boolean isVerified = false;
+        if (lblLogoutSuccess.isDisplayed()) {
+            isVerified = true;
+        }
+        return isVerified;
+    }
 }

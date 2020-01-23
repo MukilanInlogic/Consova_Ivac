@@ -10,45 +10,45 @@ import static org.junit.Assert.assertTrue;
 
 public class HomePageSteps {
     private ActionContainer actionContainer;
+
     public HomePageSteps(ActionContainer actionContainer) {
         this.actionContainer = actionContainer;
     }
 
 
-
     @Then("^I should see home page of Managemyhealth$")
-    public void iShouldSeeHomePageOfManagemyhealth(){
+    public void iShouldSeeHomePageOfManagemyhealth() {
         assertTrue(actionContainer.homePageActions.verifyHomePage());
     }
 
     @And("^I click Logout button$")
-    public void iClickLogoutButton(){
+    public void iClickLogoutButton() {
         assertTrue(actionContainer.homePageActions.clickLogoutBtn());
     }
 
 
     @Then("^I should see SetUpmenu$")
-    public void iShouldSeeSetUpmenu(){
+    public void iShouldSeeSetUpmenu() {
         assertTrue(actionContainer.homePageActions.verifySetupMenu());
     }
 
     @Then("^I should see (.*) Header in left pane$")
-    public void iShouldSeeHeaderHeaderInLeftPane(String strHeader){
+    public void iShouldSeeHeaderHeaderInLeftPane(String strHeader) {
         assertTrue(actionContainer.homePageActions.verifyHeaderInLeftPane(Testdata.getValue(strHeader)));
     }
 
     @Then("^I should see Inbox widget defaultly available$")
-    public void iShouldSeeInboxWidgetDefaultlyAvailable(){
+    public void iShouldSeeInboxWidgetDefaultlyAvailable() {
         assertTrue(actionContainer.homePageActions.verifyInboxwidget());
     }
 
     @When("^I Click My Account Main Menu$")
-    public void iClickMyAccountMainMenu(){
+    public void iClickMyAccountMainMenu() {
         assertTrue(actionContainer.homePageActions.clickMyAccountMenu());
     }
 
     @And("^I click Provider Inbox link$")
-    public void iClickProviderInboxLink(){
+    public void iClickProviderInboxLink() {
         assertTrue(actionContainer.homePageActions.clickProviderInboxMenu());
     }
 
@@ -93,7 +93,23 @@ public class HomePageSteps {
     }
 
     @When("^I click Setup E-services Menu$")
-    public void iClickSetupEServicesMenu() {
+    public void iClickSetupEServicesMenu() throws Throwable {
         assertTrue(actionContainer.homePageActions.clickSetupEservices());
+
+    }
+
+    @And("^I click Group Mail Menu$")
+    public void iClickGroupMailMenu() {
+        assertTrue(actionContainer.homePageActions.clickGroupMail());
+    }
+
+    @When("^I click MyPractice Menu$")
+    public void iClickMyPracticeMenu() {
+        assertTrue(actionContainer.homePageActions.clickMyPractice());
+    }
+
+    @Then("^User logout the application$")
+    public void userLogoutTheApplication() {
+        assertTrue(actionContainer.loginPageActions.verifyLogoutSuccess());
     }
 }

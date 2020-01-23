@@ -83,6 +83,7 @@ public class InboxPageActions extends InboxPageUI {
     public boolean enterMessage(String strMessage) {
         Boolean isEntered = false;
         if (txtMessage.isDisplayed()) {
+            System.out.println(txtMessage.isDisplayed());
             isEntered = Textbox.enterValue(driver, txtMessage, strMessage);
         } else {
             isEntered = false;
@@ -157,8 +158,8 @@ public class InboxPageActions extends InboxPageUI {
             isEntered = Textbox.enterValue(driver, txtPatientName, strPatientName);
             KeyUtil.pressKey(KeyEvent.VK_DOWN);
             KeyUtil.releaseKey(KeyEvent.VK_DOWN);
-            KeyUtil.pressKey(KeyEvent.VK_ENTER);
-            KeyUtil.releaseKey(KeyEvent.VK_ENTER);
+            KeyUtil.pressKey(KeyEvent.VK_TAB);
+            KeyUtil.releaseKey(KeyEvent.VK_TAB);
         } else {
             isEntered = false;
         }
@@ -322,15 +323,60 @@ public class InboxPageActions extends InboxPageUI {
         return isVerified;
     }
 
-    public boolean verifySetupEservicesPage(){
+    public boolean verifyGroupMessagePage(){
         Boolean isVerified = false;
-        if(lblSetupEservices.isDisplayed()){
+        if(lblGroupMessage.isDisplayed()){
             isVerified = true;
         }
         return isVerified;
     }
 
+    public boolean selectValuefromGroupMessage(String strFromGroupMessage){
+        Boolean isSelcted = false;
+        if(ddbFromGroupMessage.isDisplayed()){
+            isSelcted= Combobox.selectText(driver, ddbFromGroupMessage, strFromGroupMessage);
+        }
+        return isSelcted;
+    }
 
+    public boolean selectValueToGroupMessage(String strToGroupMessage){
+        Boolean isSelcted = false;
+        if(ddbToGroupMessage.isDisplayed()){
+            isSelcted= Combobox.selectText(driver, ddbToGroupMessage, strToGroupMessage);
+        }
+        return isSelcted;
+    }
 
+    public boolean enterGroupMessageSubject(String strGroupMessageSubject) {
+        Boolean isEntered = false;
+        if (txtSubjectGroupMessage.isDisplayed()) {
+            isEntered = Textbox.enterValue(driver, txtSubjectGroupMessage, strGroupMessageSubject);
+        } else {
+            isEntered = false;
+        }
+        return isEntered;
+    }
+
+    public boolean swithToGroupMessageFrame(){
+        Boolean isDisplayed = false;
+        isDisplayed=Frame.switchToFrameByElement(driver,iframeGroupMessage);
+        return isDisplayed;
+    }
+
+    public boolean enterGroupMessage(String strGroupMessage) {
+        Boolean isEntered = false;
+        if (txtMessageGroupMessage.isDisplayed()) {
+            isEntered = Textbox.enterValue(driver, txtMessageGroupMessage, strGroupMessage);
+        } else {
+            isEntered = false;
+        }
+        return isEntered;
+    }
+
+    public boolean clickSendMessageGroupMessage(){
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, btnSendMessageGroupMessage);
+        return isClicked;
+    }
 
 }

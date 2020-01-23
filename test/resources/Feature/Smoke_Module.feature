@@ -15,6 +15,7 @@ Feature: Smoke Module
       | DP:LOGIN.USERNAME | DP:LOGIN.PASSWORD |
 
   @MT-82541
+  @MT-82542
   Scenario Outline: MT-82541:Check the Menu displayed in the Service Provider login
     Given I am on manage my health home page
     And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
@@ -153,6 +154,29 @@ Feature: Smoke Module
       | ProviderName          | ProviderPassword          | HealthCentre                  | Location                  | ServiceName                  | To                  | UserName                  | Message                  |
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:PROVIDERINBOX.HEALTHCENTRE | DP:PROVIDERINBOX.LOCATION | DP:PROVIDERINBOX.SERVICENAME | DP:PROVIDERINBOX.TO | DP:PROVIDERINBOX.USERNAME | DP:PROVIDERINBOX.MESSAGE |
 
+  @MT-84364
+  Scenario Outline: MT-84364:User should able to send the Message with attachment to the Service Provider
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I click Provider Inbox link
+    And I click compose Tab
+    And I select healthcenter<HealthCentre> and Location<Location>
+    And I select the Services in the dropdown<ServiceName>
+    And I select To as Clinical Provider<To>
+    And I select UserName<UserName>
+    And I Enter manadory fields<Message>
+    When I click Send Message Button
+    Then I should see Send successfully
+    And I click Reuturn to Inbox Button
+    And I click sent Tab
+    And I click delete Button
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          | HealthCentre                  | Location                  | ServiceName                  | To                  | UserName                  | Message                  |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:PROVIDERINBOX.HEALTHCENTRE | DP:PROVIDERINBOX.LOCATION | DP:PROVIDERINBOX.SERVICENAME | DP:PROVIDERINBOX.TO | DP:PROVIDERINBOX.USERNAME | DP:PROVIDERINBOX.MESSAGE |
+
   @MT-82768
   Scenario Outline: MT-82768:User should able to open the Provider Inbox
     Given I am on manage my health home page
@@ -167,6 +191,29 @@ Feature: Smoke Module
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
 
   @MT-82770
+  Scenario Outline: MT-82770: User should able to send the Message to the Service Provider
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I click Provider Inbox link
+    And I click compose Tab
+    And I select healthcenter<HealthCentre> and Location<Location>
+    And I select the Services in the dropdown<ServiceName>
+    And I select To as Clinical Provider<To>
+    And I select UserName<UserName>
+    And I Enter manadory fields<Message>
+    When I click Send Message Button
+    Then I should see Send successfully
+    And I click Reuturn to Inbox Button
+    And I click sent Tab
+    And I click delete Button
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          | HealthCentre                  | Location                  | ServiceName                  | To                               | UserName                  | Message                  |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:PROVIDERINBOX.HEALTHCENTRE | DP:PROVIDERINBOX.LOCATION | DP:PROVIDERINBOX.SERVICENAME | DP:PROVIDERINBOX.HEALTHCENTRE.TO | DP:PROVIDERINBOX.USERNAME | DP:PROVIDERINBOX.MESSAGE |
+
+  @MT-84365
   Scenario Outline: MT-82770: User should able to send the Message to the Service Provider
     Given I am on manage my health home page
     And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
@@ -384,3 +431,77 @@ Feature: Smoke Module
     Examples:
       | ProviderName          | ProviderPassword          |
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+  @MT-82733
+  Scenario Outline: MT-82733:User should able to add e-services to the Health Center
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I click Setup Menu
+    And I click Setup E-services Menu
+    And I click Add E-services Button
+    And I Enter Mandatory fields in the Add e-servicePage <HealthCenter>, <ServiceCategory>, <ServiceName>, <ServiceCode>, <RecipientRole>, <Recipient>, <Description>, <Terms>
+    When I click Save Button
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          | HealthCenter                  | ServiceCategory                    | ServiceName                    | ServiceCode                    | RecipientRole                    | Recipient                    | Description                    | Terms                    |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:SETUPESERVICE.SSHEALTHCARE | DP:SETUPESERVICE.SSSERVICECATEGORY | DP:SETUPESERVICE.SSSERVICENAME | DP:SETUPESERVICE.SSSERVICECODE | DP:SETUPESERVICE.SSRECIPIENTROLE | DP:SETUPESERVICE.SSRECIPIENT | DP:SETUPESERVICE.SSDESCRIPTION | DP:SETUPESERVICE.SSTERMS |
+
+  @MT-82734
+  Scenario Outline: MT-82734:User should open the Group Message page
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I click Setup Menu
+    When I click Group Mail Menu
+    Then I should see Group Message Page
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+  @MT-82735
+  Scenario Outline: MT-82735:User should able to send the Group Message
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I click Setup Menu
+    And I click Group Mail Menu
+    And I Enter required fields<From>, <To>, <Subject>, <Message>
+    When I click Send Message Button in Group Message
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | From                   | To                   | Subject                   | Message                   |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:GROUPMESSAGE.GMFROM | DP:GROUPMESSAGE.GMTO | DP:GROUPMESSAGE.GMSUBJECT | DP:GROUPMESSAGE.GMMESSAGE |
+
+  @MT-82743
+  Scenario Outline: MT-82743:User should able to open the My Practice Page
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I click Setup Menu
+    When I click MyPractice Menu
+    Then I see Practice details opened
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+  @MT-82751
+  Scenario Outline: MT-82751:User Logout from the Application
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Logout button
+    Then User logout the application
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+

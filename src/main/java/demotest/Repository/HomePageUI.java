@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.stringtemplate.v4.ST;
 
 public class HomePageUI {
 
@@ -78,6 +77,14 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'Setup e-Services')]")
     protected WebElement eleSetupeService;
 
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Group Mail')]")
+    protected WebElement eleGroupMail;
+
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_ServiceType1_btnAdd']/img")
+    protected WebElement btnAddEsevices;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'My Practice')]")
+    protected WebElement eleMyPractice;
 
 }
 

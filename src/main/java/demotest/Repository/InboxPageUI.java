@@ -131,11 +131,25 @@ public class InboxPageUI {
     @FindBy(how = How.XPATH, using = "//span[@id='ctl01_SiteMapPath1']//span[contains(text(),'Downloads')]")
     protected WebElement lblDownloads;
 
-    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Setup e-Services')]")
-    protected WebElement lblSetupEservices;
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Group Message')]")
+    protected WebElement lblGroupMessage;
 
-    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_ServiceType1_btnAdd']//img")
-    protected WebElement btnAddEsevices;
+    @FindBy(how = How.XPATH, using = "//select[@id='ctl01_MainContent_GroupMessage1_ddlFrom']")
+    protected WebElement ddbFromGroupMessage;
 
+    @FindBy(how = How.XPATH, using = "//select[@id='ctl01_MainContent_GroupMessage1_ddlTo']")
+    protected WebElement ddbToGroupMessage;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_GroupMessage1_txtSubject']")
+    protected WebElement txtSubjectGroupMessage;
+
+    @FindBy(how = How.XPATH, using = "//iframe[@id='ctl01_MainContent_GroupMessage1_bodyMessageEditor_ctl02_ctl00']")
+    protected WebElement iframeGroupMessage;
+
+    @FindBy(how = How.XPATH, using = "//html//body")
+    protected WebElement txtMessageGroupMessage;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_GroupMessage1_btnSend']")
+    protected WebElement btnSendMessageGroupMessage;
 
 }

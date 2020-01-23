@@ -19,6 +19,7 @@ public class ActionContainer {
     public HomePageActions homePageActions;
     public InboxPageActions inboxPageActions;
     public LoginPageActions loginPageActions;
+    public SetupPageActions setupPageActions;
     public UsersPageActions usersPageActions;
 
     static public int i = 0;
@@ -47,6 +48,7 @@ public class ActionContainer {
         inboxPageActions = new InboxPageActions(sharedDriver);
         loginPageActions = new LoginPageActions(sharedDriver);
         usersPageActions = new UsersPageActions(sharedDriver);
+        setupPageActions=new SetupPageActions(sharedDriver);
     }
 
     /**

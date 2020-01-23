@@ -1,8 +1,6 @@
 package demotest.action;
 
 import commonpage.toolbox.Element;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 import demotest.Repository.HomePageUI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -128,6 +126,27 @@ public class HomePageActions extends HomePageUI {
     public boolean clickSetupEservices() {
         Boolean isClicked = false;
         isClicked = Element.click(driver, eleSetupeService);
+        return isClicked;
+    }
+
+    public boolean clickGroupMail() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, eleGroupMail);
+        return isClicked;
+    }
+
+    public boolean clickSetupEserviceIcon()
+    {
+        Boolean isClicked=false;
+        System.out.println("Methos entry");
+        System.out.println("LOCATOR" + btnAddEsevices.isDisplayed());
+        isClicked = Element.click(driver, btnAddEsevices);
+        return isClicked;
+    }
+
+    public boolean clickMyPractice() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, eleMyPractice);
         return isClicked;
     }
 
