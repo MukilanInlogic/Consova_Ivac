@@ -118,4 +118,87 @@ public class AccountsPageSteps {
         assertTrue(actionContainer.accountsPageActions.clearMobilePhoneNumberInEditProfileDetails());
         assertTrue(actionContainer.accountsPageActions.clickUpdateProfileButton());
     }
+    @And("^I click change password button$")
+    public void iClickChangePasswordButton() {
+        assertTrue(actionContainer.accountsPageActions.ClickChangePassword());
+
+    }
+
+    @And("^I Enter Invalid And Valid Password(.*), (.*),(.*)$")
+    public void iEnterInvalidAndValidPassword(String StrCurrentPassword, String StrNewpassword, String StrConfirmNewPassword) {
+        assertTrue(actionContainer.accountsPageActions.entercurrentpassword(Testdata.getValue(StrCurrentPassword)));
+        assertTrue(actionContainer.accountsPageActions.enternewpassword(Testdata.getValue(StrNewpassword)));
+        assertTrue(actionContainer.accountsPageActions.enterconfirmnewpassword(Testdata.getValue(StrConfirmNewPassword)));
+    }
+
+
+    @And("^I click button Change Password$")
+    public void iClickButtonChangePassword() {
+        assertTrue(actionContainer.accountsPageActions.ClickBtnChangePassword());
+    }
+
+    @And("^I Verify the error message displays$")
+    public void iVerifyTheErrorMessageDisplays() {
+
+        assertTrue(actionContainer.accountsPageActions.Verifytheerrortextdisplays());
+    }
+
+    @And("^I Verify the required format message displays$")
+    public void iVerifyTheRequiredFormatMessageDisplays() {
+        assertTrue(actionContainer.accountsPageActions.verifyrequiredformatdisplays());
+    }
+
+    @And("^I Verify the New and confirm password miss match$")
+    public void iVerifyTheNewAndConfirmPasswordMissMatch() {
+        assertTrue(actionContainer.accountsPageActions.VerifyConfirmAndNewPasswordMissmatch());
+    }
+
+    @Then("^I Click Change Photo button$")
+    public void iClickChangePhotoButton() {
+        assertTrue(actionContainer.accountsPageActions.ClickChangePhotoBtn());
+    }
+
+    @And("^I Click Choose File Button$")
+    public void iClickChooseFileButton() {
+        assertTrue(actionContainer.accountsPageActions.ClickChooseBtn());
+    }
+
+    @And("^I Click Verify button$")
+    public void iClickVerifyButton() {
+        assertTrue(actionContainer.accountsPageActions.ClickverifyBtn());
+    }
+
+    @And("^I Verify The Warning Displays$")
+    public void iVerifyTheWarningDisplays() {
+        assertTrue(actionContainer.accountsPageActions.VerifyTheWarningDisplays());
+    }
+
+    @And("^I Click Cancel Button And Verify It redirect To Profile Tab$")
+    public void iClickCancelButtonAndVerifyItRedirectToProfileTab() {
+        assertTrue(actionContainer.accountsPageActions.ClickCancelMyAccountMHC());
+        assertTrue(actionContainer.accountsPageActions.VerifyThePageRedirectToProfileTab());
+    }
+
+    @And("^I Click Edit Button$")
+    public void iClickEditButton(){
+        assertTrue(actionContainer.accountsPageActions.ClickEditButton());
+    }
+
+    @And("^I Edit The Created Contact(.*)$")
+    public void iEditTheCreatedContact(String strFirstName) throws InterruptedException {
+        assertTrue(actionContainer.accountsPageActions.enterFirstNameEditedEmergencyContacts(Testdata.getValue(strFirstName)));
+        assertTrue(actionContainer.accountsPageActions.clickSaveEditEmergencyContacts());
+    }
+
+    @And("^I Verify The Edited Text Got Saved$")
+    public void iVerifyTheEditedTextGotSaved() {
+        assertTrue(actionContainer.accountsPageActions.VerifyTheEditedTextGotSaved());
+    }
+
+
+    @And("^Click Cancel Button and Verify it redirect to Emergency Contacts tab$")
+    public void clickCancelButtonAndVerifyItRedirectToEmergencyContactsTab() {
+        assertTrue(actionContainer.accountsPageActions.ClickCancelEmergencyContacts());
+        assertTrue(actionContainer.accountsPageActions.VerifyThePageRedirectToEmergencyContacts());
+    }
 }

@@ -8,9 +8,13 @@ LEFTPANE:
   SETUPHEADER: "Set-Up Menu"
 EMERGENCYCONTACTS:
   FIRSTNAME: "Ganesh"
+  FIRSTNAME1: "Vimal"
   MOBILEPHONE: "0405652175"
+  MOBILEPHONE1: "8010203040"
   RELATIONSHIP: "cousin"
+  RELATIONSHIP1: "Elder"
   LASTNAME: "Babu"
+  LASTNAME1: "Vinayak"
 EDITPROFILEDETAILS:
   MOBILENUMBER: "9876543210"
 PROVIDERINBOX:
@@ -44,4 +48,9 @@ GROUPMESSAGE:
   GMTO: "All Patients"
   GMSUBJECT: "Test"
   GMMESSAGE: "Test"
+ChangePassword:
+  CrntPswd: "Medtech@"
+  ConfirmNewPswd: "Cameraman123"
+  ConfirmNewPswd1: "cameraman123"
+  CrntCrtPswd: "Medtech123"
 

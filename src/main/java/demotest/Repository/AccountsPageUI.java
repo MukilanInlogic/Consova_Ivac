@@ -77,7 +77,62 @@ public class AccountsPageUI {
     @FindBy(how = How.XPATH, using = "//span[@id='ctl01_MainContent_UserProfile1_lblMobileNumber']")
     protected WebElement lblUpdatedMobilePhone;
 
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_UserProfile1_lnkChangePass']")
+    protected WebElement BtnChangePassword;
 
+    @FindBy (how = How.XPATH, using = "//input[@id='ctl01_MainContent_ChangePassword1_ChangePassword1_ChangePasswordContainerID_CurrentPassword']")
+    protected WebElement txtBoxCurrentPassword;
+
+    @FindBy (how = How.XPATH, using = "//input[@id='ctl01_MainContent_ChangePassword1_ChangePassword1_ChangePasswordContainerID_NewPassword']")
+    protected WebElement txtBoxNewPassword;
+
+    @FindBy (how = How.XPATH, using = "//input[@id='ctl01_MainContent_ChangePassword1_ChangePassword1_ChangePasswordContainerID_ConfirmNewPassword']")
+    protected WebElement txtBoxConfirmNewPassword;
+
+    @FindBy (how = How.XPATH, using = "//div[@class='text-right btn_group mob_btn_goup']//input[@id='ctl01_MainContent_ChangePassword1_ChangePassword1_ChangePasswordContainerID_ChangePasswordPushButton']")
+    protected WebElement BtnChangepasswordGreenBtn;
+
+    @FindBy (how = How.XPATH, using = "//div[@class='text-right btn_group mob_btn_goup']//div[contains(.,'Current Password is incorrect. Try again')]")
+    protected WebElement ErrorTextInChangePassword;
+
+    @FindBy (how = How.XPATH, using = "//span[contains(.,'* Please match the requested format')]")
+    protected WebElement ErrorTextMatchTherequest;
+
+    @FindBy (how = How.XPATH, using = "//span[contains(.,'The Confirm New Password must match the New Password entry.')]")
+    protected WebElement ErrorTextMissMatchConfirmNewPassword;
+
+    @FindBy (how = How.XPATH, using = "//a[text()='Change Photo']")
+    protected WebElement BtnChangePhotoMyACC;
+
+    @FindBy (how = How.XPATH, using = "//input[@type='file']")
+    protected WebElement BtnChooseFile;
+
+    @FindBy (how = How.XPATH, using = "//input[@value='Verify']")
+    protected WebElement BtnVerifyMyAcc;
+
+    @FindBy (how = How.XPATH, using = "//div[text()='Characters on the image did not match, Please try again']")
+    protected WebElement WarningimageNotMatched;
+
+    @FindBy (how = How.XPATH, using = "//input[@value='Cancel']")
+    protected WebElement BtnCancelMyACC;
+
+    @FindBy (how = How.XPATH, using = "//h4[text()='Profile Photo  ']")
+    protected WebElement CaptionProfilePhoto;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Edit']")
+    protected WebElement btnEditEmergenceContact;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_EmergencyContacts1_txtFirstnameEdit']")
+    protected WebElement txtFirstNameEdit;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_EmergencyContacts1_btnSave']")
+    protected WebElement BtnSaveEdit;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='Cancel']")
+    protected WebElement BtnCancelEmergencyContacts;
+
+    @FindBy(how = How.XPATH, using = "//h4[text()='Emergency Contacts  ']")
+    protected WebElement CaptionEmergencyContacts;
 
 
 
