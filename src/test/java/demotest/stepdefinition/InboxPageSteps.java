@@ -202,4 +202,55 @@ public class InboxPageSteps {
     public void iClickSendMessageButtonInGroupMessage() {
         assertTrue(actionContainer.inboxPageActions.clickSendMessageGroupMessage());
     }
+
+    @And("^I Click Setting Tab$")
+    public void iClickSettingTab() {
+        assertTrue(actionContainer.inboxPageActions.SelectSettingTab());
+    }
+
+    @Then("^I Click Yes Button in Alert settings$")
+    public void iClickYesButtonInAlertSettings() {
+        assertTrue(actionContainer.inboxPageActions.SelectYesRadioBtn());
+    }
+
+    @And("^I Click Save Settings Button$")
+    public void iClickSaveSettingsButton() {
+        assertTrue(actionContainer.inboxPageActions.ClickSaveBtn());
+    }
+
+    @And("^I Verify The Success Message in Provider Inbox$")
+    public void iVerifyTheSuccessMessageInProviderInbox() {
+        assertTrue(actionContainer.inboxPageActions.VerifyTheSuccessMessDisplaysInProviderInbox());
+    }
+
+    @And("^I Click Automatic replies Tab$")
+    public void iClickAutomaticRepliesTab() {
+        assertTrue(actionContainer.inboxPageActions.SelectAutomaticRepliesTab());
+    }
+
+
+    @Then("^I Enter (.*) The Valid Text In to The Automatic Replies Text box$")
+    public void iEnterAutoRepliesTextTheValidTextInToTheAutomaticRepliesTextBox(String StrAutoTxt) {
+        assertTrue(actionContainer.inboxPageActions.EnterValidMessageInAutomaticRepliesTxtBox(StrAutoTxt));
+    }
+
+    @And("^I Click The Enable Check Box$")
+    public void iClickTheEnableCheckBox() {
+        assertTrue(actionContainer.inboxPageActions.ClickEnableButtonAutoReplies());
+    }
+
+    @Then("^I Should See the page moves to compose tab$")
+    public void iShouldSeeThePageMovesToComposeTab() {
+        assertTrue(actionContainer.inboxPageActions.Verifythepagemovestocompoetab());
+    }
+
+    @And("^I Click cancel button In compose message tab$")
+    public void iClickCancelButtonInComposeMessageTab() {
+        assertTrue(actionContainer.inboxPageActions.ClickCancelComposeTab());
+    }
+
+    @And("^I Verify The Page Redirected To Inbox Tab$")
+    public void iVerifyThePageRedirectedToInboxTab() {
+        assertTrue(actionContainer.inboxPageActions.Verifythepageredirectedtoinboxtab());
+    }
 }

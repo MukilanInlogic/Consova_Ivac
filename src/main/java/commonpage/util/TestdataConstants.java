@@ -12,5 +12,6 @@ public class TestdataConstants {
     public static String REQUIREDFORMATEOOROTEXT = "* Please match the requested format";
     public static String CONFIRMPASSWORDMISSMATCH = "The Confirm New Password must match the New Password entry.";
     public static String EDITEDFIRSTNAME = "Jack";
+    public static String SUCCESSMESSAGEPROVIDERINBOX = "Settings Saved Successfully";
 
 }

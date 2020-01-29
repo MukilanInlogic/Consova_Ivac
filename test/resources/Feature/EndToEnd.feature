@@ -187,3 +187,102 @@ Feature: EneToEnd
     Examples:
       | ProviderName          | ProviderPassword          |
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+
+
+  @MT-84310
+  Scenario Outline: MT-84310:User should able to Update the new message Alert settings
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When  I click Provider Inbox link
+    And I Click Setting Tab
+    Then I Click Yes Button in Alert settings
+    And I Click Automatic replies Tab
+    And I Click Save Settings Button
+    And I Verify The Success Message in Provider Inbox
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+
+  @MT-84311
+  Scenario Outline: MT-84311:User should able to disable out of reply for the Message
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When  I click Provider Inbox link
+    And I Click Setting Tab
+    And I Click Yes Button in Alert settings
+    And I Click Automatic replies Tab
+    Then I Enter <AutoRepliesText> The Valid Text In to The Automatic Replies Text box
+    And I Click Save Settings Button
+    And I Verify The Success Message in Provider Inbox
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          |AutoRepliesText|
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |Test Message   |
+
+
+  @MT-84312
+  Scenario Outline: MT-84312:User should able to Enable out of reply for the Message
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When  I click Provider Inbox link
+    And I Click Setting Tab
+    And I Click Yes Button in Alert settings
+    And I Click Automatic replies Tab
+    And I Click The Enable Check Box
+    Then I Enter <AutoRepliesText> The Valid Text In to The Automatic Replies Text box
+    And I Click Save Settings Button
+    And I Verify The Success Message in Provider Inbox
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          |AutoRepliesText|
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |Test Message   |
+
+  @MT-84313
+  Scenario Outline: MT-84313:User should able to cancel the compose Message
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When  I click Provider Inbox link
+    And I click compose Tab
+    Then I Should See the page moves to compose tab
+    And I Click cancel button In compose message tab
+    And I Verify The Page Redirected To Inbox Tab
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,6 +2,7 @@ package demotest.action;
 
 import commonpage.toolbox.*;
 import commonpage.util.KeyUtil;
+import commonpage.util.TestdataConstants;
 import demotest.Repository.HomePageUI;
 import demotest.Repository.InboxPageUI;
 import org.openqa.selenium.WebDriver;
@@ -379,4 +380,122 @@ public class InboxPageActions extends InboxPageUI {
         return isClicked;
     }
 
+    public boolean SelectSettingTab() {
+        Boolean isClicked = false;
+        if (btnSettingtab.isDisplayed()) {
+            isClicked = Element.click(driver, btnSettingtab);
+            isClicked=true;
+        }
+        else {
+            isClicked=false;
+        }
+        return isClicked;
+
+    }
+
+    public boolean SelectYesRadioBtn() {
+        Boolean isClicked = false;
+        if (btnYesAlertSettings.isDisplayed()) {
+            isClicked = Element.click(driver, btnYesAlertSettings);
+            isClicked=true;
+        }
+        else {
+            isClicked=false;
+        }
+        return isClicked;
+    }
+
+    public boolean ClickSaveBtn() {
+        Boolean isClicked = false;
+        if (btnSaveSettings.isDisplayed()) {
+            isClicked = Element.click(driver, btnSaveSettings);
+            isClicked=true;
+        }
+        else {
+            isClicked=false;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyTheSuccessMessDisplaysInProviderInbox() {
+        boolean isVerify = false;
+        String StrSuccess = SuccessMessageProviserInbox.getText();
+        if (StrSuccess.equals(TestdataConstants.SUCCESSMESSAGEPROVIDERINBOX)){
+            isVerify=true;
+        }
+        else {
+            isVerify=false;
+        }
+        return isVerify;
+    }
+
+    public boolean SelectAutomaticRepliesTab() {
+        Boolean isClicked = false;
+        if (BtnAutomaticRepliestab.isDisplayed()) {
+            isClicked = Element.click(driver, BtnAutomaticRepliestab);
+            isClicked=true;
+        }
+        else {
+            isClicked=false;
+        }
+        return isClicked;
+    }
+
+    public boolean EnterValidMessageInAutomaticRepliesTxtBox(String StrAutoTxt) {
+        boolean isEntered = false;
+        if (txtBoxAutomaticRepliesProviderInbox.isDisplayed()){
+            isEntered = Textbox.enterValue(driver, txtBoxAutomaticRepliesProviderInbox, StrAutoTxt);
+            isEntered=true;
+        }
+        else {
+            isEntered=false;
+        }
+        return isEntered;
+    }
+
+    public boolean ClickEnableButtonAutoReplies() {
+        Boolean isClicked = false;
+        if (ChkBoxEnableOutOfOfficeReplyProiderInbox.isDisplayed()) {
+            isClicked = Element.click(driver, ChkBoxEnableOutOfOfficeReplyProiderInbox);
+            isClicked=true;
+        }
+        else {
+            isClicked=false;
+        }
+        return isClicked;
+    }
+
+    public boolean Verifythepagemovestocompoetab() {
+        boolean isVerify = false;
+        if (CaptionComposenewmessage.isDisplayed()){
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean ClickCancelComposeTab() {
+        Boolean isClicked = false;
+        if (btnCancelComposeMessageTab.isDisplayed()) {
+            isClicked = Element.click(driver, btnCancelComposeMessageTab);
+            isClicked=true;
+        }
+        else {
+            isClicked=false;
+        }
+        return isClicked;
+    }
+
+    public boolean Verifythepageredirectedtoinboxtab() {
+        boolean isVerify = false;
+        if (btnRefreshInboxTab.isDisplayed()){
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
 }

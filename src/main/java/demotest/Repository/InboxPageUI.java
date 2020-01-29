@@ -152,4 +152,44 @@ public class InboxPageUI {
     @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_GroupMessage1_btnSend']")
     protected WebElement btnSendMessageGroupMessage;
 
+    @FindBy(how = How.XPATH, using = "//a[text()='Settings']")
+    protected WebElement btnSettingtab;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucSettings_radbtnlstSettings1_0']")
+    protected WebElement btnYesAlertSettings;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucSettings_bntsave']")
+    protected WebElement btnSaveSettings;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='success']")
+    protected WebElement SuccessMessageProviserInbox;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='Automatic Replies']")
+    protected WebElement BtnAutomaticRepliestab;
+
+    @FindBy(how = How.XPATH, using = "//label[text()='Enable Out Of Office Reply']")
+    protected WebElement ChkBoxEnableOutOfOfficeReplyProiderInbox;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='oae_editor_base oae_editor_default']//table[@class='oae_editor_container']//tr//td[@class='oae_editor_editpanel_container']/following::div[@id='ctl01_MainContent_ucSettings_TabContainer1_tbAutomaticreplies_oeOutOfOffice_ctl02']")
+    protected WebElement txtBoxAutomaticRepliesProviderInbox;
+
+    @FindBy(how = How.XPATH, using = "//h4[text()='Compose New Mesage']")
+    protected WebElement CaptionComposenewmessage;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='container-fluid']//div[@id='ctl01_MainContent_ucCompose_panCompose']//div[@id='ctl01_MainContent_ucCompose_trRRP']/preceding::input[@value='Cancel']")
+    protected WebElement btnCancelComposeMessageTab;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='Refresh']")
+    protected WebElement btnRefreshInboxTab;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='Automatic Replies']")
+    protected WebElement BtnSignatureSettingstab;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='Automatic Replies']")
+    protected WebElement txtBoxSignatureSettingsProviderInbox;
+
+
+
+
+
 }
