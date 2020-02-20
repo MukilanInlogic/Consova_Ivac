@@ -181,7 +181,7 @@ public class Window {
     /**
      * Description:This method is to Switch to child window
      * @param driver
-     * @return blResult
+     * @return isDisplays
      * Author Name:Vimalan
      * Date of Development:20-feb-2020
      */
@@ -218,7 +218,7 @@ public class Window {
     /**
      * Description:This method is to Close All the child windows Except parent window
      * @param driver
-     * @return blResult
+     * @return isDisplays
      * Author Name:Vimalan
      * Date of Development:20-feb-2020
      */

@@ -1497,7 +1497,85 @@ Feature: EneToEnd
       | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME1 | DP:EMERGENCYCONTACTS.MOBILEPHONE1 | DP:EMERGENCYCONTACTS.RELATIONSHIP1 | DP:EMERGENCYCONTACTS.LASTNAME1 | Jack            |
 
 
+  @MT-83172
+  Scenario Outline: MT-83172:Check cancel button in Add Emergency contacts page
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I Click My Account Main Menu
+    When I click Emergency Contacts Tab
+    Then Emergeny Contacts tab opened
+    And click Add icon the Emergency contact Tab
+    And Click Cancel Button and Verify it redirect to Emergency Contacts tab
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
 
 
+  @MT-83173
+  Scenario Outline: MT-83129:Check cancel button in Edit Emergency contacts page
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I Click My Account Main Menu
+    When I click Emergency Contacts Tab
+    Then Emergeny Contacts tab opened
+    And click Add icon the Emergency contact Tab
+    And Enter the required details in the Emergency contacts tab: <FirstName>, <MobilePhone>, <Relationship>, <LastName>
+    And I Click Edit Button
+    And Click Cancel Button and Verify it redirect to Emergency Contacts tab
+    And Delete the Emergency Contacts
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         | FirstName                       | MobilePhone                       | Relationship                       | LastName                       |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME1 | DP:EMERGENCYCONTACTS.MOBILEPHONE1 | DP:EMERGENCYCONTACTS.RELATIONSHIP1 | DP:EMERGENCYCONTACTS.LASTNAME1 |
+
+  @MT-83174
+  Scenario Outline: MT-83161:Check cancel button in Update Profile page
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    And I Click My Account Main Menu
+    When I click Update Profile
+    Then I Click Cancel Button And Verify It redirect To Profile Tab
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
 
 
+  @MT-83515
+  Scenario Outline: MT-83515:No records available displayed in the Patient Inbox grid
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Patient Inbox link
+    And I Click Inbox Tab
+    Then I Should See no record available message in inbox table
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+
+  @MT-84295
+  Scenario Outline: MT-84295:User should able to Update the new message Alert settings
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Provider Inbox link
+    And I Click Setting Tab
+    Then I Click Yes Button in Alert settings
+    And I Click Automatic replies Tab
+    And I Click Save Settings Button
+    And I Verify The Success Message in Provider Inbox
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
