@@ -253,4 +253,69 @@ public class InboxPageSteps {
     public void iVerifyThePageRedirectedToInboxTab() {
         assertTrue(actionContainer.inboxPageActions.Verifythepageredirectedtoinboxtab());
     }
+
+    @And("^I Click Signature Settings Tab$")
+    public void iClickSignatureSettingsTab() {
+        assertTrue(actionContainer.inboxPageActions.SelectSignatureSettingsTab());
+    }
+
+    @Then("^I Enter (.*) The Valid Text In to The Signature Settings Text box$")
+    public void iEnterSignatureSettingsTheValidTextInToTheSignatureSettingsTextBox(String StrSigTxt) {
+        assertTrue(actionContainer.inboxPageActions.EnterValueInSignatureSettingTxtBox(StrSigTxt));
+    }
+
+    @Then("^I Verify The Alert Displays$")
+    public void iVerifyTheAlertDisplays() {
+        assertTrue(actionContainer.inboxPageActions.AcceptAlert());
+    }
+
+    @And("^I Click Inbox Tab$")
+    public void iClickInboxTab() {
+        assertTrue(actionContainer.inboxPageActions.ClickInboxTab());
+    }
+
+    @Then("^I Should See no record available message in inbox table$")
+    public void iShouldSeeNoRecordAvailableMessageInInboxTable() {
+        assertTrue(actionContainer.inboxPageActions.VerifyNoRecordAvailable());
+    }
+
+    @Then("^I should see Event Page Displays$")
+    public void iShouldSeeEventPageDisplays() {
+        assertTrue(actionContainer.inboxPageActions.VerifyTheEventPageDisplaysInCalender());
+    }
+
+    @And("^i Click Cancel in Calender$")
+    public void iClickCancelInCalender() {
+        assertTrue(actionContainer.inboxPageActions.ClickcancelEventCalender());
+    }
+
+    @And("^I should see the event window closed$")
+    public void iShouldSeeTheEventWindowClosed() {
+        assertTrue(actionContainer.inboxPageActions.Verifytheeventwindowclosed());
+    }
+
+    @And("^I Should See the save button is in disabled state$")
+    public void iShouldSeeTheSaveButtonIsInDisabledState() {
+        assertTrue(actionContainer.inboxPageActions.Verifythesavebtnisdisabledincalender());
+    }
+
+    @And("^i Clear All The Maditory Fields From Saved Journal Record$")
+    public void iClearAllTheMaditoryFieldsFromSavedJournalRecord() {
+        assertTrue(actionContainer.inboxPageActions.ClearTheSubjectFields());
+    }
+
+    @And("^Click Cancel View Journal$")
+    public void clickCancelViewJournal() {
+        assertTrue(actionContainer.inboxPageActions.ClickCancelJournal());
+    }
+
+    @And("^I click the Update Button View Journal$")
+    public void iClickTheUpdateButtonViewJournal() {
+        assertTrue(actionContainer.inboxPageActions.ClickUpdateButtonJournal());
+    }
+
+    @Then("^I Should See The Warning Displays In Group Message Page$")
+    public void iShouldSeeTheWarningDisplaysInGroupMessagePage() {
+        assertTrue(actionContainer.inboxPageActions.VerifyTheRequiredWarningDisplaysInGroupMessage());
+    }
 }

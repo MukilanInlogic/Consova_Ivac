@@ -4,8 +4,12 @@ LOGIN:
   PASSWORD: "Medtech123"
   PROVIDERNAME: "billb@mail.com"
   PROVIDERPASSWORD: "Medtech123"
+  PATIENTNAME: "testautomation@mail.com"
+  PATIENTPASSWORD: "Medtech123"
 LEFTPANE:
-  SETUPHEADER: "Set-Up Menu"
+  SETUPHEADER:
+  - "Set-Up Menu"
+  - - "Set-Up Menu"
 EMERGENCYCONTACTS:
   FIRSTNAME: "Ganesh"
   FIRSTNAME1: "Vimal"
@@ -18,8 +22,8 @@ EMERGENCYCONTACTS:
 EDITPROFILEDETAILS:
   MOBILENUMBER: "9876543210"
 PROVIDERINBOX:
-  HEALTHCENTRE: "Medtech"
-  LOCATION: "sydney"
+  HEALTHCENTRE: "AutomationMedtech"
+  LOCATION: "Lisa's Surgery"
   SERVICENAME: "Internal Communication"
   TO: "Clinical Staff"
   TOPATIENT: "Patient"
@@ -35,7 +39,7 @@ JOURNAL:
   CATEGORY: "General"
   NOTES: "Test"
 SETUPESERVICE:
-  SSHEALTHCARE: "Medtech"
+  SSHEALTHCARE: "AutomationMedtech"
   SSSERVICECATEGORY: "Internal Communication"
   SSSERVICENAME: "Test"
   SSSERVICECODE: "Test"
@@ -43,6 +47,16 @@ SETUPESERVICE:
   SSRECIPIENT: "Allow Patient to select Recipient"
   SSDESCRIPTION: "Test"
   SSTERMS: "Test"
+  SETUPECODE: "TESTING"
+  ESERVICENAME: "TESTING"
+  ESERVICECODE: "TESTING"
+  ESERVICENAME1: "IRONMAN"
+  ESERVICECODE1: "SPIDY"
+  ESERVICENAME2: "ADOLF"
+  ESERVICECODE2: "HITLER"
+  EDITESERVICENAME: "DEXTER"
+  EDITESERVICECODE: "LABER"
+  EDITEDESERVICENAME: "OSWALD"
 GROUPMESSAGE:
   GMFROM: "Medtech"
   GMTO: "All Patients"
@@ -53,4 +67,7 @@ ChangePassword:
   ConfirmNewPswd: "Cameraman123"
   ConfirmNewPswd1: "cameraman123"
   CrntCrtPswd: "Medtech123"
+STAFF:
+  STAFFNAME: "Balaji"
+  TOMRIDDLE: "voldmort@mail.com"
 

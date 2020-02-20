@@ -32,7 +32,7 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'Set-Up Menu')]")
     protected WebElement lblSetUpMenu;
 
-    @FindBy(how = How.XPATH, using = "//i[@title='Sign Out']")
+    @FindBy(how = How.CSS, using = "i[title='Sign Out']")
     protected WebElement iconLogout;
 
     @FindBy(how = How.XPATH, using = "//span[contains(text(),'Inbox')]")
@@ -85,6 +85,66 @@ public class HomePageUI {
 
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'My Practice')]")
     protected WebElement eleMyPractice;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='Save Entry']")
+    protected WebElement BtnSaveEntryJaurnal;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$ucJournalAddEntry$txtSubject']/following-sibling::span[contains(text(),'* Required')]")
+    protected WebElement lblRequiredErrorSubjectTxtBox;
+
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_ViewEventDetails1_grdJournalEvent_ob_grdJournalEventBodyContainer_ctl02_ctl29_ctl00_lnkBtnEdit']")
+    protected WebElement BtnEditViewJournal;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$ucEditEntry$txtSubject']/following-sibling::span[contains(text(),'* Required')]")
+    protected WebElement lblRequiredErrorEditSubjectTxtBox;
+
+    @FindBy(how = How.XPATH, using = "//li[contains(text(),'Staff')]")
+    protected WebElement BtnStaffTabPracticePage;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$txtSearchusername']")
+    protected WebElement txtBoxUserNameStafftabPracticePage;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='Search']")
+    protected WebElement BtnSearchStaffTabPracticePage;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'No Records Found')]")
+    protected WebElement CaptionNoRecordAvailableStafftabPracticepage;
+
+    @FindBy(how = How.XPATH, using = "//a[@class='pract_map']")
+    protected WebElement BtnMapLocationRolePracticePage;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$btnLocUpdate']")
+    protected WebElement BtnUpdateMapLocationRole;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$btnLocMapCancel']")
+    protected WebElement BtnCancelMapLocation;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Search Users')]")
+    protected WebElement BtnSearchUserMainMenu;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucSearch_cbo1']")
+    protected WebElement TxtBoxNameSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$ucSearch$btnGo']")
+    protected WebElement BtnSearchPatientPage;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'No Patient(s) found in ')]")
+    protected WebElement WarningnoPatientFoundSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucSearch_radSearchInput_0']")
+    protected WebElement BtnlastnamefirstnameSearchpatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucSearch_radSearchInput_1']")
+    protected WebElement BtnfirstnamelastnameSearchpatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$ucSearch$btnclear']")
+    protected WebElement BtnClearSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucSearch_chkAutoSuggest']")
+    protected WebElement BtnAutoSuggestSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//li[@class='ac_even ac_over']")
+    protected WebElement ListNameSearchPatient;
 
 }
 

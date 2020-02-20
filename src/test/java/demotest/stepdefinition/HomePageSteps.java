@@ -112,4 +112,112 @@ public class HomePageSteps {
     public void userLogoutTheApplication() {
         assertTrue(actionContainer.loginPageActions.verifyLogoutSuccess());
     }
+
+    @And("^I Click Save Button Journal$")
+    public void iClickSaveButtonJournal() {
+        assertTrue(actionContainer.homePageActions.ClickSaveEntryJournal());
+    }
+
+    @Then("^I Should See Warning Message Displays In Journal Window$")
+    public void iShouldSeeWarningMessageDisplaysInJournalWindow() {
+        assertTrue(actionContainer.homePageActions.VerifyTheRequiredErrorDisplaysJournalWindow());
+    }
+
+    @And("^I Click Edit Button View Journal$")
+    public void iClickEditButtonViewJournal() {
+        assertTrue(actionContainer.homePageActions.ClickEditBtnViewJournal());
+    }
+
+    @Then("^I Should See Warning Message Displays In Journal Window After Clear$")
+    public void iShouldSeeWarningMessageDisplaysInJournalWindowAfterClear() {
+        assertTrue(actionContainer.homePageActions.VerifyTheWarningDisplaysAfterClearInJournal());
+    }
+
+    @And("^I Click Staff Tab In Practice Page$")
+    public void iClickStaffTabInPracticePage() {
+        assertTrue(actionContainer.homePageActions.ClickStaffTabPracticePage());
+    }
+
+    @And("^I Enter Invalid Staff Name In The (.*) Text box And Click Search$")
+    public void iEnterInvalidStaffNameInTheTextBoxAndClickSearch(String StrStaffTxt) {
+        assertTrue(actionContainer.homePageActions.EnterInValidStaffinTheTxtBox(Testdata.getValue(StrStaffTxt)));
+        assertTrue(actionContainer.homePageActions.ClickSearchButtonStaffTabPracticePage());
+    }
+
+    @Then("^I Should See no record available message in staff tab practice page$")
+    public void iShouldSeeNoRecordAvailableMessageInStaffTabPracticePage() {
+        assertTrue(actionContainer.homePageActions.VerifyTheNoRecordAvailablemessageinStaffTabPracticePage());
+    }
+
+    @And("^I Click Map Location And Role Link$")
+    public void iClickMapLocationAndRoleLink() {
+        assertTrue(actionContainer.homePageActions.ClickMaplocationrolelinkpracticepage());
+    }
+
+    @Then("^I Should See map location window and click update and verify the alert displays$")
+    public void iShouldSeeMapLocationWindowAndClickUpdateAndVerifyTheAlertDisplays() {
+        assertTrue(actionContainer.homePageActions.ClickUpateBtnMapLocation());
+        assertTrue(actionContainer.inboxPageActions.AcceptAlert());
+
+    }
+
+    @And("^I Click Cancel Map Location$")
+    public void iClickCancelMapLocation() {
+        assertTrue(actionContainer.homePageActions.ClickCancelMapLocation());
+    }
+
+    @When("^I click Search user link$")
+    public void iClickSearchUserLink() {
+        assertTrue(actionContainer.homePageActions.ClickSearchUserLick());
+    }
+
+    @And("^I Enter InValid Text (.*) in name text box search patient page$")
+    public void iEnterInValidTextInNameTextBoxSearchPatientPage(String StrSearchPatientr) {
+        assertTrue(actionContainer.homePageActions.EnterInvalidPatientInTheNameTxtBox(StrSearchPatientr));
+    }
+
+    @And("^I Click Search Button Search Patient$")
+    public void iClickSearchButtonSearchPatient() {
+        assertTrue(actionContainer.homePageActions.ClickSearchBtnSearchPatient());
+    }
+
+    @Then("^I Should See The Warning Message no Patient Found Displays$")
+    public void iShouldSeeTheWarningMessageNoPatientFoundDisplays() {
+        assertTrue(actionContainer.homePageActions.VerifyTheNopatientfoundisplays());
+    }
+
+    @And("^I Click First Name radio Button$")
+    public void iClickFirstNameRadioButton() {
+        assertTrue(actionContainer.homePageActions.ClickFirstNameRadioBtnSearchAptient());
+    }
+
+    @And("^I Click Last Name radio Button$")
+    public void iClickLastNameRadioButton() {
+        assertTrue(actionContainer.homePageActions.ClickLastNameRadioBtnSearchAptient());
+    }
+
+    @Then("^I Should See The Value Enter in To The text box$")
+    public void iShouldSeeTheValueEnterInToTheTextBox() {
+        assertTrue(actionContainer.homePageActions.VerifyTheTextDisplaysinPAtientSearchtxtBox());
+    }
+
+    @And("^I Click Clear Button Search patient$")
+    public void iClickClearButtonSearchPatient() {
+        assertTrue(actionContainer.homePageActions.ClickClearButtonSearchPatient());
+    }
+
+    @Then("^I Should see the text cleared from the text box$")
+    public void iShouldSeeTheTextClearedFromTheTextBox() {
+        assertTrue(actionContainer.homePageActions.VerifyTheTextGotClearedFromTheSearchPatientTxtBox());
+    }
+
+    @And("^I Click AutoAuggest Button$")
+    public void iClickAutoAuggestButton() {
+        assertTrue(actionContainer.homePageActions.ClickAutoSuggestButtonSearchpatient());
+    }
+
+    @Then("^I Should See The Auto Suggest List Not Displays$")
+    public void iShouldSeeTheAutoSuggestListNotDisplays() {
+        assertTrue(actionContainer.homePageActions.VerifyTheSuggesstionListNotDisplays());
+    }
 }

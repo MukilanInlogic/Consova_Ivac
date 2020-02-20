@@ -9,6 +9,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import java.awt.event.KeyEvent;
+import java.util.Iterator;
+import java.util.Set;
 
 public class Window {
 
@@ -154,7 +156,6 @@ public class Window {
         }
         return blResult;
     }
-
     public static boolean alertaccept(WebDriver driver){
         boolean isalert = false;
         try{
@@ -176,4 +177,83 @@ public class Window {
         }
         return isalert;
     }
+
+    /**
+     * Description:This method is to Switch to child window
+     * @param driver
+     * @return blResult
+     * Author Name:Vimalan
+     * Date of Development:20-feb-2020
+     */
+
+    public static boolean WindowHandle(WebDriver driver){
+        boolean isDisplays = false;
+
+        String Parent = driver.getWindowHandle();
+        Set<String> Childs = driver.getWindowHandles();
+
+        Iterator<String> List = Childs.iterator();
+        try {
+            while (List.hasNext()){
+                String Child = List.next();
+                if (!Parent.equals(Child)){
+                    driver.switchTo().window(Child);
+                    System.out.println("Moved To Child");
+                    if (Parent.equals(Child)) {
+                        driver.getTitle();
+                    }
+                    else {
+                        driver.switchTo().window(Parent);
+                        System.out.println("Moved To Parent");
+                    }
+                }
+            }
+        }
+        catch (Exception e){
+            log.error(e);
+        }
+        return true;
+    }
+
+    /**
+     * Description:This method is to Close All the child windows Except parent window
+     * @param driver
+     * @return blResult
+     * Author Name:Vimalan
+     * Date of Development:20-feb-2020
+     */
+
+    public static boolean CloseChildWindow(WebDriver driver){
+        boolean isDisplays = false;
+
+        String Parent = driver.getWindowHandle();
+        Set<String> Childs = driver.getWindowHandles();
+
+        Iterator<String> List = Childs.iterator();
+        try {
+            while (List.hasNext()){
+                String Child = List.next();
+                if (!Parent.equals(Child)){
+                    driver.close();
+                    System.out.println("Closed The Child");
+                }
+                else {
+                    isDisplays = false;
+                    System.out.println("Displays Parent");
+                }
+            }
+        }
+        catch (Exception e){
+            log.error(e);
+        }
+        return true;
+    }
+
+
+
+
+
+
+
+
 }

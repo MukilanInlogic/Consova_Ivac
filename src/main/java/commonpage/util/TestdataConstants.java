@@ -13,5 +13,8 @@ public class TestdataConstants {
     public static String CONFIRMPASSWORDMISSMATCH = "The Confirm New Password must match the New Password entry.";
     public static String EDITEDFIRSTNAME = "Jack";
     public static String SUCCESSMESSAGEPROVIDERINBOX = "Settings Saved Successfully";
+    public static String SEARCHPATIENT = "TESTVALUE";
+    public static String SETUPECODE = "TESTING";
+
 
 }

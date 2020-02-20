@@ -225,7 +225,13 @@ public class InboxPageActions extends InboxPageUI {
 
     public boolean clickDeleteEvent(){
         Boolean isClicked = false;
-        isClicked = Element.click(driver, btnDeleteEvent);
+        if (btnDeleteEvent.isDisplayed()){
+            isClicked = Element.click(driver, btnDeleteEvent);
+            isClicked= true;
+        }
+        else {
+            isClicked = false;
+        }
         return isClicked;
     }
 
@@ -491,6 +497,147 @@ public class InboxPageActions extends InboxPageUI {
     public boolean Verifythepageredirectedtoinboxtab() {
         boolean isVerify = false;
         if (btnRefreshInboxTab.isDisplayed()){
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean SelectSignatureSettingsTab() {
+        Boolean isClicked = false;
+        if (BtnSignatureSettingstab.isDisplayed()) {
+            isClicked = Element.click(driver, BtnSignatureSettingstab);
+            isClicked=true;
+        }
+        else {
+            isClicked=false;
+        }
+        return isClicked;
+    }
+
+    public boolean EnterValueInSignatureSettingTxtBox(String StrSigTxt) {
+        boolean isEntered = false;
+        if (txtBoxSignatureSettingsProviderInbox.isDisplayed()){
+            isEntered = Element.click(driver, txtBoxSignatureSettingsProviderInbox);
+            isEntered = Textbox.enterValue(driver, txtBoxSignatureSettingsProviderInbox, StrSigTxt);
+            isEntered=true;
+        }
+        else {
+            isEntered=false;
+        }
+        return isEntered;
+    }
+
+    public boolean ClickInboxTab() {
+        boolean isClicked = false;
+        if (BtnInboxTab.isDisplayed()){
+            isClicked = Element.click(driver, BtnInboxTab);
+            isClicked = true;
+        }
+        else {
+            isClicked = false;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyNoRecordAvailable() {
+        boolean isVerify = false;
+        if (CaptionNoRecordAvailableInboxTab.isDisplayed()){
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean VerifyTheEventPageDisplaysInCalender() {
+        boolean isVerify = false;
+        if (btnEventSave.isDisplayed()){
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean ClickcancelEventCalender() {
+        boolean isClicked = false;
+        if (BtnCancelEventCalender.isDisplayed()){
+            isClicked = Element.click(driver, BtnCancelEventCalender);
+            isClicked = true;
+        }
+        else {
+            isClicked = false;
+        }
+        return isClicked;
+    }
+
+    public boolean Verifytheeventwindowclosed() {
+        boolean isVerify = false;
+        if (lblCalender.isDisplayed()){
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean Verifythesavebtnisdisabledincalender() {
+        boolean isVerify = false;
+        if (btnEventSave.isEnabled()){
+            isVerify = false;
+        }
+        else {
+            isVerify = true;
+        }
+        return isVerify;
+    }
+
+    public boolean ClearTheSubjectFields() {
+        boolean isClear = false;
+        if (txtBoxSubjectEditjournal.isDisplayed()){
+            isClear = Textbox.clearValue(driver, txtBoxSubjectEditjournal);
+            isClear = true;
+        }
+        else {
+            isClear = false;
+        }
+        return isClear;
+    }
+
+    public boolean ClickCancelJournal() {
+        boolean isClicked = false;
+        if (BtnCancelJournal.isDisplayed()){
+            isClicked = Element.click(driver, BtnCancelJournal);
+            isClicked = true;
+        }
+        else {
+            isClicked = false;
+        }
+        return isClicked;
+
+    }
+
+    public boolean ClickUpdateButtonJournal() {
+        boolean isClicked = false;
+        if (BtnUpdateViewJournal.isDisplayed()){
+            isClicked = Element.click(driver, BtnUpdateViewJournal);
+            isClicked = true;
+        }
+        else {
+            isClicked = false;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyTheRequiredWarningDisplaysInGroupMessage() {
+        boolean isVerify = false;
+        if (lblRequiredWarningGroupMessage.isDisplayed()){
             isVerify = true;
         }
         else {

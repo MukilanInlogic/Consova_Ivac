@@ -182,14 +182,31 @@ public class InboxPageUI {
     @FindBy(how = How.XPATH, using = "//input[@value='Refresh']")
     protected WebElement btnRefreshInboxTab;
 
-    @FindBy(how = How.XPATH, using = "//span[text()='Automatic Replies']")
+    @FindBy(how = How.XPATH, using = "//span[text()='Signature Settings']")
     protected WebElement BtnSignatureSettingstab;
 
-    @FindBy(how = How.XPATH, using = "//span[text()='Automatic Replies']")
+    @FindBy(how = How.XPATH, using = "//td[@class='oae_editor_editpanel_container']//div[@id='ctl01_MainContent_ucSettings_TabContainer1_tbAlert_editSignature_ctl02']")
     protected WebElement txtBoxSignatureSettingsProviderInbox;
 
+    @FindBy(how = How.XPATH, using = "//div[@class='menu-bar']//a[text()='Inbox']")
+    protected WebElement BtnInboxTab;
 
+    @FindBy(how = How.XPATH, using = "//div[text()='There are no records available.']")
+    protected WebElement CaptionNoRecordAvailableInboxTab;
 
+    @FindBy(how = How.XPATH, using = "//input[@value='CANCEL']")
+    protected WebElement BtnCancelEventCalender;
 
+    @FindBy(how = How.XPATH, using = "//input[@value='Cancel']")
+    protected WebElement BtnCancelJournal;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucEditEntry_txtSubject']")
+    protected WebElement txtBoxSubjectEditjournal;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='Update']")
+    protected WebElement BtnUpdateViewJournal;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_GroupMessage1_txtSubject']/following-sibling::span[contains(text(),'*Required')]")
+    protected WebElement lblRequiredWarningGroupMessage;
 
 }
