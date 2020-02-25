@@ -220,4 +220,9 @@ public class HomePageSteps {
     public void iShouldSeeTheAutoSuggestListNotDisplays() {
         assertTrue(actionContainer.homePageActions.VerifyTheSuggesstionListNotDisplays());
     }
+
+    @When("^I click Inbox link$")
+    public void iClickInboxLink() {
+        assertTrue(actionContainer.homePageActions.ClickInboxPatientMenu());
+    }
 }

@@ -25,6 +25,7 @@ PROVIDERINBOX:
   HEALTHCENTRE: "AutomationMedtech"
   LOCATION: "Lisa's Surgery"
   SERVICENAME: "Internal Communication"
+  SERVICENAMEPATIENT: "External Communication"
   TO: "Clinical Staff"
   TOPATIENT: "Patient"
   SUBJECT: "Clinical Communication"

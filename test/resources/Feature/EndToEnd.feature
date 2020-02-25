@@ -1533,6 +1533,7 @@ Feature: EneToEnd
       | ProviderName         | ProviderPassword         | FirstName                       | MobilePhone                       | Relationship                       | LastName                       |
       | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | DP:EMERGENCYCONTACTS.FIRSTNAME1 | DP:EMERGENCYCONTACTS.MOBILEPHONE1 | DP:EMERGENCYCONTACTS.RELATIONSHIP1 | DP:EMERGENCYCONTACTS.LASTNAME1 |
 
+
   @MT-83174
   Scenario Outline: MT-83161:Check cancel button in Update Profile page
     Given I am on manage my health home page
@@ -1553,7 +1554,7 @@ Feature: EneToEnd
     Given I am on manage my health home page
     And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
     And I click Login button
-    When I click Patient Inbox link
+    When I click Inbox link
     And I Click Inbox Tab
     Then I Should See no record available message in inbox table
     And I click Logout button
@@ -1568,7 +1569,7 @@ Feature: EneToEnd
     Given I am on manage my health home page
     And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
     And I click Login button
-    When I click Provider Inbox link
+    When I click Inbox link
     And I Click Setting Tab
     Then I Click Yes Button in Alert settings
     And I Click Automatic replies Tab
@@ -1579,3 +1580,143 @@ Feature: EneToEnd
     Examples:
       | ProviderName         | ProviderPassword         |
       | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+
+  @MT-83509
+  Scenario Outline: MT-83509:Should not sent a message without recepient
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Inbox link
+    And I click compose Tab
+    And I select healthcenter<HealthCentre> and Location<Location>
+    And I select the Services in the dropdown<ServiceName>
+    And I select To as Clinical Provider<Topatient>
+    When I click Send Message Button
+    Then I Verify The Alert Displays
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         | HealthCentre                  | Location                  | ServiceName                         | Topatient                        |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | DP:PROVIDERINBOX.HEALTHCENTRE | DP:PROVIDERINBOX.LOCATION | DP:PROVIDERINBOX.SERVICENAMEPATIENT | DP:PROVIDERINBOX.HEALTHCENTRE.TO |
+
+
+  @MT-84296
+  Scenario Outline: MT-84296:User should able to disable out of reply for the Message
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Inbox link
+    And I Click Setting Tab
+    And I Click Yes Button in Alert settings
+    And I Click Automatic replies Tab
+    Then I Enter <AutoRepliesText> The Valid Text In to The Automatic Replies Text box
+    And I Click Save Settings Button
+    And I Verify The Success Message in Provider Inbox
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         | AutoRepliesText |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | Test Message    |
+
+
+  @MT-84297
+  Scenario Outline: MT-84297:User should able to Enable out of reply for the Message
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Inbox link
+    And I Click Setting Tab
+    And I Click Yes Button in Alert settings
+    And I Click Automatic replies Tab
+    And I Click The Enable Check Box
+    Then I Enter <AutoRepliesText> The Valid Text In to The Automatic Replies Text box
+    And I Click Save Settings Button
+    And I Verify The Success Message in Provider Inbox
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         | AutoRepliesText |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | Test Message    |
+
+  @MT-84298
+  Scenario Outline: MT-84298:User should able to cancel the compose Message
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Inbox link
+    And I click compose Tab
+    Then I Should See the page moves to compose tab
+    And I Click cancel button In compose message tab
+    And I Verify The Page Redirected To Inbox Tab
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+  @MT-84299
+  Scenario Outline: MT-84299:User should able to update the Signature in the Provider Inbox details
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Inbox link
+    And I Click Setting Tab
+    And I Click Yes Button in Alert settings
+    And I Click Signature Settings Tab
+    Then I Enter <SignatureSettings> The Valid Text In to The Signature Settings Text box
+    And I Click Save Settings Button
+    And I Verify The Success Message in Provider Inbox
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         | SignatureSettings |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | Test Message      |
+
+
+  @MT-83285
+  Scenario Outline: MT-83285:Should not add the journal without mandatory fields
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Journal link
+    And I click New Add Journal Button
+    And I Click Save Button Journal
+    Then I Should See Warning Message Displays In Journal Window
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+
+  @MT-83279
+  Scenario Outline: MT-83279:Should not update the journal without mandatory fields
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Journal link
+    And I click New Add Journal Button
+    And I Enter the required Details<Subject> ,<Category> ,<Notes>
+    When I click the Save Entry Button
+    Then I should see updated journal
+    And I Click Edit Button View Journal
+    And i Clear All The Maditory Fields From Saved Journal Record
+    And I click the Update Button View Journal
+    Then I Should See Warning Message Displays In Journal Window After Clear
+    And Click Cancel View Journal
+    And I click Delete Journal Button
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName         | ProviderPassword         | Subject            | Category            | Notes            |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | DP:JOURNAL.SUBJECT | DP:JOURNAL.CATEGORY | DP:JOURNAL.NOTES |
+
+
+
+
+
+
+
+

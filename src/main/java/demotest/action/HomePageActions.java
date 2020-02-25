@@ -414,4 +414,17 @@ public class HomePageActions extends HomePageUI {
         }
         return isVerify;
     }
+
+    public boolean ClickInboxPatientMenu() {
+        boolean isClicked = false;
+        if (eleInboxForPatient.isDisplayed()){
+            isClicked = Element.click(driver, eleInboxForPatient);
+            isClicked = true;
+        }
+        else {
+            isClicked = false;
+        }
+        return isClicked;
+
+    }
 }

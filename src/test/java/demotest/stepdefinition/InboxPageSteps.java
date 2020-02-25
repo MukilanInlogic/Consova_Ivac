@@ -318,4 +318,6 @@ public class InboxPageSteps {
     public void iShouldSeeTheWarningDisplaysInGroupMessagePage() {
         assertTrue(actionContainer.inboxPageActions.VerifyTheRequiredWarningDisplaysInGroupMessage());
     }
+
+
 }
