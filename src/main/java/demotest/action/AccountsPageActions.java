@@ -432,6 +432,56 @@ public class AccountsPageActions extends AccountsPageUI {
         return isVerify;
 
     }
+
+    public boolean VerifyTheProfileDetailsUIDisplays() {
+        boolean isVerify = false;
+        if (CaptionProfilePhoto.isDisplayed()){
+            lblUpdateProfile.isDisplayed();
+            lblFullNamePD.isDisplayed();
+            lblPreferedNamePD.isDisplayed();
+            lblGenderPD.isDisplayed();
+            lblDOBPD.isDisplayed();
+            lblOccupationPD.isDisplayed();
+            lblUsernameEmailPD.isDisplayed();
+            lblPasswordPD.isDisplayed();
+            lblStreetPD.isDisplayed();
+            lblCityProvinceCountyPD.isDisplayed();
+            lblPostCodePD.isDisplayed();
+            lblHomePhonePD.isDisplayed();
+            lblMobilePhonePD.isDisplayed();
+            lblWorkPhonePD.isDisplayed();
+            lblInsuranceCarrierPD.isDisplayed();
+            lblCompanyNamePD.isDisplayed();
+            lblCoveragePD.isDisplayed();
+            lblGroupNamePD.isDisplayed();
+            lblGroupNumberPD.isDisplayed();
+            lblIDNumberPD.isDisplayed();
+            lblAppointmentConfirmationModePD.isDisplayed();
+            lblResidencyStatusPD.isDisplayed();
+            isVerify = true;
+
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean VerifyTheMyAccountTabsDisplays() {
+        boolean isVerify = false;
+        if (lblMyAccount.isDisplayed()){
+            eleProfileTab.isDisplayed();
+            eleMYHEALTHCENTRES.isDisplayed();
+            eleACCESSINFORMATION.isDisplayed();
+            eleEMERGENCYCONTACTS.isDisplayed();
+            isVerify = true;
+
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
 }
 
 

@@ -255,4 +255,9 @@ public class HomePageSteps {
     public void iEnterValidInputsHealthIndicator() {
         assertTrue(actionContainer.homePageActions.EnterValidTxtHealthIndicator());
     }
+
+    @Then("^I should see Main SetUp And Clinical Menus Items$")
+    public void iShouldSeeMainSetUpAndClinicalMenusItems() {
+        assertTrue(actionContainer.homePageActions.verifyTheMenuItemsDisplays());
+    }
 }

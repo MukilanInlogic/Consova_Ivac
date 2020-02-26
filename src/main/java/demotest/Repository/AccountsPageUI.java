@@ -20,6 +20,9 @@ public class AccountsPageUI {
     @FindBy(how = How.XPATH, using = "//span[@id='ctl01_SiteMapPath1']//span[contains(text(),'My Account')]")
     protected WebElement lblMyAccount;
 
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_LinkButton1']")
+    protected WebElement eleProfileTab;
+
     @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_LinkButton4']")
     protected WebElement eleMYHEALTHCENTRES;
 
@@ -116,7 +119,7 @@ public class AccountsPageUI {
     @FindBy (how = How.XPATH, using = "//input[@value='Cancel']")
     protected WebElement BtnCancelMyACC;
 
-    @FindBy (how = How.XPATH, using = "//h4[text()='Profile Photo  ']")
+    @FindBy (how = How.XPATH, using = "//h4[contains(text(),'Profile Photo  ')]")
     protected WebElement CaptionProfilePhoto;
 
     @FindBy(how = How.XPATH, using = "//a[text()='Edit']")
@@ -133,6 +136,81 @@ public class AccountsPageUI {
 
     @FindBy(how = How.XPATH, using = "//h4[text()='Emergency Contacts  ']")
     protected WebElement CaptionEmergencyContacts;
+//Personal DetailsMy Account UI
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Full Name : ')]")
+    protected WebElement lblFullNamePD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Preferred Name : ')]")
+    protected WebElement lblPreferedNamePD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Gender : ')]")
+    protected WebElement lblGenderPD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Gender : ')]")
+    protected WebElement lblDOBPD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Occupation : ')]")
+    protected WebElement lblOccupationPD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Highest Education Level :')]")
+    protected WebElement lblHighestEducationLevelPD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Username / E-mail : ')]")
+    protected WebElement lblUsernameEmailPD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Password : ')]")
+    protected WebElement lblPasswordPD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Street : ')]")
+    protected WebElement lblStreetPD;
+
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'City / Province / County')]")
+    protected WebElement lblCityProvinceCountyPD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Post code')]")
+    protected WebElement lblPostCodePD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Home Phone : ')]")
+    protected WebElement lblHomePhonePD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Mobile Phone : ')]")
+    protected WebElement lblMobilePhonePD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Work Phone : ')]")
+    protected WebElement lblWorkPhonePD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Insurance Carrier : ')]")
+    protected WebElement lblInsuranceCarrierPD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Company Name : ')]")
+    protected WebElement lblCompanyNamePD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Coverage : ')]")
+    protected WebElement lblCoveragePD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Group Name : ')]")
+    protected WebElement lblGroupNamePD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Group Number : ')]")
+    protected WebElement lblGroupNumberPD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'I.D. Number : ')]")
+    protected WebElement lblIDNumberPD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Health Care Card :')]")
+    protected WebElement lblHealthCareCardPD;
+
+    @FindBy(how = How.XPATH, using = "//Span[contains(text(),'IHI Number')]")
+    protected WebElement lblIHINumberPD;
+
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'HPI-I Number')]]")
+    protected WebElement lblHPIINumberPD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Appointment Confirmation Mode : ')]")
+    protected WebElement lblAppointmentConfirmationModePD;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Residency Status : ')]")
+    protected WebElement lblResidencyStatusPD;
 
 
 

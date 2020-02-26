@@ -201,4 +201,14 @@ public class AccountsPageSteps {
         assertTrue(actionContainer.accountsPageActions.ClickCancelEmergencyContacts());
         assertTrue(actionContainer.accountsPageActions.VerifyThePageRedirectToEmergencyContacts());
     }
+
+    @Then("^I should see All The profile details$")
+    public void iShouldSeeAllTheProfileDetails() {
+        assertTrue(actionContainer.accountsPageActions.VerifyTheProfileDetailsUIDisplays());
+    }
+
+    @And("^I should see My Account page Tabs Displays$")
+    public void iShouldSeeMyAccountPageTabsDisplays() {
+        assertTrue(actionContainer.accountsPageActions.VerifyTheMyAccountTabsDisplays());
+    }
 }

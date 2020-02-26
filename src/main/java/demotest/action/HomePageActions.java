@@ -496,4 +496,36 @@ public class HomePageActions extends HomePageUI {
         }
         return isEntered;
     }
+
+    public boolean verifyTheMenuItemsDisplays() {
+        boolean isverify = false;
+
+        if (lblHomePage.isDisplayed()){
+            BtnHomeMainMenu.isDisplayed();
+            eleMyAccount.isDisplayed();
+            eleProviderInbox.isDisplayed();
+            elePatientInbox.isDisplayed();
+            eleJournal.isDisplayed();
+            eleCalender.isDisplayed();
+            elePractice.isDisplayed();
+            eleDownloads.isDisplayed();
+            BtnSearchUserMainMenu.isDisplayed();
+            isverify = Element.click(driver,eleSetupMenu);
+            eleSetupeService.isDisplayed();
+            eleGroupMail.isDisplayed();
+            eleMyPractice.isDisplayed();
+            eleStaffListSetupMenu.isDisplayed();
+            elePracticeHelpdeskSetupMenu.isDisplayed();
+            isverify = Element.click(driver, eleClinicalMenu);
+            eleERequestClinicalMenu.isDisplayed();
+            eleDashboardClinicalMenu.isDisplayed();
+            eleAppointmentinbox.isDisplayed();
+            isverify = true;
+
+        }
+        else {
+            isverify = false;
+        }
+        return isverify;
+    }
 }

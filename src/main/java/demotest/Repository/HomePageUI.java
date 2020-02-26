@@ -68,10 +68,14 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'Clinical Menu')]")
     protected WebElement eleClinicalMenu;
 
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'e-Requests')]")
+    protected WebElement eleERequestClinicalMenu;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'e-Requests')]")
+    protected WebElement eleDashboardClinicalMenu;
 
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'Set-Up Menu')]")
     protected WebElement eleSetupMenu;
-
 
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'Appointment Inbox')]")
     protected WebElement eleAppointmentinbox;
@@ -88,6 +92,12 @@ public class HomePageUI {
 
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'My Practice')]")
     protected WebElement eleMyPractice;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Staff List')]")
+    protected WebElement eleStaffListSetupMenu;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Practice Helpdesk')]")
+    protected WebElement elePracticeHelpdeskSetupMenu;
 
     @FindBy(how = How.XPATH, using = "//input[@value='Save Entry']")
     protected WebElement BtnSaveEntryJaurnal;
@@ -166,6 +176,9 @@ public class HomePageUI {
 
     @FindBy(how = How.XPATH, using = "//input[@id='txtWeight']")
     protected WebElement TxtBoxWeightBMIHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='menu-img my-account Home']//a[contains(text(),'Home')]")
+    protected WebElement BtnHomeMainMenu;
 
 }
 
