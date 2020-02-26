@@ -149,6 +149,24 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//li[@class='ac_even ac_over']")
     protected WebElement ListNameSearchPatient;
 
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Health Indicators')]")
+    protected WebElement BtnHealthIndicatorMainMenu;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(@id,'grid_link_Add_0')]")
+    protected WebElement BtnAddHealthIndicatorMainMenu;
+
+    @FindBy(how = How.XPATH, using = "//label[contains(text(),'BMI')]/following::div[@id='trPHQ9']/following::div[@id='trHIComments']/following::div[@class='up_Section']//div[@class='btn_group btn_linkbtn ec_edit']//input[@value='Save']")
+    protected WebElement BtnSaveAddHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//label[contains(text(),'BMI')]/following::div[@id='trPHQ9']/following::div[@id='trHIComments']/following::div[@class='up_Section']/following::div[@class='ui-dialog-buttonpane ui-widget-content ui-helper-clearfix']//button[text()='Close']")
+    protected WebElement BtnCloseAddHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='txtCurrentValue']")
+    protected WebElement TxtBoxHeightBMIHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='txtWeight']")
+    protected WebElement TxtBoxWeightBMIHealthIndicator;
+
 }
 
 

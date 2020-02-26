@@ -1674,22 +1674,6 @@ Feature: EneToEnd
       | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | Test Message      |
 
 
-  @MT-83285
-  Scenario Outline: MT-83285:Should not add the journal without mandatory fields
-    Given I am on manage my health home page
-    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
-    And I click Login button
-    When I click Journal link
-    And I click New Add Journal Button
-    And I Click Save Button Journal
-    Then I Should See Warning Message Displays In Journal Window
-    And I click Logout button
-
-    Examples:
-      | ProviderName         | ProviderPassword         |
-      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
-
-
   @MT-83279
   Scenario Outline: MT-83279:Should not update the journal without mandatory fields
     Given I am on manage my health home page
@@ -1712,6 +1696,144 @@ Feature: EneToEnd
     Examples:
       | ProviderName         | ProviderPassword         | Subject            | Category            | Notes            |
       | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | DP:JOURNAL.SUBJECT | DP:JOURNAL.CATEGORY | DP:JOURNAL.NOTES |
+
+
+  @MT-83285
+  Scenario Outline: MT-83285:Should not add the journal without mandatory fields
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Journal link
+    And I click New Add Journal Button
+    And I Click Save Button Journal
+    Then I Should See Warning Message Displays In Journal Window
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+
+  @MT-83411
+  Scenario Outline: MT-83411:Cancel the Event Creation
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Calender link
+    Then I should see Calender Page
+    And I click the calender to open the Add event popup
+    Then I should see Event Page Displays
+    And i Click Cancel in Calender
+    And I should see the event window closed
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+
+  @MT-83412
+  Scenario Outline: MT-83412:Verify Save button should not enable without enter the mandatory fields
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Calender link
+    Then I should see Calender Page
+    And I click the calender to open the Add event popup
+    Then I should see Event Page Displays
+    And I Should See the save button is in disabled state
+    And i Click Cancel in Calender
+    And I should see the event window closed
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+
+  @MT-83413
+  Scenario Outline: MT-83413:Delete the Added event in the Calendar
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Calender link
+    Then I should see Calender Page
+    And I click the calender to open the Add event popup
+    And I Enter the required details<Title>, <Description>
+    When I click Event
+    Then I should see added Event is displayed in the claender Page
+    And I click the Delete Event Button
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         | Title             | Description             |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | DP:CALENDAR.TITLE | DP:CALENDAR.DESCRIPTION |
+
+
+  @MT-83414
+  Scenario Outline: MT-83414:Check cancel button while editing/view the event popup
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Calender link
+    Then I should see Calender Page
+    And I click the calender to open the Add event popup
+    Then I should see Event Page Displays
+    And i Click Cancel in Calender
+    And I should see the event window closed
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+
+  @MT-79959
+  Scenario Outline: MT-79959:Patient can not able to add New Entry to Health Indicator Fields
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Health Indicator
+    And I Click Add Button Healthindicator
+    And I Click Save Button Add Health Indicator
+    Then I Should See Alert Displays In Health Indicator
+    And I Click Close Button Health Indicator
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+
+  @MT-80222
+  Scenario Outline: MT-80222:Enter the Invalid value in the Health Indicator textbox
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Health Indicator
+    And I Click Add Button Healthindicator
+    And I Enter valid inputs health indicator
+    And I Click Save Button Add Health Indicator
+    Then I Should See Alert Displays In Health Indicator
+    And I Click Close Button Health Indicator
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

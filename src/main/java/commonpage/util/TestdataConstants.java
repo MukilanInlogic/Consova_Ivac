@@ -15,6 +15,7 @@ public class TestdataConstants {
     public static String SUCCESSMESSAGEPROVIDERINBOX = "Settings Saved Successfully";
     public static String SEARCHPATIENT = "TESTVALUE";
     public static String SETUPECODE = "TESTING";
+    public static String HEIGHTBMI = "3KD";
 
 
 }

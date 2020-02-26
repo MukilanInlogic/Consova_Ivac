@@ -1,5 +1,6 @@
 package demotest.action;
 
+import commonpage.toolbox.Alert;
 import commonpage.toolbox.Element;
 import commonpage.toolbox.Textbox;
 import commonpage.util.TestdataConstants;
@@ -426,5 +427,73 @@ public class HomePageActions extends HomePageUI {
         }
         return isClicked;
 
+    }
+
+    public boolean ClickHealthIndicator() {
+        boolean isClicked = false;
+        if (BtnHealthIndicatorMainMenu.isDisplayed()){
+            isClicked = Element.click(driver, BtnHealthIndicatorMainMenu);
+            isClicked = true;
+        }
+        else {
+            isClicked = false;
+        }
+        return isClicked;
+    }
+
+    public boolean ClickAddBtnHealthIndicator() {
+        boolean isClicked = false;
+        if (BtnAddHealthIndicatorMainMenu.isDisplayed()){
+            isClicked = Element.click(driver, BtnAddHealthIndicatorMainMenu);
+            isClicked = true;
+        }
+        else {
+            isClicked = false;
+        }
+        return isClicked;
+    }
+
+    public boolean ClickSaveAddHealthIndicator() {
+        boolean isClicked = false;
+        if (BtnSaveAddHealthIndicator.isDisplayed()){
+            isClicked = Element.click(driver, BtnSaveAddHealthIndicator);
+            isClicked = true;
+        }
+        else {
+            isClicked = false;
+        }
+        return isClicked;
+    }
+
+    public boolean AcceptAlertHealthIndicator() {
+        boolean isAccepted = false;
+        isAccepted = Alert.acceptAlert(driver);
+        return isAccepted;
+    }
+
+    public boolean ClickCloseBtnhealthindicator() {
+        boolean isClicked = false;
+        if (BtnCloseAddHealthIndicator.isDisplayed()){
+            isClicked = Element.click(driver, BtnCloseAddHealthIndicator);
+            isClicked = true;
+        }
+        else {
+            isClicked = false;
+        }
+        return isClicked;
+    }
+
+    public boolean EnterValidTxtHealthIndicator() {
+        boolean isEntered = false;
+
+        if (TxtBoxHeightBMIHealthIndicator.isDisplayed()){
+            isEntered = Textbox.enterValue(driver, TxtBoxHeightBMIHealthIndicator, TestdataConstants.HEIGHTBMI);
+            isEntered = Textbox.enterValue(driver, TxtBoxWeightBMIHealthIndicator, TestdataConstants.HEIGHTBMI);
+            isEntered = true;
+        }
+        else {
+            isEntered = false;
+        }
+        return isEntered;
     }
 }

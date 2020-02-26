@@ -225,4 +225,34 @@ public class HomePageSteps {
     public void iClickInboxLink() {
         assertTrue(actionContainer.homePageActions.ClickInboxPatientMenu());
     }
+
+    @When("^I click Health Indicator$")
+    public void iClickHealthIndicator() {
+        assertTrue(actionContainer.homePageActions.ClickHealthIndicator());
+    }
+
+    @And("^I Click Add Button Healthindicator$")
+    public void iClickAddButtonHealthindicator() {
+        assertTrue(actionContainer.homePageActions.ClickAddBtnHealthIndicator());
+    }
+
+    @And("^I Click Save Button Add Health Indicator$")
+    public void iClickSaveButtonAddHealthIndicator() {
+        assertTrue(actionContainer.homePageActions.ClickSaveAddHealthIndicator());
+    }
+
+    @Then("^I Should See Alert Displays In Health Indicator$")
+    public void iShouldSeeAlertDisplaysInHealthIndicator() {
+        assertTrue(actionContainer.homePageActions.AcceptAlertHealthIndicator());
+    }
+
+    @And("^I Click Close Button Health Indicator$")
+    public void iClickCloseButtonHealthIndicator() {
+        assertTrue(actionContainer.homePageActions.ClickCloseBtnhealthindicator());
+    }
+
+    @And("^I Enter valid inputs health indicator$")
+    public void iEnterValidInputsHealthIndicator() {
+        assertTrue(actionContainer.homePageActions.EnterValidTxtHealthIndicator());
+    }
 }
