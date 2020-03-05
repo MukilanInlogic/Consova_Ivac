@@ -132,6 +132,29 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$btnLocMapCancel']")
     protected WebElement BtnCancelMapLocation;
 
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Health Indicators')]")
+    protected WebElement BtnHealthIndicatorMainMenu;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(@id,'grid_link_Add_0')]")
+    protected WebElement BtnAddHealthIndicatorMainMenu;
+
+    @FindBy(how = How.XPATH, using = "//label[contains(text(),'BMI')]/following::div[@id='trPHQ9']/following::div[@id='trHIComments']/following::div[@class='up_Section']//div[@class='btn_group btn_linkbtn ec_edit']//input[@value='Save']")
+    protected WebElement BtnSaveAddHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//label[contains(text(),'BMI')]/following::div[@id='trPHQ9']/following::div[@id='trHIComments']/following::div[@class='up_Section']/following::div[@class='ui-dialog-buttonpane ui-widget-content ui-helper-clearfix']//button[text()='Close']")
+    protected WebElement BtnCloseAddHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='txtCurrentValue']")
+    protected WebElement TxtBoxHeightBMIHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='txtWeight']")
+    protected WebElement TxtBoxWeightBMIHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='menu-img my-account Home']//a[contains(text(),'Home')]")
+    protected WebElement BtnHomeMainMenu;
+
+// Search Patient
+
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'Search Users')]")
     protected WebElement BtnSearchUserMainMenu;
 
@@ -156,29 +179,65 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucSearch_chkAutoSuggest']")
     protected WebElement BtnAutoSuggestSearchPatient;
 
-    @FindBy(how = How.XPATH, using = "//li[@class='ac_even ac_over']")
-    protected WebElement ListNameSearchPatient;
+    @FindBy(how = How.XPATH, using = "//span[text()='Search Patients']")
+    protected WebElement lblSearchPatient;
 
-    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Health Indicators')]")
-    protected WebElement BtnHealthIndicatorMainMenu;
+    @FindBy(how = How.XPATH, using = "//select[@name='ctl01$MainContent$ucSearch$cmbPractice']")
+    protected WebElement DropDnSearchInSearchPatient;
 
-    @FindBy(how = How.XPATH, using = "//a[contains(@id,'grid_link_Add_0')]")
-    protected WebElement BtnAddHealthIndicatorMainMenu;
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucSearch_chkAdvSearch']")
+    protected WebElement BtnAdvancedSearchPatient;
 
-    @FindBy(how = How.XPATH, using = "//label[contains(text(),'BMI')]/following::div[@id='trPHQ9']/following::div[@id='trHIComments']/following::div[@class='up_Section']//div[@class='btn_group btn_linkbtn ec_edit']//input[@value='Save']")
-    protected WebElement BtnSaveAddHealthIndicator;
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_ucSearch_chkAdvSearch']")
+    protected WebElement lblAdvancedSearchPatient;
 
-    @FindBy(how = How.XPATH, using = "//label[contains(text(),'BMI')]/following::div[@id='trPHQ9']/following::div[@id='trHIComments']/following::div[@class='up_Section']/following::div[@class='ui-dialog-buttonpane ui-widget-content ui-helper-clearfix']//button[text()='Close']")
-    protected WebElement BtnCloseAddHealthIndicator;
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Age :')]/following::select[@name='ctl01$MainContent$ucSearch$ddlAgeGreater']")
+    protected WebElement lblAgeSearchPatient;
 
-    @FindBy(how = How.XPATH, using = "//input[@id='txtCurrentValue']")
-    protected WebElement TxtBoxHeightBMIHealthIndicator;
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'DOB :')]/following::input[@name='ctl01$MainContent$ucSearch$txtDOBDate']")
+    protected WebElement lblDOBSearchPatient;
 
-    @FindBy(how = How.XPATH, using = "//input[@id='txtWeight']")
-    protected WebElement TxtBoxWeightBMIHealthIndicator;
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'To :')]/following::select[@name='ctl01$MainContent$ucSearch$ddlAgeLessthen']")
+    protected WebElement lblToSearchPatient;
 
-    @FindBy(how = How.XPATH, using = "//span[@class='menu-img my-account Home']//a[contains(text(),'Home')]")
-    protected WebElement BtnHomeMainMenu;
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Gender :')]/following::select[@name='ctl01$MainContent$ucSearch$cmbGender']")
+    protected WebElement lblGenderSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Email :')]/following::input[@name='ctl01$MainContent$ucSearch$txtEmail']")
+    protected WebElement lblEmailSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_ucSearch_lstvewSearchResult_ctrl0_lnkUserName']")
+    protected WebElement lblDisplayPatientSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//img[@id='imgVidyoIO']")
+    protected WebElement BtnVideoIconSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Send a Message']")
+    protected WebElement BtnSendAMessageSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='View Dashboard']")
+    protected WebElement BtnViewDashBoardSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='View Goals']")
+    protected WebElement BtnViewGoalsSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Clinical Notes']")
+    protected WebElement BtnClinicalNotesSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='View Health Indicator']")
+    protected WebElement BtnViewHealthIndicatorSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='View Health Summary']")
+    protected WebElement BtnViewHealthSummarySearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='View Journal']")
+    protected WebElement BtnViewJournalSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='View Profile']")
+    protected WebElement BtnViewProfileSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Back To Search']")
+    protected WebElement BtnBacktoSearchPatient;
 
 }
 

@@ -211,9 +211,10 @@ public class InboxPageActions extends InboxPageUI {
     }
 
 
-    public boolean clickEventSave() {
+    public boolean clickEventSave() throws InterruptedException {
         Boolean isClicked = false;
         isClicked = Element.click(driver, btnEventSave);
+        Thread.sleep(5000);
         return isClicked;
     }
 
@@ -647,4 +648,294 @@ public class InboxPageActions extends InboxPageUI {
     }
 
 
+    public boolean VerifyTheTabsAndUIDisplays() {
+        boolean isVerify = false;
+        if (BtnInboxTab.isDisplayed()){
+            eleTabCompose.isDisplayed();
+            eleTabSent.isDisplayed();
+            eleTrashTab.isDisplayed();
+            btnSettingtab.isDisplayed();
+            btnRefreshInboxTab.isDisplayed();
+            btnMoreActionsInboxTab.isDisplayed();
+            btnComposeInboxTab.isDisplayed();
+            CaptionRecordsPerPages.isDisplayed();
+            CaptionRecordsPages.isDisplayed();
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean VerifyComposeTabElements() {
+        boolean isVerify = false;
+        if (CaptionComposenewmessage.isDisplayed()){
+            lblHealthCentre.isDisplayed();
+            lblLocation.isDisplayed();
+            lblServiceName.isDisplayed();
+            lblCost.isDisplayed();
+            lblTo.isDisplayed();
+            TxtBoxStartTyping.isDisplayed();
+            lblSubject.isDisplayed();
+            lblAttachments.isDisplayed();
+            ChkBoxAccept.isDisplayed();
+            btnSendMessage.isDisplayed();
+            btnCancelComposeMessageTab.isDisplayed();
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean VerifyAllTheElementsInJournalDisplays() {
+        boolean isVerify = false;
+        if (btnAddJournal.isDisplayed()){
+            lblDateViewjournal.isDisplayed();
+            lblSubjectViewjournal.isDisplayed();
+            lblCategoryViewjournal.isDisplayed();
+            lblMoreInfoViewjournal.isDisplayed();
+            lblEditViewjournal.isDisplayed();
+            lblDeleteViewjournal.isDisplayed();
+            CaptionNoRecordAvailableInboxTab.isDisplayed();
+            lblRecordsPerPageViewjournal.isDisplayed();
+            lblRecordPagesViewjournal.isDisplayed();
+            TabAddNewEntryjournal.isDisplayed();
+            ImgHelpJournal.isDisplayed();
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean VerifyElementsDisplaysInAddJournal() {
+        boolean isVerify = false;
+        if (lblSubjectAddJournal.isDisplayed()){
+            lblCategoryAddJournal.isDisplayed();
+            lblNotesAddJournal.isDisplayed();
+            lblDateAddJournal.isDisplayed();
+            lblScheduleEventAddJournal.isDisplayed();
+            lblAddEventAddJournal.isDisplayed();
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean ClickMoreInfoBtn() {
+        boolean isClicked = false;
+        if (BtnMoreInfoViewJournal.isDisplayed()){
+            isClicked = Element.click(driver, BtnMoreInfoViewJournal);
+            isClicked = true;
+        }
+        else {
+            isClicked = false;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyJorunalinfoDetails() {
+        boolean isVerify = false;
+        if (lblJorunalInformationWindow.isDisplayed()){
+            lblSubjectJorunalInformationWindow.isDisplayed();
+            lblCategoryJorunalInformationWindow.isDisplayed();
+            lblEventDateJorunalInformationWindow.isDisplayed();
+            lblStartDateJorunalInformationWindow.isDisplayed();
+            lblLastUpdatedDateJorunalInformationWindow.isDisplayed();
+            lblDescriptionJorunalInformationWindow.isDisplayed();
+            lblReminderSetOnJorunalInformationWindow.isDisplayed();
+            BtnCloseJorunalInformationWindow.isDisplayed();
+            isVerify = Element.click(driver, BtnCloseJorunalInformationWindow);
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean VerifyElementsDisplaysInEditJournal() {
+        boolean isVerify = false;
+        if (lblSubjectAddJournal.isDisplayed()){
+            lblCategoryAddJournal.isDisplayed();
+            lblNotesAddJournal.isDisplayed();
+            lblDateAddJournal.isDisplayed();
+            lblScheduleEventAddJournal.isDisplayed();
+            lblEditAddEventAddJournal.isDisplayed();
+            ListDontRemindMeJorunalInformationWindow.isDisplayed();
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean ClickDeleteAndDismiss() {
+        Boolean isClicked = false;
+        isClicked = Element.click(driver, btnDeleteJournal);
+        isClicked = Alert.dismissAlert(driver);
+        return isClicked;
+    }
+
+    public boolean VerifyAllElementsDisplaysInCalenderpage() {
+        boolean isVerify = false;
+        if (lblCalender.isDisplayed()){
+            ImgHelpCalenderWindow.isDisplayed();
+            BtnTodayCalender.isDisplayed();
+            BtnLeftNavigationCalender.isDisplayed();
+            BtnRightNavigationCalender.isDisplayed();
+            BtnDayCalender.isDisplayed();
+            BtnWeekCalender.isDisplayed();
+            BtnMonthCalender.isDisplayed();
+            lblGeneralCalender.isDisplayed();
+            lblAppointmentCalender.isDisplayed();
+            lblJournalCalender.isDisplayed();
+            isVerify = Element.verifyBGColor(lblGeneralCalender, TestdataConstants.GENERALRGB);
+            isVerify = Element.verifyBGColor(lblGeneralCalender, TestdataConstants.APPOINTMENTRGB);
+            isVerify = Element.verifyBGColor(lblGeneralCalender, TestdataConstants.JOURNALRGB);
+            isVerify = Element.verifyBGColor(BtnTodayDateSlotCalender, TestdataConstants.TODATSLOTBORDERRGB);
+            isVerify = true;
+            if (BtnTodayCalender.isEnabled()){
+                isVerify = false;
+            }
+            else {
+                isVerify = true;
+            }
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean ClickNavigateAndVerifyTodayBtn() {
+        Boolean isClicked = false;
+        if (BtnDayCalender.isDisplayed()){
+            isClicked = Element.click(driver, BtnDayCalender);
+            lblTimeStampCalender.isDisplayed();
+            BtnTodayCalender.isEnabled();
+            if (BtnWeekCalender.isDisplayed()){
+                isClicked = Element.click(driver, BtnWeekCalender);
+                lblDateStampCalender.isDisplayed();
+                isClicked = Element.click(driver, BtnWeekCalender);
+                BtnTodayDateSlotCalender.isDisplayed();
+            }
+        }
+        else {
+            isClicked = false;
+        }
+        return isClicked;
+    }
+
+    public boolean ClickHelpButtonCalender() {
+        boolean isClicked = false;
+        if (ImgHelpCalenderWindow.isDisplayed()){
+            isClicked = Element.click(driver, ImgHelpCalenderWindow);
+            HelpCalenderWindow.isDisplayed();
+            isClicked = Element.click(driver, BtnCloseHelpCalenderWindow);
+        }else {
+            isClicked = false;
+        }
+        return  isClicked;
+    }
+
+    public boolean ClickEventAndVerifyElementsDisplays() throws InterruptedException {
+        boolean isClicked = false;
+        if (BtnCancelEventCalender.isDisplayed()){
+            isClicked = Element.click(driver, BtnCancelEventCalender);
+            eleEvent.isDisplayed();
+            isClicked = Element.click(driver, eleEvent);
+            isClicked = Element.click(driver, btnEventSave);
+            Thread.sleep(5000);
+            eleEvent.isDisplayed();
+            Thread.sleep(5000);
+        }else {
+            isClicked = false;
+        }
+        return  isClicked;
+    }
+
+    public boolean VerifyAllElementsDisplaysInEventPage() {
+        boolean isVerify = false;
+        if (btnEventSave.isDisplayed()){
+            lblDescriptionEventCalender.isDisplayed();
+            lblAllDayEventCalender.isDisplayed();
+            lblStartEventCalender.isDisplayed();
+            lblEndEventCalender.isDisplayed();
+            lblTitleEventCalender.isDisplayed();
+            isVerify = Element.click(driver, BtnCancelEventCalender);
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean DragAndDropEventtask() throws InterruptedException {
+        boolean isdragdop = false;
+        if (eleEvent.isDisplayed()){
+            isdragdop = Element.dragAndDropXpath(eleEvent, BtnNextDateSlotCalender, driver);
+            eleEvent.isDisplayed();
+            Thread.sleep(5000);
+            isdragdop = true;
+        }else{
+            isdragdop=false;
+        }
+        return  isdragdop;
+    }
+
+    public boolean VerifyElementsInPracticePage() {
+        boolean isVerify = false;
+        if (lblPractice.isDisplayed()){
+           String ABC = lblTitlePractice.getText();
+            BtnSelectYourPractice.equals(ABC);
+            BtnEditPractice.isDisplayed();
+            lblIDLocationTabPractice.isDisplayed();
+            lblLocationNameLocationTabPractice.isDisplayed();
+            lblLocationLocationTabPractice.isDisplayed();
+            lblTimeZoneLocationTabPractice.isDisplayed();
+            isVerify = Element.click(driver, BtnStaffTabPracticePage);
+            lblFullNameStaffTabPracticePage.isDisplayed();
+            lblUserNameStaffTabPracticePage.isDisplayed();
+            BtnSearchStaffTabPracticePage.isDisplayed();
+            lblStaffTabPracticePage.isDisplayed();
+
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean ClickMapButton() {
+        boolean isClicked = false;
+        if (ImgMapPracticePage.isDisplayed()){
+            isClicked = Element.click(driver, ImgMapPracticePage);
+            isClicked = true;
+        }
+        else {
+            isClicked=false;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyMapWindow() {
+        boolean isVerify = false;
+        if (WindowMapPracticePage.isDisplayed()){
+            isVerify = Alert.acceptAlert(driver);
+            isVerify = Element.click(driver, BtnCloseWindowMapPracticePage);
+
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
 }

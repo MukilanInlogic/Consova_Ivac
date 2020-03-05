@@ -528,4 +528,63 @@ public class HomePageActions extends HomePageUI {
         }
         return isverify;
     }
+
+    public boolean VerifyElementInSearchPaient() throws InterruptedException {
+        boolean isVerify = false;
+        if (lblSearchPatient.isDisplayed()){
+            DropDnSearchInSearchPatient.isDisplayed();
+            BtnSearchPatientPage.isDisplayed();
+            BtnlastnamefirstnameSearchpatient.isDisplayed();
+            BtnfirstnamelastnameSearchpatient.isDisplayed();
+            BtnClearSearchPatient.isDisplayed();
+            BtnAutoSuggestSearchPatient.isDisplayed();
+            lblAdvancedSearchPatient.isDisplayed();
+            isVerify = Element.click(driver, BtnAdvancedSearchPatient);
+            Thread.sleep(5000);
+            lblAgeSearchPatient.isDisplayed();
+            lblDOBSearchPatient.isDisplayed();
+            lblToSearchPatient.isDisplayed();
+            lblGenderSearchPatient.isDisplayed();
+            lblEmailSearchPatient.isDisplayed();
+            isVerify = true;
+        }
+        return isVerify;
+    }
+
+    public boolean VerifyStateOfAutoSuggestCheckBox() {
+        boolean isVerify = false;
+        if (BtnAutoSuggestSearchPatient.isSelected()){
+            isVerify = Element.click(driver, BtnAutoSuggestSearchPatient);
+            isVerify = true;
+            if (BtnAutoSuggestSearchPatient.isSelected()){
+                isVerify = false;
+            }else {
+                isVerify = true;
+            }
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean VerifyPatientSearchDelails() {
+        boolean isVerify = false;
+        if (lblDisplayPatientSearchPatient.isDisplayed()){
+            BtnVideoIconSearchPatient.isDisplayed();
+            BtnSendAMessageSearchPatient.isDisplayed();
+            BtnViewDashBoardSearchPatient.isDisplayed();
+            BtnViewGoalsSearchPatient.isDisplayed();
+            BtnClinicalNotesSearchPatient.isDisplayed();
+            BtnViewHealthIndicatorSearchPatient.isDisplayed();
+            BtnViewHealthSummarySearchPatient.isDisplayed();
+            BtnViewJournalSearchPatient.isDisplayed();
+            BtnViewProfileSearchPatient.isDisplayed();
+            BtnBacktoSearchPatient.isDisplayed();
+            isVerify = Element.click(driver, BtnBacktoSearchPatient);
+            lblDisplayPatientSearchPatient.isDisplayed();
+        }
+
+        return isVerify;
+    }
 }

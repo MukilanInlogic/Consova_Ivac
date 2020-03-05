@@ -211,4 +211,19 @@ public class AccountsPageSteps {
     public void iShouldSeeMyAccountPageTabsDisplays() {
         assertTrue(actionContainer.accountsPageActions.VerifyTheMyAccountTabsDisplays());
     }
+
+    @And("^I Should See The Emergency contact details displays$")
+    public void iShouldSeeTheEmergencyContactDetailsDisplays() {
+        assertTrue(actionContainer.accountsPageActions.VerifyTheEmergencyContactDetailsDisplays());
+    }
+
+    @And("^Delete the Emergency Contacts And Click cancel In Alert$")
+    public void deleteTheEmergencyContactsAndClickCancelInAlert() {
+        assertTrue(actionContainer.accountsPageActions.ClickdeleteBtnAndDismissTheAlertEmergencyContact());
+    }
+
+    @Then("^I should see All The profile details Bread Crumb$")
+    public void iShouldSeeAllTheProfileDetailsBreadCrumb() {
+        assertTrue(actionContainer.accountsPageActions.VerifyTheProfiledetails());
+    }
 }

@@ -260,4 +260,19 @@ public class HomePageSteps {
     public void iShouldSeeMainSetUpAndClinicalMenusItems() {
         assertTrue(actionContainer.homePageActions.verifyTheMenuItemsDisplays());
     }
+
+    @Then("^I Should See All Elements Displays In Search Patient$")
+    public void iShouldSeeAllElementsDisplaysInSearchPatient() throws InterruptedException {
+        assertTrue(actionContainer.homePageActions.VerifyElementInSearchPaient());
+    }
+
+    @And("^I Check Whether The Auto Suggest Checked Or not$")
+    public void iCheckWhetherTheAutoSuggestCheckedOrNot() {
+        assertTrue(actionContainer.homePageActions.VerifyStateOfAutoSuggestCheckBox());
+    }
+
+    @Then("^I Should See Patient Search details$")
+    public void iShouldSeePatientSearchDetails() {
+        assertTrue(actionContainer.homePageActions.VerifyPatientSearchDelails());
+    }
 }

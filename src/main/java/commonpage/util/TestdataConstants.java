@@ -14,8 +14,10 @@ public class TestdataConstants {
     public static String EDITEDFIRSTNAME = "Jack";
     public static String SUCCESSMESSAGEPROVIDERINBOX = "Settings Saved Successfully";
     public static String SEARCHPATIENT = "TESTVALUE";
-    public static String SETUPECODE = "TESTING";
     public static String HEIGHTBMI = "3KD";
-
-
+    public  static  String GENERALRGB = "#8ec43b";
+    public  static  String APPOINTMENTRGB = "#0170c1";
+    public  static  String JOURNALRGB = "#b388fe";
+    public  static  String TODATSLOTBORDERRGB = "#fad42e";
+    public  static  String EventTaskCalenderRGB = "#8EC43B";
 }

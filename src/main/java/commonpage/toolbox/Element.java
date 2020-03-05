@@ -940,6 +940,34 @@ public class Element implements Comparator {
 
     }
 
+    /**
+     * Description:This method is used to Verify UI Background color
+     * @param element,strTextRGBValue,strBorderRGBValue
+     * @return isColor
+     * Author Name:Vimalan
+     * Date of Development:03-March-2020
+     */
+    public static boolean verifyBGColor(WebElement element, String strBorderRGBValue) {
+        boolean isColor = false;
+        String strOriginalBgColor = element.getCssValue("background-color");
+
+        try {
+            if (strOriginalBgColor.equals(strBorderRGBValue)) {
+                isColor = true;
+            } else {
+                System.out.println();
+                System.out.println("");
+                System.out.println("Verify Text BG And Border Color: ");
+                System.out.println(">> Border COLOR : " + strBorderRGBValue);
+                System.out.println("FINAL BOOLEAN : " + isColor);
+                System.out.println();
+                isColor = false;
+            }
+        } catch (Exception e) {
+            log.error(e);
+        }
+        return isColor;
+    }
 
     /**
      * Description:This method is used to Compare Two List value Webelement List and Testdata List

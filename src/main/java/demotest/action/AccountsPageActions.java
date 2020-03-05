@@ -458,6 +458,7 @@ public class AccountsPageActions extends AccountsPageUI {
             lblIDNumberPD.isDisplayed();
             lblAppointmentConfirmationModePD.isDisplayed();
             lblResidencyStatusPD.isDisplayed();
+            lblAppointmentModeAutomaticPD.isDisplayed();
             isVerify = true;
 
         }
@@ -481,6 +482,55 @@ public class AccountsPageActions extends AccountsPageUI {
             isVerify = false;
         }
         return isVerify;
+    }
+
+    public boolean VerifyTheEmergencyContactDetailsDisplays() {
+        boolean isVerify = false;
+        if (btnAddEmergencyContacts.isDisplayed()){
+            isVerify = Element.click(driver, btnAddEmergencyContacts);
+            lblTxtBoxFirstNameEmergencyContacts.isDisplayed();
+            lblTxtBoxLastNameEmergencyContacts.isDisplayed();
+            lblTxtBoxEmailEmergencyContacts.isDisplayed();
+            lblTxtBoxHomePhoneEmergencyContacts.isDisplayed();
+            lblTxtBoxMobilePhoneEmergencyContacts.isDisplayed();
+            lblTxtBoxWorkPhoneEmergencyContacts.isDisplayed();
+            lblTxtBoxRelationshipEmergencyContacts.isDisplayed();
+            lblTxtBoxCityEmergencyContacts.isDisplayed();
+            lblTxtBoxStreetEmergencyContacts.isDisplayed();
+            lblTxtBoxStateEmergencyContacts.isDisplayed();
+            lblTxtBoxPostCodeEmergencyContacts.isDisplayed();
+            isVerify = true;
+
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean ClickdeleteBtnAndDismissTheAlertEmergencyContact() {
+        Boolean isClicked = false;
+        if (btnDelete.isDisplayed()) {
+            isClicked = Element.click(driver, btnDelete);
+            isClicked = Alert.dismissAlert(driver);
+        }
+        return isClicked;
+    }
+
+
+    public boolean VerifyTheProfiledetails() {
+        boolean isVerify = false;
+        if (CaptionProfilePhoto.isDisplayed()){
+            lblUpdateProfile.isDisplayed();
+            BtnChangePassword.isDisplayed();
+            BtnChangePhotoMyACC.isDisplayed();
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+
     }
 }
 

@@ -109,7 +109,7 @@ public class InboxPageSteps {
 
 
     @And("^I Enter the required details(.*), (.*)$")
-    public void iEnterTheRequiredDetailsTitleDescription(String strEventTitle, String strEventDecription) {
+    public void iEnterTheRequiredDetailsTitleDescription(String strEventTitle, String strEventDecription) throws InterruptedException {
         assertTrue(actionContainer.inboxPageActions.enterEventTitle(Testdata.getValue(strEventTitle)));
         assertTrue(actionContainer.inboxPageActions.enterEventDescription(Testdata.getValue(strEventDecription)));
         assertTrue(actionContainer.inboxPageActions.clickEventSave());
@@ -320,4 +320,88 @@ public class InboxPageSteps {
     }
 
 
+    @Then("^I Should See Tabs UI Displays in the page$")
+    public void iShouldSeeTabsUIDisplaysInThePage() {
+        assertTrue(actionContainer.inboxPageActions.VerifyTheTabsAndUIDisplays());
+    }
+
+    @Then("^I Should See Compose Tab Elements$")
+    public void iShouldSeeComposeTabElements() {
+        assertTrue(actionContainer.inboxPageActions.VerifyComposeTabElements());
+    }
+
+    @Then("^I Should See All The Elements Displays$")
+    public void iShouldSeeAllTheElementsDisplays() {
+        assertTrue(actionContainer.inboxPageActions.VerifyAllTheElementsInJournalDisplays());
+    }
+
+    @Then("^I Should See All Elements In Add Journal Page$")
+    public void iShouldSeeAllElementsInAddJournalPage() {
+        assertTrue(actionContainer.inboxPageActions.VerifyElementsDisplaysInAddJournal());
+    }
+
+    @And("^Click More Info Button$")
+    public void clickMoreInfoButton() {
+        assertTrue(actionContainer.inboxPageActions.ClickMoreInfoBtn());
+    }
+
+    @Then("^I Should See More Info Details in Journal information$")
+    public void iShouldSeeMoreInfoDetailsInJournalInformation() {
+        assertTrue(actionContainer.inboxPageActions.VerifyJorunalinfoDetails());
+    }
+
+    @Then("^I Should See All Elements In Edit Journal Page$")
+    public void iShouldSeeAllElementsInEditJournalPage() {
+        assertTrue(actionContainer.inboxPageActions.VerifyElementsDisplaysInEditJournal());
+    }
+
+    @And("^I click Delete Journal Button And Dismiss$")
+    public void iClickDeleteJournalButtonAndDismiss() {
+        assertTrue(actionContainer.inboxPageActions.ClickDeleteAndDismiss());
+    }
+
+    @Then("^I Should See All The Elements Displays In The Calender Page$")
+    public void iShouldSeeAllTheElementsDisplaysInTheCalenderPage() {
+        assertTrue(actionContainer.inboxPageActions.VerifyAllElementsDisplaysInCalenderpage());
+    }
+
+    @And("^Click Navigate Button And Verify Today Button Disabled$")
+    public void clickNavigateButtonAndVerifyTodayButtonDisabled() {
+        assertTrue(actionContainer.inboxPageActions.ClickNavigateAndVerifyTodayBtn());
+    }
+
+    @And("^I Click Help Button Calender$")
+    public void iClickHelpButtonCalender() {
+        assertTrue(actionContainer.inboxPageActions.ClickHelpButtonCalender());
+    }
+
+    @And("^I Click The Event And Verify The Elements Displays$")
+    public void iClickTheEventAndVerifyTheElementsDisplays() throws InterruptedException {
+        assertTrue(actionContainer.inboxPageActions.ClickEventAndVerifyElementsDisplays());
+    }
+
+    @And("^I Should See All The Elements Displays In Event Calender Page$")
+    public void iShouldSeeAllTheElementsDisplaysInEventCalenderPage() {
+        assertTrue(actionContainer.inboxPageActions.VerifyAllElementsDisplaysInEventPage());
+    }
+
+    @And("^Drag And drop The Event task$")
+    public void dragAndDropTheEventTask() throws InterruptedException {
+        assertTrue(actionContainer.inboxPageActions.DragAndDropEventtask());
+    }
+
+    @And("^I Should See Required Elements In Practice Page$")
+    public void iShouldSeeRequiredElementsInPracticePage() {
+        assertTrue(actionContainer.inboxPageActions.VerifyElementsInPracticePage());
+    }
+
+    @And("^I Click Map Button$")
+    public void iClickMapButton() {
+        assertTrue(actionContainer.inboxPageActions.ClickMapButton());
+    }
+
+    @Then("^I Should See Map Window$")
+    public void iShouldSeeMapWindow() {
+        assertTrue(actionContainer.inboxPageActions.VerifyMapWindow());
+    }
 }

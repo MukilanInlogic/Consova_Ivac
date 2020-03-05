@@ -127,4 +127,29 @@ public class SetupPageSteps {
     public void iShouldSeeThePageRedirectedToPracticeSettingsMenuPage() {
         assertTrue(actionContainer.setupPageActions.VerifyThePageRedirectedToPracticeSettingsMenu());
     }
+
+    @Then("^I Should See All The Elements Displays in E Service$")
+    public void iShouldSeeAllTheElementsDisplaysInEService() {
+        assertTrue(actionContainer.setupPageActions.VerifyAllTheElementsInEservice());
+    }
+
+    @Then("^I Should See Success Message In Group Mail$")
+    public void iShouldSeeSuccessMessageInGroupMail() {
+        assertTrue(actionContainer.setupPageActions.VerifySuccessMessageGroupMail());
+    }
+
+    @And("^I click Sent Tab Group Mail$")
+    public void iClickSentTabGroupMail() {
+        assertTrue(actionContainer.setupPageActions.ClickSentTabGroupMail());
+    }
+
+    @Then("^I Click Subject And Verify Elements Displays In Group Message$")
+    public void iClickSubjectAndVerifyElementsDisplaysInGroupMessage() {
+        assertTrue(actionContainer.setupPageActions.ClickSubjectAndVerifyElementsGroupMail());
+    }
+
+    @And("^I Should See All The Elements Displays My Practice$")
+    public void iShouldSeeAllTheElementsDisplaysMyPractice() {
+        assertTrue(actionContainer.setupPageActions.VerifyAllTheElementsDisplaysInMyPracticePage());
+    }
 }

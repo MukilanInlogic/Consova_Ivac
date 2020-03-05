@@ -340,4 +340,79 @@ public class SetupPageActions extends SetupPageUI {
         }
         return isVerify;
     }
+
+    public boolean VerifyAllTheElementsInEservice() {
+        boolean isVerify =false;
+        if (lblSetupEservices.isDisplayed()){
+            lblHealthCentreEservices.isDisplayed();
+            lblServiceCategoryEservices.isDisplayed();
+            lblServiceNameEservices.isDisplayed();
+            lblServiceCodeEservices.isDisplayed();
+            lblRecipientEservices.isDisplayed();
+            lblAppliesToEservices.isDisplayed();
+            lblDescriptionEservices.isDisplayed();
+            lblPaymentOptionEservices.isDisplayed();
+            lblTermsEservices.isDisplayed();
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean VerifySuccessMessageGroupMail() {
+        boolean isVerify =false;
+        if (lblSuccessMessageEservices.isDisplayed()){
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean ClickSentTabGroupMail() {
+        boolean isClicked = false;
+        if (btnSentTabEservices.isDisplayed()){
+            isClicked = Element.click(driver, btnSentTabEservices);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean ClickSubjectAndVerifyElementsGroupMail() {
+        boolean isVerify = false;
+        if (BtnCreatedSubjectGroupMessage.isDisplayed()){
+            isVerify = Element.click(driver, BtnCreatedSubjectGroupMessage);
+            lblFromGroupMessage.isDisplayed();
+            lblDateGroupMessage.isDisplayed();
+            lblMessageGroupMessage.isDisplayed();
+            lblToGroupMessage.isDisplayed();
+            lblSubjectGroupMessage.isDisplayed();
+            BtnComposeGroupMessage.isDisplayed();
+            BtnNextGroupMessage.isDisplayed();
+            BtnBackGroupMessage.isDisplayed();
+            isVerify = Element.click(driver,BtnBackGroupMessage);
+            BtnCreatedSubjectGroupMessage.isDisplayed();
+        }
+        return isVerify;
+    }
+
+    public boolean VerifyAllTheElementsDisplaysInMyPracticePage() {
+        boolean isVerify = false;
+        if (lblPracticeDetails.isDisplayed()){
+            lblLocation1MyPractice.isDisplayed();
+            lblLocation2MyPractice.isDisplayed();
+            lblMessageGroupMessage.isDisplayed();
+            lblToGroupMessage.isDisplayed();
+            lblSubjectGroupMessage.isDisplayed();
+            BtnComposeGroupMessage.isDisplayed();
+            BtnNextGroupMessage.isDisplayed();
+            BtnBackGroupMessage.isDisplayed();
+            isVerify = Element.click(driver,BtnBackGroupMessage);
+            BtnCreatedSubjectGroupMessage.isDisplayed();
+        }
+        return isVerify;
+    }
 }
