@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class HomePageUI {
 
 
@@ -239,6 +241,71 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//a[text()='Back To Search']")
     protected WebElement BtnBacktoSearchPatient;
 
+    @FindBy(how = How.XPATH, using = "//option[@selected='selected' and @value='Any']")
+    protected WebElement eleAnyAgeSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//select[@name='ctl01$MainContent$ucSearch$ddlAgeGreater']")
+    protected WebElement eleAgeDropDownSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//option[@selected='selected' and @value='25']")
+    protected WebElement eleToDropDownSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//select[@name='ctl01$MainContent$ucSearch$ddlAgeLessthen']")
+    protected WebElement TxtBoxToDropDownSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$ucSearch$txtDOBDate']")
+    protected WebElement TxtBoxDOBSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'TEST TEST')]")
+    protected WebElement lblpatientSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$ucSearch$txtEmail']")
+    protected WebElement txtBoxEmailSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$ucSearch$btnAdvancedGo']")
+    protected WebElement btnSearchPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$ucSearch$Button2']")
+    protected WebElement btnClearSearchPatient;
+//Dash Board Details
+    @FindBy(how = How.XPATH, using = "//span[@id='ctl01_SiteMapPath1']")
+    protected WebElement lblDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Goals']")
+    protected WebElement btnGoalsDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Health Summary']")
+    protected WebElement btnHealthSummaryDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Health Summary']/following::a[text()='Journal']")
+    protected WebElement btnJournalDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Health Indicator']")
+    protected WebElement btnHealthIndicatorDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='View Profile']")
+    protected WebElement btnViewProfileDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Send a Message']")
+    protected WebElement btnSendAMessageDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Clinical Notes']")
+    protected WebElement btnClinicalNotesDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Clinical Notes']/following::a[text()='Dashboard']")
+    protected WebElement btnDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//li[text()='History']")
+    protected WebElement lblHistoryTabDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//li[text()='Trends']")
+    protected WebElement lblTrendsTabDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//li[text()='Manage Patient']")
+    protected WebElement lblmanagePatientTabDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//span[@id='ctl01_MainContent_ucPatientBanner_lblPatientName']")
+    protected WebElement lblPatientDashBoard;
 }
 
 

@@ -1,5 +1,7 @@
 package commonpage.util;
 
+import java.util.List;
+
 public class TestdataConstants {
 
     /*
@@ -20,4 +22,9 @@ public class TestdataConstants {
     public  static  String JOURNALRGB = "#b388fe";
     public  static  String TODATSLOTBORDERRGB = "#fad42e";
     public  static  String EventTaskCalenderRGB = "#8EC43B";
+    public  static  String AGEVALUE = "20";
+    public  static String AGEVALUEEXP = "25";
+    public  static String DOBSEARCHPATIENT = "01011991";
+    public  static  String EMAILPATIENT = "testautomation@mail.com";
+
 }

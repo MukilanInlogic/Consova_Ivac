@@ -74,7 +74,7 @@ public class Combobox {
         try {
             element = Sync.waitForElement(driver, element);
             Sync.waitForAjax(driver);
-            if (!Helper.getBrowser().equalsIgnoreCase("FIREFOX")) {
+            if (!Helper.getBrowser().equalsIgnoreCase("CHROME")) {
                 Sync.waitForSeconds(10);
             }
             System.out.println("entry");

@@ -230,7 +230,6 @@ Feature: Functional
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
 
 
-
   @MT-69462
   Scenario Outline: MT-69462:Check Request Repeat Prescription details are updated when Service name is changed
     Given I am on manage my health home page
@@ -300,7 +299,6 @@ Feature: Functional
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:JOURNAL.SUBJECT | DP:JOURNAL.CATEGORY | DP:JOURNAL.NOTES |
 
 
-
   @MT-69466
   Scenario Outline: MT-69466:Tick the 'Add event to Calender'
     Given I am on manage my health home page
@@ -335,7 +333,6 @@ Feature: Functional
     Examples:
       | ProviderName          | ProviderPassword          | Subject            | Category            | Notes            |
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | DP:JOURNAL.SUBJECT | DP:JOURNAL.CATEGORY | DP:JOURNAL.NOTES |
-
 
 
   @MT-69468
@@ -575,6 +572,122 @@ Feature: Functional
     Examples:
       | ProviderName          | ProviderPassword          |
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+
+  @MT-69491
+  Scenario Outline: MT-69491:Enable / Disable Auto Suggest
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    Then I Should See All Elements Displays In Search Patient
+    And I Check Whether The Auto Suggest Checked Or not
+    And I Click Search Button Search Patient
+    Then I Should See Patient Search details
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+  @MT-69492
+  Scenario Outline: MT-69492:Search patient by Advance Search
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And Click Advanced Button
+    Then I Should See ELements And Details Displays After Clicking Search Button
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+  @MT-69493
+  Scenario Outline: MT-69493:Ensure searched patient contains all the navigation links and it is redirected to particular screen
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    Then I Should See All Elements Displays In Search Patient
+    And I Check Whether The Auto Suggest Checked Or not
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+
+  @MT-69494
+  Scenario Outline: MT-69494:To verify Recently Accessed patient navigation is working
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    Then I Should See All Elements Displays In Search Patient
+    And I Check Whether The Auto Suggest Checked Or not
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+
+  @MT-69495
+  Scenario Outline: MT-69495:Ensure Auto Suggest populates the patient name based on the configuration is enabled
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    Then I Should See All Elements Displays In Search Patient
+    And I Check Whether The Auto Suggest Checked Or not
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+
+  @MT-69496
+  Scenario Outline: MT-69496:To Verify Navigation to Dashboard is working from search Patient
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    Then I Should See Patient Search details
+    And Click DashBoard Link
+    Then I Should See Elements In DashBoard
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

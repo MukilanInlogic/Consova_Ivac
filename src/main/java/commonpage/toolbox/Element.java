@@ -1475,7 +1475,6 @@ public class Element implements Comparator {
                     Sync.waitForSeconds(5);
                     Actions builder = new Actions(driver);
                     builder.dragAndDrop(dragElement, dropElement).build().perform();
-                    //builder.build();
                     isDraggable = true;
                 } else {
                     isDraggable = false;

@@ -275,4 +275,24 @@ public class HomePageSteps {
     public void iShouldSeePatientSearchDetails() {
         assertTrue(actionContainer.homePageActions.VerifyPatientSearchDelails());
     }
+
+    @And("^Click Advanced Button$")
+    public void clickAdvancedButton() throws InterruptedException {
+        assertTrue(actionContainer.homePageActions.ClickAdvancedButtonSearchPatient());
+    }
+
+    @Then("^I Should See ELements And Details Displays After Clicking Search Button$")
+    public void iShouldSeeELementsAndDetailsDisplaysAfterClickingSearchButton() throws InterruptedException {
+        assertTrue(actionContainer.homePageActions.VerifyelementsAndDetailsAfterClickingSearchBtn());
+    }
+
+    @And("^Click DashBoard Link$")
+    public void clickDashBoardLink() {
+        assertTrue(actionContainer.homePageActions.ClickDashBoardLink());
+    }
+
+    @Then("^I Should See Elements In DashBoard$")
+    public void iShouldSeeElementsInDashBoard() {
+        assertTrue(actionContainer.homePageActions.VerifyElementsDashBoard());
+    }
 }

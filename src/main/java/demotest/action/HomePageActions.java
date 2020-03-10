@@ -1,14 +1,14 @@
 package demotest.action;
 
-import commonpage.toolbox.Alert;
-import commonpage.toolbox.Element;
-import commonpage.toolbox.Textbox;
+import commonpage.toolbox.*;
 import commonpage.util.TestdataConstants;
 import demotest.Repository.HomePageUI;
 import jdk.nashorn.internal.ir.IfNode;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import java.util.Collections;
 
 public class HomePageActions extends HomePageUI {
     public HomePageActions(WebDriver driver) {
@@ -585,6 +585,74 @@ public class HomePageActions extends HomePageUI {
             lblDisplayPatientSearchPatient.isDisplayed();
         }
 
+        return isVerify;
+    }
+
+    public boolean ClickAdvancedButtonSearchPatient() throws InterruptedException {
+        boolean isClicked = false;
+        if (BtnAdvancedSearchPatient.isDisplayed()){
+            isClicked = Element.click(driver, BtnAdvancedSearchPatient);
+            Thread.sleep(5000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyelementsAndDetailsAfterClickingSearchBtn() throws InterruptedException {
+        boolean isVerify = false;
+        if (eleAnyAgeSearchPatient.isDisplayed()){
+//            isVerify = Combobox.selectValue(driver, eleAgeDropDownSearchPatient, TestdataConstants.AGEVALUE);
+//            Thread.sleep(5000);
+//            isVerify = Element.click(driver, TxtBoxToDropDownSearchPatient);
+//            Combobox.getSelectedOption(driver, TxtBoxToDropDownSearchPatient);
+//            isVerify = Element.click(driver, BtnClearSearchPatient);
+//            Thread.sleep(5000);
+            isVerify = Textbox.enterValue(driver, TxtBoxDOBSearchPatient, TestdataConstants.DOBSEARCHPATIENT);
+            Thread.sleep(5000);
+            isVerify = Element.click(driver, btnSearchPatient);
+            lblpatientSearchPatient.isDisplayed();
+            isVerify = Element.click(driver, btnClearSearchPatient);
+            isVerify = Textbox.enterValue(driver, txtBoxEmailSearchPatient, TestdataConstants.EMAILPATIENT);
+            Thread.sleep(5000);
+            isVerify = Element.click(driver, btnSearchPatient);
+            lblpatientSearchPatient.isDisplayed();
+            isVerify = Element.click(driver, btnClearSearchPatient);
+            Thread.sleep(5000);
+        }
+
+        return isVerify;
+    }
+
+    public boolean ClickDashBoardLink() {
+        boolean isClicked = false;
+        if (BtnViewDashBoardSearchPatient.isDisplayed()){
+            isClicked = Element.click(driver, BtnViewDashBoardSearchPatient);
+            Sync.waitForSeconds(5000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyElementsDashBoard() {
+        boolean isVerify = false;
+        Sync.waitForSeconds(5000);
+        if (lblPatientDashBoard.isDisplayed()){
+            btnGoalsDashBoard.isDisplayed();
+            btnHealthSummaryDashBoard.isDisplayed();
+            btnJournalDashBoard.isDisplayed();
+            btnHealthIndicatorDashBoard.isDisplayed();
+            btnViewProfileDashBoard.isDisplayed();
+            btnSendAMessageDashBoard.isDisplayed();
+            btnClinicalNotesDashBoard.isDisplayed();
+            btnDashBoard.isDisplayed();
+            lblHistoryTabDashBoard.isDisplayed();
+            lblTrendsTabDashBoard.isDisplayed();
+            lblmanagePatientTabDashBoard.isDisplayed();
+            isVerify = true;
+        }
+        else {
+            isVerify = false;
+        }
         return isVerify;
     }
 }

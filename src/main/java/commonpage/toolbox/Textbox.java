@@ -85,6 +85,25 @@ public class Textbox {
 
     /**
      * Description:This method is to get Text of an Web Element
+     * @param driver,element
+     * @return strText
+     * Author Name:Bhaanu Reaka Balachandran
+     * Date of Development:12-Aug-2019
+     */
+    public static String getTextAndCompare(WebDriver driver, WebElement element, String Value) {
+        String strText ="";
+        try {
+            Sync.waitForElement(driver, element);
+            strText = element.getText();
+            strText.equalsIgnoreCase(Value);
+        } catch (Exception e) {
+            log.error(e);
+        }
+        return strText;
+    }
+
+    /**
+     * Description:This method is to get Text of an Web Element
      * @param driver,by
      * @return strText
      * Author Name:Bhaanu Reaka Balachandran
