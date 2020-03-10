@@ -292,7 +292,52 @@ public class HomePageSteps {
     }
 
     @Then("^I Should See Elements In DashBoard$")
-    public void iShouldSeeElementsInDashBoard() {
+    public void iShouldSeeElementsInDashBoard(){
         assertTrue(actionContainer.homePageActions.VerifyElementsDashBoard());
+    }
+
+    @And("^I Click patient Link Patient Search$")
+    public void iClickPatientLinkPatientSearch(){
+        assertTrue(actionContainer.homePageActions.ClickPatientLink());
+    }
+
+    @And("^I Should See All The Elements Displays View Patient Search$")
+    public void iShouldSeeAllTheElementsDisplaysViewPatientSearch(){
+        assertTrue(actionContainer.homePageActions.VerifyVIewPatientElementsDisplays());
+    }
+
+    @And("^I Click Search Button Search Patient Adv$")
+    public void iClickSearchButtonSearchPatientAdv() {
+        assertTrue(actionContainer.homePageActions.ClickBtnSearchPatient());
+    }
+
+    @And("^I Click Update Button View Patient$")
+    public void iClickUpdateButtonViewPatient() {
+        assertTrue(actionContainer.homePageActions.ClickUpdateBtn());
+    }
+
+    @And("^Update New Values In View Patient$")
+    public void updateNewValuesInViewPatient() {
+        assertTrue(actionContainer.homePageActions.EnterNewValuesUpdateViewProfile());
+    }
+
+    @Then("^I Should See The updated Profile Details Displays$")
+    public void iShouldSeeTheUpdatedProfileDetailsDisplays() {
+        assertTrue(actionContainer.homePageActions.VerifyUpdatedProfile());
+    }
+
+    @And("^Update Old Values In View Patient$")
+    public void updateOldValuesInViewPatient() {
+        assertTrue(actionContainer.homePageActions.EnterOldTitle());
+    }
+
+    @And("^I Click Cancel Button Update View Patient$")
+    public void iClickCancelButtonUpdateViewPatient() {
+        assertTrue(actionContainer.homePageActions.ClickCancelViewPatientUpdate());
+    }
+
+    @Then("^I Verify The Page Return Back to view Profile$")
+    public void iVerifyThePageReturnBackToViewProfile() {
+        assertTrue(actionContainer.homePageActions.VerifyPageReturnBackToViewProfile());
     }
 }

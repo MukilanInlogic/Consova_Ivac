@@ -26,5 +26,6 @@ public class TestdataConstants {
     public  static String AGEVALUEEXP = "25";
     public  static String DOBSEARCHPATIENT = "01011991";
     public  static  String EMAILPATIENT = "testautomation@mail.com";
-
+    public  static  String TITLEPATIENT = "MR S";
+    public  static  String TITLE1PATIENT = "MR";
 }

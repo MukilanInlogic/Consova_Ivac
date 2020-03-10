@@ -673,20 +673,100 @@ Feature: Functional
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
 
 
+  @MT-69497
+  Scenario Outline: MT-69497:Provider can access the Emergency contact details of the Patient
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    Then I Should See All Elements Displays In Search Patient
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD |
+
+
+  @MT-69498
+  Scenario Outline: MT-69498:View the Patient Journal
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    Then I Should See All Elements Displays In Search Patient
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient Adv
+    Then I Should See Patient Search details
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+
+  @MT-76477
+  Scenario Outline: MT-76477:View profile
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    And I Click patient Link Patient Search
+    And I Should See All The Elements Displays View Patient Search
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
 
 
 
+  @MT-76478
+  Scenario Outline: MT-76478:Patient Details in View Profile tab
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    And I Click patient Link Patient Search
+    And I Should See All The Elements Displays View Patient Search
+    And I click Logout button
 
 
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
 
 
+  @MT-76479
+  Scenario Outline: MT-76479:Update Profile Last update time
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    And I Click patient Link Patient Search
+    And I Should See All The Elements Displays View Patient Search
+    And I Click Update Button View Patient
+    And Update New Values In View Patient
+    Then I Should See The updated Profile Details Displays
+    And I Click Update Button View Patient
+    And Update Old Values In View Patient
+    And I Click Update Button View Patient
+    And I Click Cancel Button Update View Patient
+    Then I Verify The Page Return Back to view Profile
+    And I click Logout button
 
 
-
-
-
-
-
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
 
 
 

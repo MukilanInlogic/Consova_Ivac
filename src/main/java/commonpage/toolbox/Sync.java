@@ -273,6 +273,21 @@ public class Sync {
     }
 
     /**
+     * Description:This method is used to make the web driver to wait for a specified seconds(Thread.sleep())
+     * @param Value
+     * Author Name:Vimalan
+     * Date of Development:10-March-2020
+     */
+    public static void Delay(int Value) {
+        try {
+            Thread.sleep(Value);
+
+        } catch (Exception e) {
+            log.error(e);
+        }
+    }
+
+    /**
      * Description:This method is used to check expected condition - expected web element is visible
      * @param by
      * @return element

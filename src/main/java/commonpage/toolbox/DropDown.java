@@ -48,7 +48,7 @@ public class DropDown {
      * Date of Development:20-Feb-2020
      */
 
-    public void   SelectValue (WebElement DropDownBtn, String StrDDValue){
+    public static void   SelectValue(WebDriver driver, WebElement DropDownBtn, String StrDDValue){
         List<WebElement> listdata = (List<WebElement>) DropDownBtn;
         System.out.println(listdata.size());
 

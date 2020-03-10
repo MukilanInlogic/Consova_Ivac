@@ -1,5 +1,6 @@
 package demotest.action;
 
+import com.google.gson.internal.$Gson$Preconditions;
 import commonpage.toolbox.*;
 import commonpage.util.TestdataConstants;
 import demotest.Repository.HomePageUI;
@@ -139,9 +140,8 @@ public class HomePageActions extends HomePageUI {
         return isClicked;
     }
 
-    public boolean clickSetupEserviceIcon()
-    {
-        Boolean isClicked=false;
+    public boolean clickSetupEserviceIcon() {
+        Boolean isClicked = false;
         System.out.println("Methos entry");
         System.out.println("LOCATOR" + btnAddEsevices.isDisplayed());
         isClicked = Element.click(driver, btnAddEsevices);
@@ -156,11 +156,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickSaveEntryJournal() {
         boolean isClicked = false;
-        if (BtnSaveEntryJaurnal.isDisplayed()){
+        if (BtnSaveEntryJaurnal.isDisplayed()) {
             isClicked = Element.click(driver, BtnSaveEntryJaurnal);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -168,10 +167,9 @@ public class HomePageActions extends HomePageUI {
 
     public boolean VerifyTheRequiredErrorDisplaysJournalWindow() {
         boolean isVerify = false;
-        if (lblRequiredErrorSubjectTxtBox.isDisplayed()){
+        if (lblRequiredErrorSubjectTxtBox.isDisplayed()) {
             isVerify = true;
-        }
-        else {
+        } else {
             isVerify = false;
         }
         return isVerify;
@@ -179,11 +177,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickEditBtnViewJournal() {
         boolean isClicked = false;
-        if (BtnEditViewJournal.isDisplayed()){
+        if (BtnEditViewJournal.isDisplayed()) {
             isClicked = Element.click(driver, BtnEditViewJournal);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -191,10 +188,9 @@ public class HomePageActions extends HomePageUI {
 
     public boolean VerifyTheWarningDisplaysAfterClearInJournal() {
         boolean isVerify = false;
-        if (lblRequiredErrorEditSubjectTxtBox.isDisplayed()){
+        if (lblRequiredErrorEditSubjectTxtBox.isDisplayed()) {
             isVerify = true;
-        }
-        else {
+        } else {
             isVerify = false;
         }
         return isVerify;
@@ -202,11 +198,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickStaffTabPracticePage() {
         boolean isClicked = false;
-        if (BtnStaffTabPracticePage.isDisplayed()){
+        if (BtnStaffTabPracticePage.isDisplayed()) {
             isClicked = Element.click(driver, BtnStaffTabPracticePage);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -214,11 +209,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean EnterInValidStaffinTheTxtBox(String StrStaffTxt) {
         boolean isEntered = false;
-        if (txtBoxUserNameStafftabPracticePage.isDisplayed()){
+        if (txtBoxUserNameStafftabPracticePage.isDisplayed()) {
             isEntered = Textbox.enterValue(driver, txtBoxUserNameStafftabPracticePage, StrStaffTxt);
             isEntered = true;
-        }
-        else {
+        } else {
             isEntered = false;
         }
         return isEntered;
@@ -226,11 +220,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickSearchButtonStaffTabPracticePage() {
         boolean isClicked = false;
-        if (BtnSearchStaffTabPracticePage.isDisplayed()){
+        if (BtnSearchStaffTabPracticePage.isDisplayed()) {
             isClicked = Element.click(driver, BtnSearchStaffTabPracticePage);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -238,10 +231,9 @@ public class HomePageActions extends HomePageUI {
 
     public boolean VerifyTheNoRecordAvailablemessageinStaffTabPracticePage() {
         boolean isVerify = false;
-        if (CaptionNoRecordAvailableStafftabPracticepage.isDisplayed()){
+        if (CaptionNoRecordAvailableStafftabPracticepage.isDisplayed()) {
             isVerify = true;
-        }
-        else {
+        } else {
             isVerify = false;
         }
         return isVerify;
@@ -249,11 +241,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickMaplocationrolelinkpracticepage() {
         boolean isClicked = false;
-        if (BtnMapLocationRolePracticePage.isDisplayed()){
+        if (BtnMapLocationRolePracticePage.isDisplayed()) {
             isClicked = Element.click(driver, BtnMapLocationRolePracticePage);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -261,11 +252,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickUpateBtnMapLocation() {
         boolean isClicked = false;
-        if (BtnUpdateMapLocationRole.isDisplayed()){
+        if (BtnUpdateMapLocationRole.isDisplayed()) {
             isClicked = Element.click(driver, BtnUpdateMapLocationRole);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -273,11 +263,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickCancelMapLocation() {
         boolean isClicked = false;
-        if (BtnCancelMapLocation.isDisplayed()){
+        if (BtnCancelMapLocation.isDisplayed()) {
             isClicked = Element.click(driver, BtnCancelMapLocation);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -285,11 +274,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickSearchUserLick() {
         boolean isClicked = false;
-        if (BtnSearchUserMainMenu.isDisplayed()){
+        if (BtnSearchUserMainMenu.isDisplayed()) {
             isClicked = Element.click(driver, BtnSearchUserMainMenu);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -297,11 +285,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean EnterInvalidPatientInTheNameTxtBox(String StrStaffTxt) {
         boolean isEntered = false;
-        if (TxtBoxNameSearchPatient.isDisplayed()){
+        if (TxtBoxNameSearchPatient.isDisplayed()) {
             isEntered = Textbox.enterValue(driver, TxtBoxNameSearchPatient, StrStaffTxt);
             isEntered = true;
-        }
-        else {
+        } else {
             isEntered = false;
         }
         return isEntered;
@@ -309,11 +296,9 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickSearchBtnSearchPatient() {
         boolean isClicked = false;
-        if (BtnSearchPatientPage.isDisplayed()){
+        if (BtnSearchPatientPage.isDisplayed()) {
             isClicked = Element.click(driver, BtnSearchPatientPage);
-            isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -321,10 +306,9 @@ public class HomePageActions extends HomePageUI {
 
     public boolean VerifyTheNopatientfoundisplays() {
         boolean isVerify = false;
-        if (WarningnoPatientFoundSearchPatient.isDisplayed()){
+        if (WarningnoPatientFoundSearchPatient.isDisplayed()) {
             isVerify = true;
-        }
-        else {
+        } else {
             isVerify = false;
         }
         return isVerify;
@@ -332,11 +316,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickFirstNameRadioBtnSearchAptient() {
         boolean isClicked = false;
-        if (BtnfirstnamelastnameSearchpatient.isDisplayed()){
+        if (BtnfirstnamelastnameSearchpatient.isDisplayed()) {
             isClicked = Element.click(driver, BtnfirstnamelastnameSearchpatient);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -344,11 +327,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickLastNameRadioBtnSearchAptient() {
         boolean isClicked = false;
-        if (BtnlastnamefirstnameSearchpatient.isDisplayed()){
+        if (BtnlastnamefirstnameSearchpatient.isDisplayed()) {
             isClicked = Element.click(driver, BtnlastnamefirstnameSearchpatient);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -358,11 +340,10 @@ public class HomePageActions extends HomePageUI {
         boolean isVerify = false;
         System.out.println("before GetText");
         String StrPatientName = TxtBoxNameSearchPatient.getText();
-        System.out.println("Show Value"+StrPatientName);
-        if (StrPatientName.equals(TestdataConstants.SEARCHPATIENT)){
+        System.out.println("Show Value" + StrPatientName);
+        if (StrPatientName.equals(TestdataConstants.SEARCHPATIENT)) {
             isVerify = true;
-        }
-        else {
+        } else {
             isVerify = false;
         }
         return isVerify;
@@ -370,11 +351,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickClearButtonSearchPatient() {
         boolean isClicked = false;
-        if (BtnClearSearchPatient.isDisplayed()){
+        if (BtnClearSearchPatient.isDisplayed()) {
             isClicked = Element.click(driver, BtnClearSearchPatient);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -383,10 +363,9 @@ public class HomePageActions extends HomePageUI {
     public boolean VerifyTheTextGotClearedFromTheSearchPatientTxtBox() {
         boolean isVerify = false;
         String StrPatientName = TxtBoxNameSearchPatient.getText();
-        if (StrPatientName.isEmpty()){
+        if (StrPatientName.isEmpty()) {
             isVerify = true;
-        }
-        else {
+        } else {
             isVerify = false;
         }
         return isVerify;
@@ -394,11 +373,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickAutoSuggestButtonSearchpatient() {
         boolean isClicked = false;
-        if (BtnAutoSuggestSearchPatient.isDisplayed()){
+        if (BtnAutoSuggestSearchPatient.isDisplayed()) {
             isClicked = Element.click(driver, BtnAutoSuggestSearchPatient);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -406,11 +384,9 @@ public class HomePageActions extends HomePageUI {
 
     public boolean VerifyTheSuggesstionListNotDisplays() {
         boolean isVerify = false;
-        if (TxtBoxNameSearchPatient.isEnabled())
-        {
+        if (TxtBoxNameSearchPatient.isEnabled()) {
             isVerify = true;
-        }
-        else{
+        } else {
             isVerify = false;
         }
         return isVerify;
@@ -418,11 +394,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickInboxPatientMenu() {
         boolean isClicked = false;
-        if (eleInboxForPatient.isDisplayed()){
+        if (eleInboxForPatient.isDisplayed()) {
             isClicked = Element.click(driver, eleInboxForPatient);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -431,11 +406,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickHealthIndicator() {
         boolean isClicked = false;
-        if (BtnHealthIndicatorMainMenu.isDisplayed()){
+        if (BtnHealthIndicatorMainMenu.isDisplayed()) {
             isClicked = Element.click(driver, BtnHealthIndicatorMainMenu);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -443,11 +417,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickAddBtnHealthIndicator() {
         boolean isClicked = false;
-        if (BtnAddHealthIndicatorMainMenu.isDisplayed()){
+        if (BtnAddHealthIndicatorMainMenu.isDisplayed()) {
             isClicked = Element.click(driver, BtnAddHealthIndicatorMainMenu);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -455,11 +428,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickSaveAddHealthIndicator() {
         boolean isClicked = false;
-        if (BtnSaveAddHealthIndicator.isDisplayed()){
+        if (BtnSaveAddHealthIndicator.isDisplayed()) {
             isClicked = Element.click(driver, BtnSaveAddHealthIndicator);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -473,11 +445,10 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickCloseBtnhealthindicator() {
         boolean isClicked = false;
-        if (BtnCloseAddHealthIndicator.isDisplayed()){
+        if (BtnCloseAddHealthIndicator.isDisplayed()) {
             isClicked = Element.click(driver, BtnCloseAddHealthIndicator);
             isClicked = true;
-        }
-        else {
+        } else {
             isClicked = false;
         }
         return isClicked;
@@ -486,12 +457,11 @@ public class HomePageActions extends HomePageUI {
     public boolean EnterValidTxtHealthIndicator() {
         boolean isEntered = false;
 
-        if (TxtBoxHeightBMIHealthIndicator.isDisplayed()){
+        if (TxtBoxHeightBMIHealthIndicator.isDisplayed()) {
             isEntered = Textbox.enterValue(driver, TxtBoxHeightBMIHealthIndicator, TestdataConstants.HEIGHTBMI);
             isEntered = Textbox.enterValue(driver, TxtBoxWeightBMIHealthIndicator, TestdataConstants.HEIGHTBMI);
             isEntered = true;
-        }
-        else {
+        } else {
             isEntered = false;
         }
         return isEntered;
@@ -500,7 +470,7 @@ public class HomePageActions extends HomePageUI {
     public boolean verifyTheMenuItemsDisplays() {
         boolean isverify = false;
 
-        if (lblHomePage.isDisplayed()){
+        if (lblHomePage.isDisplayed()) {
             BtnHomeMainMenu.isDisplayed();
             eleMyAccount.isDisplayed();
             eleProviderInbox.isDisplayed();
@@ -510,7 +480,7 @@ public class HomePageActions extends HomePageUI {
             elePractice.isDisplayed();
             eleDownloads.isDisplayed();
             BtnSearchUserMainMenu.isDisplayed();
-            isverify = Element.click(driver,eleSetupMenu);
+            isverify = Element.click(driver, eleSetupMenu);
             eleSetupeService.isDisplayed();
             eleGroupMail.isDisplayed();
             eleMyPractice.isDisplayed();
@@ -522,8 +492,7 @@ public class HomePageActions extends HomePageUI {
             eleAppointmentinbox.isDisplayed();
             isverify = true;
 
-        }
-        else {
+        } else {
             isverify = false;
         }
         return isverify;
@@ -531,7 +500,7 @@ public class HomePageActions extends HomePageUI {
 
     public boolean VerifyElementInSearchPaient() throws InterruptedException {
         boolean isVerify = false;
-        if (lblSearchPatient.isDisplayed()){
+        if (lblSearchPatient.isDisplayed()) {
             DropDnSearchInSearchPatient.isDisplayed();
             BtnSearchPatientPage.isDisplayed();
             BtnlastnamefirstnameSearchpatient.isDisplayed();
@@ -553,16 +522,15 @@ public class HomePageActions extends HomePageUI {
 
     public boolean VerifyStateOfAutoSuggestCheckBox() {
         boolean isVerify = false;
-        if (BtnAutoSuggestSearchPatient.isSelected()){
+        if (BtnAutoSuggestSearchPatient.isSelected()) {
             isVerify = Element.click(driver, BtnAutoSuggestSearchPatient);
             isVerify = true;
-            if (BtnAutoSuggestSearchPatient.isSelected()){
+            if (BtnAutoSuggestSearchPatient.isSelected()) {
                 isVerify = false;
-            }else {
+            } else {
                 isVerify = true;
             }
-        }
-        else {
+        } else {
             isVerify = false;
         }
         return isVerify;
@@ -570,7 +538,7 @@ public class HomePageActions extends HomePageUI {
 
     public boolean VerifyPatientSearchDelails() {
         boolean isVerify = false;
-        if (lblDisplayPatientSearchPatient.isDisplayed()){
+        if (lblDisplayPatientSearchPatient.isDisplayed()) {
             BtnVideoIconSearchPatient.isDisplayed();
             BtnSendAMessageSearchPatient.isDisplayed();
             BtnViewDashBoardSearchPatient.isDisplayed();
@@ -590,7 +558,7 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickAdvancedButtonSearchPatient() throws InterruptedException {
         boolean isClicked = false;
-        if (BtnAdvancedSearchPatient.isDisplayed()){
+        if (BtnAdvancedSearchPatient.isDisplayed()) {
             isClicked = Element.click(driver, BtnAdvancedSearchPatient);
             Thread.sleep(5000);
             isClicked = true;
@@ -600,7 +568,7 @@ public class HomePageActions extends HomePageUI {
 
     public boolean VerifyelementsAndDetailsAfterClickingSearchBtn() throws InterruptedException {
         boolean isVerify = false;
-        if (eleAnyAgeSearchPatient.isDisplayed()){
+        if (eleAnyAgeSearchPatient.isDisplayed()) {
 //            isVerify = Combobox.selectValue(driver, eleAgeDropDownSearchPatient, TestdataConstants.AGEVALUE);
 //            Thread.sleep(5000);
 //            isVerify = Element.click(driver, TxtBoxToDropDownSearchPatient);
@@ -625,9 +593,9 @@ public class HomePageActions extends HomePageUI {
 
     public boolean ClickDashBoardLink() {
         boolean isClicked = false;
-        if (BtnViewDashBoardSearchPatient.isDisplayed()){
+        if (BtnViewDashBoardSearchPatient.isDisplayed()) {
             isClicked = Element.click(driver, BtnViewDashBoardSearchPatient);
-            Sync.waitForSeconds(5000);
+            Sync.Delay(4000);
             isClicked = true;
         }
         return isClicked;
@@ -635,9 +603,9 @@ public class HomePageActions extends HomePageUI {
 
     public boolean VerifyElementsDashBoard() {
         boolean isVerify = false;
-        Sync.waitForSeconds(5000);
+        Sync.Delay(4000);
         System.out.println("Moved To Verify State");
-        if (lblPatientDashBoard.isDisplayed()){
+        if (lblPatientDashBoard.isDisplayed()) {
             System.out.println("Moved in To If Condition");
             btnGoalsDashBoard.isDisplayed();
             btnHealthSummaryDashBoard.isDisplayed();
@@ -651,9 +619,117 @@ public class HomePageActions extends HomePageUI {
             lblTrendsTabDashBoard.isDisplayed();
             lblmanagePatientTabDashBoard.isDisplayed();
             isVerify = true;
-        }
-        else {
+        } else {
             isVerify = false;
+        }
+        return isVerify;
+    }
+
+    public boolean ClickPatientLink() {
+        boolean isClicked = false;
+        Sync.Delay(4000);
+        if (BtnPatientDashBoard.isDisplayed()) {
+            isClicked = Element.click(driver, BtnPatientDashBoard);
+        }
+        System.out.println("CLICK status" + isClicked);
+        return isClicked;
+    }
+
+    public boolean VerifyVIewPatientElementsDisplays() {
+        boolean isVerify = false;
+        Sync.Delay(4000);
+        if (lblViewPatient.isDisplayed()) {
+            lblPatientCurrentConditionViewPatient.isDisplayed();
+            lblPersonalDetailsViewPatient.isDisplayed();
+            lblLoginDetailsViewPatient.isDisplayed();
+            lblContactDetailsViewPatient.isDisplayed();
+            lblInsuranceDetailsViewPatient.isDisplayed();
+            lblAdditionalInfoViewPatient.isDisplayed();
+//            lblEditProfileTabViewPatient.isDisplayed();
+//            lblEmergencyContactsTabViewPatient.isDisplayed();
+//            lblAdditionalInfoTabViewPatient.isDisplayed();
+//            lblDeviceInfoTabViewPatient.isDisplayed();
+            isVerify = true;
+        } else {
+            isVerify = false;
+            System.out.println("Elements Not Displays");
+        }
+        return isVerify;
+    }
+
+    public boolean ClickBtnSearchPatient() {
+        boolean isClicked = false;
+        if (btnSearchPatient.isDisplayed()) {
+            isClicked = Element.click(driver, btnSearchPatient);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean ClickUpdateBtn() {
+        boolean isClicked = false;
+        if (BtnUpdateViewPatient.isDisplayed()) {
+            isClicked = Element.click(driver, BtnUpdateViewPatient);
+            Sync.Delay(3000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean EnterNewValuesUpdateViewProfile() {
+        boolean isEntred = false;
+        if (BtnTitleViewPatient.isDisplayed()) {
+            Element.click(driver, BtnTitleViewPatient);
+            Element.click(driver, OptionMrsTitleViewPatient);
+            Element.click(driver, BtnUpdateProfileViewPatient);
+            isEntred = true;
+        } else {
+            System.out.println("Value Not Displays");
+        }
+        return isEntred;
+    }
+
+    public boolean VerifyUpdatedProfile() {
+        boolean isVerify = false;
+        if (lblFullNameViewPatient.isDisplayed()) {
+            isVerify = true;
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
+    }
+
+
+    public boolean EnterOldTitle() {
+        boolean isEntred = false;
+        if (BtnTitleViewPatient.isDisplayed()) {
+            Element.click(driver, BtnTitleViewPatient);
+            Element.click(driver, OptionMrTitleViewPatient);
+            Element.click(driver, BtnUpdateProfileViewPatient);
+            isEntred = true;
+        } else {
+            System.out.println("Value Not Displays");
+        }
+        return isEntred;
+    }
+
+
+    public boolean ClickCancelViewPatientUpdate() {
+        boolean isClicked = false;
+        if (BtnCancelUpdateViewPatient.isDisplayed()) {
+            isClicked = Element.click(driver, BtnCancelUpdateViewPatient);
+            Sync.Delay(3000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyPageReturnBackToViewProfile() {
+        boolean isVerify = false;
+        if (lblFullNameUpdatedViewPatient.isDisplayed()) {
+            isVerify = true;
+        } else {
+            System.out.println("Not Displays");
         }
         return isVerify;
     }

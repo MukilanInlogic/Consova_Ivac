@@ -306,6 +306,71 @@ public class HomePageUI {
 
     @FindBy(how = How.XPATH, using = "//span[@id='ctl01_MainContent_ucPatientBanner_lblPatientName']")
     protected WebElement lblPatientDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_ucSearch_lstvewSearchResult_ctrl0_lnkUserName']")
+    protected WebElement BtnPatientDashBoard;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='View Profile']")
+    protected WebElement lblViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Patient Current Condition :')]")
+    protected WebElement lblPatientCurrentConditionViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Personal Details  ')]")
+    protected WebElement lblPersonalDetailsViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Login Details  ')]")
+    protected WebElement lblLoginDetailsViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Contact Details  ')]")
+    protected WebElement lblContactDetailsViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Insurance Information   ')]")
+    protected WebElement lblInsuranceDetailsViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Additional Information')]")
+    protected WebElement lblAdditionalInfoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Edit Profile Details')]")
+    protected WebElement lblEditProfileTabViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Emergency Contacts')]")
+    protected WebElement lblEmergencyContactsTabViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Additional Information')]")
+    protected WebElement lblAdditionalInfoTabViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Device Information')]")
+    protected WebElement lblDeviceInfoTabViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Mrs')]")
+    protected WebElement lblFullNameViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//option[text()='Mrs']")
+    protected WebElement OptionMrsTitleViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//option[text()='Mr']")
+    protected WebElement OptionMrTitleViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Mr')]")
+    protected WebElement lblFullNameUpdatedViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_UserProfile1_lnkEditProfile']")
+    protected WebElement BtnUpdateViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$EditBasicProfile1$btnUpdateProfile']")
+    protected WebElement BtnUpdateProfileViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$EditBasicProfile1$btnCancel']")
+    protected WebElement BtnCancelUpdateViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//select[@name='ctl01$MainContent$EditBasicProfile1$ddlTitle']")
+    protected WebElement BtnTitleViewPatient;
+
+
+
+
+
 }
 
 
