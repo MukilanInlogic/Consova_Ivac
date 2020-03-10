@@ -636,7 +636,9 @@ public class HomePageActions extends HomePageUI {
     public boolean VerifyElementsDashBoard() {
         boolean isVerify = false;
         Sync.waitForSeconds(5000);
+        System.out.println("Moved To Verify State");
         if (lblPatientDashBoard.isDisplayed()){
+            System.out.println("Moved in To If Condition");
             btnGoalsDashBoard.isDisplayed();
             btnHealthSummaryDashBoard.isDisplayed();
             btnJournalDashBoard.isDisplayed();
