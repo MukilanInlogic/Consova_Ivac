@@ -67,7 +67,7 @@ public class Element implements Comparator {
      * Author Name:Sankar Ganesh
      * Date of Development:13-Aug-2019
      */
-    public static boolean verifyElement(WebDriver driver, String strLocator, String strElement) {
+    public static boolean verifyElements(WebDriver driver, String strLocator, String strElement) {
         boolean blResult = false;
         try {
             WebElement elmntLocator = Sync.waitForElement(driver, By
@@ -79,6 +79,48 @@ public class Element implements Comparator {
         }
         return blResult;
     }
+
+    /**
+     * Description:This method is used to replace content and verify whether a Text is displayed
+     * @param driver,strLocator,strElement
+     * @return isVerify
+     * Author Name:Vimalan
+     * Date of Development:12-March-2020
+     */
+    public static boolean VerifyText(WebDriver driver, String strLocator, String strElement) {
+        boolean isVerify = false;
+        try {
+            WebElement ele = driver.findElement( By
+                    .xpath(strLocator.replace("<<REPLACECONTENT>>",
+                            strElement)));
+            isVerify = Element.verifyElement(ele);
+        } catch (Exception e) {
+            log.error(e);
+        }
+        return isVerify;
+    }
+
+
+    /**
+     * Description:This method is used to replace content and Click whether a Text is displayed
+     * @param driver,strLocator,strElement
+     * @return isVerify
+     * Author Name:Vimalan
+     * Date of Development:12-March-2020
+     */
+    public static boolean ClickText(WebDriver driver, String strLocator, String strElement) {
+        boolean isClicked = false;
+        try {
+            WebElement ele = driver.findElement( By
+                    .xpath(strLocator.replace("<<REPLACECONTENT>>",
+                            strElement)));
+            isClicked = Element.click(driver, ele);
+        } catch (Exception e) {
+            log.error(e);
+        }
+        return isClicked;
+    }
+
 
     /**
      * Description:This method is used to replace content and click on the web element

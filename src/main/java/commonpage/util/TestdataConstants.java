@@ -26,6 +26,10 @@ public class TestdataConstants {
     public  static String AGEVALUEEXP = "25";
     public  static String DOBSEARCHPATIENT = "01011991";
     public  static  String EMAILPATIENT = "testautomation@mail.com";
-    public  static  String TITLEPATIENT = "MR S";
-    public  static  String TITLE1PATIENT = "MR";
+    public  static  String FIRSTNAMEEDITADDINFO = "Vimal";
+    public  static  String LASTNAMEEDITADDINFO = "Vinayak";
+    public  static  String SERIALNUMADDINFO = "729960023";
+    public  static  String DEVICVALUE = "Bluetooth Weigh Scales";
+    public  static  String HEALTHCENTRE = "AutomationMedtech";
+
 }

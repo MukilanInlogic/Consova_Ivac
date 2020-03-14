@@ -2,6 +2,7 @@ package demotest.action;
 
 import com.google.gson.internal.$Gson$Preconditions;
 import commonpage.toolbox.*;
+import commonpage.util.Testdata;
 import commonpage.util.TestdataConstants;
 import demotest.Repository.HomePageUI;
 import jdk.nashorn.internal.ir.IfNode;
@@ -645,10 +646,6 @@ public class HomePageActions extends HomePageUI {
             lblContactDetailsViewPatient.isDisplayed();
             lblInsuranceDetailsViewPatient.isDisplayed();
             lblAdditionalInfoViewPatient.isDisplayed();
-//            lblEditProfileTabViewPatient.isDisplayed();
-//            lblEmergencyContactsTabViewPatient.isDisplayed();
-//            lblAdditionalInfoTabViewPatient.isDisplayed();
-//            lblDeviceInfoTabViewPatient.isDisplayed();
             isVerify = true;
         } else {
             isVerify = false;
@@ -732,5 +729,400 @@ public class HomePageActions extends HomePageUI {
             System.out.println("Not Displays");
         }
         return isVerify;
+    }
+
+    public boolean ClickEmergencyTabViewProfile() {
+        boolean isClicked = false;
+        Sync.Delay(5000);
+        if (lblEmergencyContactsTabViewPatient.isDisplayed()) {
+            isClicked = Element.click(driver, lblEmergencyContactsTabViewPatient);
+            Sync.Delay(3000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean ClickAdditionalInfoTab() {
+        boolean isClicked = false;
+        Sync.Delay(5000);
+        if (lblAdditionalInfoTabViewPatient.isDisplayed()) {
+            isClicked = Element.click(driver, lblAdditionalInfoTabViewPatient);
+            Sync.Delay(3000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyElementsAddInfoViewPatient() {
+        boolean isVerify = false;
+        if (lblProviderViewPatient.isDisplayed()) {
+            lblManagingProviderViewPatient.isDisplayed();
+            lblClinicalDetailsViewPatient.isDisplayed();
+            lblProposedStartDateViewPatient.isDisplayed();
+            lblEndDateViewPatient.isDisplayed();
+            lblTrialGroupViewPatient.isDisplayed();
+            lblTrialStatusViewPatient.isDisplayed();
+            lblExternalSysIntegViewPatient.isDisplayed();
+            lblPatientIdViewPatient.isDisplayed();
+            lblInterpreterServiceViewPatient.isDisplayed();
+            lblInterpreterServiceViewPatient.isDisplayed();
+            lblInterpretereViewPatient.isDisplayed();
+            lblRegularGPViewPatient.isDisplayed();
+            lblHospitalNameViewPatient.isDisplayed();
+            lblURNViewPatient.isDisplayed();
+
+            isVerify = true;
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
+    }
+
+    public boolean ClickEditAddInfoBtn() {
+        boolean isClicked = false;
+        Sync.Delay(5000);
+        if (BtnEditAddInfoViewPatient.isDisplayed()) {
+            isClicked = Element.click(driver, BtnEditAddInfoViewPatient);
+            Sync.Delay(3000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean EnterValidValueAddInfo() {
+        boolean isClicked = false;
+        if (TxtBoxManagingProviderViewPatient.isDisplayed()) {
+            Element.click(driver, TxtBoxManagingProviderViewPatient);
+            Element.click(driver, TxtBoxManagingProviderValueViewPatient);
+            Element.click(driver, TxtBoxClicinViewPatient);
+            Element.click(driver, TxtBoxclinicValueViewPatient);
+            Textbox.enterValue(driver, TxtBoxProviderFirstNameViewPatient, TestdataConstants.FIRSTNAMEEDITADDINFO);
+            Textbox.enterValue(driver, TxtBoxProviderLastNameViewPatient, TestdataConstants.LASTNAMEEDITADDINFO);
+            Element.click(driver, BtnUpdateProfileEditViewPatient);
+            Sync.Delay(3000);
+            isClicked = true;
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyUpdatedprofileView() {
+        boolean isVerify = false;
+        if (TxtBoxProviderFirstNameValueViewPatient.isDisplayed()) {
+            isVerify = true;
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
+    }
+
+    public boolean ClickCancelBtnAddInfoEdit() {
+        boolean isClicked = false;
+        Sync.Delay(5000);
+        if (BtnCancelEditViewPatient.isDisplayed()) {
+            isClicked = Element.click(driver, BtnCancelEditViewPatient);
+            Sync.Delay(3000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyPagereturnbackAddInfo() {
+        boolean isVerify = false;
+        if (BtnEditAddInfoViewPatient.isDisplayed()) {
+            isVerify = true;
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
+    }
+
+    public boolean ClickDeviceInfoTab() {
+        boolean isClicked = false;
+        Sync.Delay(5000);
+        if (lblDeviceInfoTabViewPatient.isDisplayed()) {
+            isClicked = Element.click(driver, lblDeviceInfoTabViewPatient);
+            Sync.Delay(3000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyElementsDisplaysDeviceInfoTab() {
+        boolean isVerify = false;
+        if (lblDeviceNameViewPatient.isDisplayed()) {
+            lblSerialNoViewPatient.isDisplayed();
+            lblMACAddressViewPatient.isDisplayed();
+            lblIMEINoViewPatient.isDisplayed();
+            isVerify = true;
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
+    }
+
+    public boolean ClickAddBtnDeviceInfo() {
+        boolean isClicked = false;
+        if (BtnAddViewPatient.isDisplayed()) {
+            isClicked = Element.click(driver, BtnAddViewPatient);
+
+            Sync.Delay(3000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean EnterInfoInDevice() {
+        boolean isEntred = false;
+        if (lblAddDeviceInfoViewPatient.isDisplayed()) {
+            lblDeviceViewPatient.isDisplayed();
+            Element.click(driver, TxtBoxDeviceDeviceInfoViewPatient);
+            WebElement ele = driver.findElement(By.xpath(TxtBoxValueDeviceInfoViewPatient.replace("<<REPLACE>>", TestdataConstants.DEVICVALUE)));
+            Element.click(driver, ele);
+            Textbox.enterValue(driver, TxtBoxMacaddDeviceInfoViewPatient, "12");
+            Textbox.enterValue(driver, TxtBoxMacadd1DeviceInfoViewPatient, "12");
+            Textbox.enterValue(driver, TxtBoxMacadd2DeviceInfoViewPatient, "12");
+            Textbox.enterValue(driver, TxtBoxMacadd3DeviceInfoViewPatient, "12");
+            Textbox.enterValue(driver, TxtBoxMacadd4DeviceInfoViewPatient, "12");
+            Textbox.enterValue(driver, TxtBoxMacadd5DeviceInfoViewPatient, "12");
+            Textbox.enterValue(driver, txtboxSerialNumberViewPatient, TestdataConstants.SERIALNUMADDINFO);
+            Textbox.enterValue(driver, txtboxIMEINumberViewPatient, TestdataConstants.SERIALNUMADDINFO);
+            Sync.Delay(3000);
+            System.out.println("Going To Click");
+            Element.click(driver, BtnSaveDeviceinfoViewPatient);
+            Sync.Delay(10000);
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isEntred;
+    }
+
+    public boolean VerifySavedDeviceInfo() {
+        boolean isVerify = false;
+        if (BtnAddViewPatient.isDisplayed()) {
+            WebElement ele = driver.findElement(By.xpath(CreatedValueDeviceInfoViewPatient.replace("<<REPLACE>>", TestdataConstants.SERIALNUMADDINFO)));
+            ele.isDisplayed();
+            Element.click(driver, BtnAddViewPatient);
+            lblDeviceViewPatient.isDisplayed();
+            Element.click(driver, BtnSaveDeviceinfoViewPatient);
+            WarningIMEIDeviceInfoViewPatient.isDisplayed();
+            Element.click(driver, BtnCloseDeviceinfoViewPatient);
+            isVerify = true;
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
+    }
+
+    public boolean ClickClinicalNotes() {
+        boolean isClicked = false;
+        if (BtnClinicalNotesSearchPatient.isDisplayed()) {
+            isClicked = Element.click(driver, BtnClinicalNotesSearchPatient);
+
+            Sync.Delay(5000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean ClickAddClinicalNotesbtn() {
+        boolean isClicked = false;
+        if (BtnAddClinicalNotes.isDisplayed()) {
+            isClicked = Element.click(driver, BtnAddClinicalNotes);
+            Sync.Delay(3000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyClincalNotesUI() {
+        boolean isVerify = false;
+        Sync.Delay(6000);
+        if (BtnAddClinicalNotes.isDisplayed()) {
+            Element.verifyElement(lblPatientNameClinicalNotes);
+            Element.verifyElement(lblHealthIndicatorClinicalNotes);
+            Element.verifyElement(lblContactDetailsClinicalNotes);
+            Element.verifyElement(lblNotesClinicalNotes);
+            Element.verifyElement(TxtBoxMedicalWarningClinicalNotes);
+            Combobox.selectText(driver, TxtBoxHealthCentreClinicalNotes, TestdataConstants.HEALTHCENTRE);
+            Textbox.enterValue(driver, TxtBoxReaseonForVisitClinicalNotes, TestdataConstants.EDITEDFIRSTNAME);
+            Textbox.enterValue(driver, TxtBoxSubjectiveClinicalNotes, TestdataConstants.SEARCHPATIENT);
+            Textbox.enterValue(driver, TxtBoxObjectiveClinicalNotes, TestdataConstants.SEARCHPATIENT);
+            Textbox.enterValue(driver, TxtBoxDiagnosisClinicalNotes, TestdataConstants.SEARCHPATIENT);
+            Element.click(driver, BtnSaveClinicalNotes);
+            Sync.Delay(6000);
+            Element.VerifyText(driver, CreatedClinicalNotes, TestdataConstants.EDITEDFIRSTNAME);
+            System.out.println("Displays");
+            isVerify = true;
+
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
+    }
+
+    public boolean ClickCancelClinicalNotes() {
+        boolean isClicked = false;
+        if (BtnCancelClinicalNotes.isDisplayed()) {
+            isClicked = Element.click(driver, BtnCancelClinicalNotes);
+            Sync.Delay(5000);
+            Element.verifyElement(lblClinicalNotes);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean ClickPrescriptionTab() {
+        boolean isClicked = false;
+        if (BtnPrescriptionTabClinicalNotes.isDisplayed()) {
+            isClicked = Element.click(driver, BtnPrescriptionTabClinicalNotes);
+            Sync.Delay(5000);
+            Alert.acceptAlert(driver);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean ClickViewClinicalNotes() {
+        boolean isClicked = false;
+        if (BtnAddClinicalNotes.isDisplayed()) {
+            Element.ClickText(driver, ViewClinicalNotes, TestdataConstants.EDITEDFIRSTNAME);
+            Sync.Delay(5000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyPrescriptionTabElements() {
+        boolean isVerify = false;
+        Sync.Delay(6000);
+        if (BtnPrescriptionTabClinicalNotes.isDisplayed()) {
+            Element.verifyElement(lblStartDatePrescriptionTab);
+            Element.verifyElement(lblDrugNamePrescriptionTab);
+            Element.verifyElement(lblDosagePrescriptionTab);
+            Element.verifyElement(lblStrengthPrescriptionTab);
+            Element.verifyElement(lblFrequencyPrescriptionTab);
+            Element.verifyElement(lblPeriodPrescriptionTab);
+            Element.verifyElement(lblStatusPrescriptionTab);
+            Element.verifyElement(lblMoreInfoPrescriptionTab);
+            Element.verifyElement(lblStatePrescriptionTab);
+            isVerify = true;
+
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
+    }
+
+    public boolean VerifyUIDisplaysClinicalNotes() {
+        boolean isVerify = false;
+        Sync.Delay(6000);
+        if (BtnAddClinicalNotes.isDisplayed()) {
+            Element.verifyElement(lblReasonForVisitClinicalNotes);
+            Element.verifyElement(lblDateClinicalNotes);
+            Element.verifyElement(lblProviderNameClinicalNotes);
+            Element.verifyElement(lblPracticeNameClinicalNotes);
+            Element.click(driver, BtnBackToPatientClinicalNotes);
+            Sync.Delay(5000);
+            Element.verifyElement(lblDashBoard);
+            isVerify = true;
+
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
+    }
+
+    public boolean ClickEditBtnClinicalNotes() {
+        boolean isClicked = false;
+        if (BtnAddClinicalNotes.isDisplayed()) {
+            Element.ClickText(driver, EditClinicalNotes, TestdataConstants.EDITEDFIRSTNAME);
+            Sync.Delay(5000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean EditAndVerifyClinicalNotes() {
+        boolean isEntered = false;
+        if (lblTabClinicalNotes.isDisplayed()){
+            TxtBoxReaseonForVisitClinicalNotes.clear();
+            Textbox.enterValue(driver,TxtBoxReaseonForVisitClinicalNotes, TestdataConstants.FIRSTNAMEEDITADDINFO);
+            Element.click(driver, BtnSaveClinicalNotes);
+            Sync.Delay(6000);
+            Element.VerifyText(driver, CreatedClinicalNotes, TestdataConstants.FIRSTNAMEEDITADDINFO);
+            isEntered = true;
+        }else {
+            System.out.println("Not Displays");
+        }
+        return isEntered;
+    }
+
+    public boolean ClickReEditBtnClinicalNotes() {
+        boolean isClicked = false;
+        if (BtnAddClinicalNotes.isDisplayed()) {
+            Element.ClickText(driver, EditClinicalNotes, TestdataConstants.FIRSTNAMEEDITADDINFO);
+            Sync.Delay(5000);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean ReEditTheClinicalNotesAgain() {
+        boolean isEntered = false;
+        if (lblTabClinicalNotes.isDisplayed()){
+            TxtBoxReaseonForVisitClinicalNotes.clear();
+            Textbox.enterValue(driver,TxtBoxReaseonForVisitClinicalNotes, TestdataConstants.EDITEDFIRSTNAME);
+            Element.click(driver, BtnSaveClinicalNotes);
+            Sync.Delay(6000);
+            Element.VerifyText(driver, CreatedClinicalNotes, TestdataConstants.EDITEDFIRSTNAME);
+            isEntered = true;
+        }else {
+            System.out.println("Not Displays");
+        }
+        return isEntered;
+    }
+
+    public boolean ClickAuditTabClinicalNotes() {
+        boolean isClicked = false;
+        if (BtnAuditTabClinicalNotes.isDisplayed()) {
+            isClicked = Element.click(driver, BtnAuditTabClinicalNotes);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyAuditTabUIClinicalNotes() {
+        boolean isVerify = false;
+        Sync.Delay(6000);
+        if (lblmodifieddateClinicalNotes.isDisplayed()) {
+            Element.click(driver, BtnAuditLogClinicalNotes);
+            Element.verifyElement(AuditWindowClinicalNotes);
+            Element.verifyElement(lblDateTimeAuditWinClinicalNotes);
+            Element.click(driver, BtnCloseAuditWinClinicalNotes);
+            isVerify = true;
+
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
+    }
+
+    public boolean ClickAddMedication() {
+        boolean isClicked = false;
+        if (BtnAddMedicationPrescriptionClinicalNotes.isDisplayed()) {
+            isClicked = Element.click(driver, BtnAddMedicationPrescriptionClinicalNotes);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean EnterValuesInAddMedication() {
+        boolean isEntered = false;
+        if (WindowAddMedicationPrescriptionClinicalNotes.isDisplayed()){
+
+        }
+        return  isEntered;
     }
 }

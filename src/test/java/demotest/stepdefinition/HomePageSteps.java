@@ -340,4 +340,150 @@ public class HomePageSteps {
     public void iVerifyThePageReturnBackToViewProfile() {
         assertTrue(actionContainer.homePageActions.VerifyPageReturnBackToViewProfile());
     }
+
+    @And("^Click Emergency Contact Tab View Profile$")
+    public void clickEmergencyContactTabViewProfile() {
+        assertTrue(actionContainer.homePageActions.ClickEmergencyTabViewProfile());
+    }
+
+    @And("^I Click Additional Info Tab$")
+    public void iClickAdditionalInfoTab() {
+        assertTrue(actionContainer.homePageActions.ClickAdditionalInfoTab());
+    }
+
+    @Then("^I Should See All Elements In Add Info tab View Profile$")
+    public void iShouldSeeAllElementsInAddInfoTabViewProfile() {
+        assertTrue(actionContainer.homePageActions.VerifyElementsAddInfoViewPatient());
+    }
+
+    @And("^Click Additional info Edit Button$")
+    public void clickAdditionalInfoEditButton() {
+        assertTrue(actionContainer.homePageActions.ClickEditAddInfoBtn());
+    }
+
+    @And("^Enter Valid Edit Value In Add Info Page$")
+    public void enterValidEditValueInAddInfoPage() {
+        assertTrue(actionContainer.homePageActions.EnterValidValueAddInfo());
+    }
+
+    @Then("^I Verify The Profile Updated$")
+    public void iVerifyTheProfileUpdated() {
+        assertTrue(actionContainer.homePageActions.VerifyUpdatedprofileView());
+    }
+
+    @And("^Click Cancel Button Add Info$")
+    public void clickCancelButtonAddInfo() {
+        assertTrue(actionContainer.homePageActions.ClickCancelBtnAddInfoEdit());
+    }
+
+    @Then("^I Verify Add Info Page Return Back From Edit Page$")
+    public void iVerifyAddInfoPageReturnBackFromEditPage() {
+        assertTrue(actionContainer.homePageActions.VerifyPagereturnbackAddInfo());
+    }
+
+    @And("^I Click Device Info Tab$")
+    public void iClickDeviceInfoTab() {
+        assertTrue(actionContainer.homePageActions.ClickDeviceInfoTab());
+    }
+
+    @Then("^I Verify All elements Displays In Device Info Tab$")
+    public void iVerifyAllElementsDisplaysInDeviceInfoTab() {
+        assertTrue(actionContainer.homePageActions.VerifyElementsDisplaysDeviceInfoTab());
+    }
+
+    @And("^I Click Add Button Device Info$")
+    public void iClickAddButtonDeviceInfo() {
+        assertTrue(actionContainer.homePageActions.ClickAddBtnDeviceInfo());
+    }
+
+    @And("^Enter Valid Info In device$")
+    public void enterValidInfoInDevice() {
+        assertTrue(actionContainer.homePageActions.EnterInfoInDevice());
+    }
+
+    @Then("^I Verify Saved value Displays$")
+    public void iVerifySavedValueDisplays() {
+        assertTrue(actionContainer.homePageActions.VerifySavedDeviceInfo());
+    }
+
+    @And("^Click Clinical Notes Link$")
+    public void clickClinicalNotesLink() {
+        assertTrue(actionContainer.homePageActions.ClickClinicalNotes());
+    }
+
+    @And("^Click Add Button Clinical Notes$")
+    public void clickAddButtonClinicalNotes() {
+        assertTrue(actionContainer.homePageActions.ClickAddClinicalNotesbtn());
+    }
+
+    @Then("^I Verify All Elements Displays In Clinical Notes$")
+    public void iVerifyAllElementsDisplaysInClinicalNotes() {
+        assertTrue(actionContainer.homePageActions.VerifyClincalNotesUI());
+    }
+
+    @And("^I Click Cancel Clinical Notes$")
+    public void iClickCancelClinicalNotes() {
+        assertTrue(actionContainer.homePageActions.ClickCancelClinicalNotes());
+    }
+
+    @And("^Click Prescription Tab$")
+    public void clickPrescriptionTab() {
+        assertTrue(actionContainer.homePageActions.ClickPrescriptionTab());
+    }
+
+    @When("^I Click View Clinical Notes$")
+    public void iClickViewClinicalNotes() {
+        assertTrue(actionContainer.homePageActions.ClickViewClinicalNotes());
+    }
+
+    @Then("^I See Elements Displays In Prescription Tab$")
+    public void iSeeElementsDisplaysInPrescriptionTab() {
+        assertTrue(actionContainer.homePageActions.VerifyPrescriptionTabElements());
+    }
+
+    @Then("^I Should See Ui Dsiplays In Clinical Notes Grid And Click Back$")
+    public void iShouldSeeUiDsiplaysInClinicalNotesGridAndClickBack() {
+        assertTrue(actionContainer.homePageActions.VerifyUIDisplaysClinicalNotes());
+    }
+
+    @And("^I Click Edit Clinical Notes$")
+    public void iClickEditClinicalNotes() {
+        assertTrue(actionContainer.homePageActions.ClickEditBtnClinicalNotes());
+    }
+
+    @Then("^i Edit And Verify The New Changes in Clinical Notes$")
+    public void iEditAndVerifyTheNewChangesInClinicalNotes() {
+        assertTrue(actionContainer.homePageActions.EditAndVerifyClinicalNotes());
+    }
+
+
+    @And("^I Click ReEdit Clinical Notes$")
+    public void iClickReEditClinicalNotes() {
+        assertTrue(actionContainer.homePageActions.ClickReEditBtnClinicalNotes());
+    }
+
+    @Then("^I Edit The Clinical Notes Again$")
+    public void iEditTheClinicalNotesAgain() {
+        assertTrue(actionContainer.homePageActions.ReEditTheClinicalNotesAgain());
+    }
+
+    @And("^I Click Audit Tab Clinical Notes$")
+    public void iClickAuditTabClinicalNotes() {
+        assertTrue(actionContainer.homePageActions.ClickAuditTabClinicalNotes());
+    }
+
+    @Then("^I Verify Audit Tab UI Clinical Notes$")
+    public void iVerifyAuditTabUIClinicalNotes() {
+        assertTrue(actionContainer.homePageActions.VerifyAuditTabUIClinicalNotes());
+    }
+
+    @And("^Click Add Medication Button$")
+    public void clickAddMedicationButton() {
+        assertTrue(actionContainer.homePageActions.ClickAddMedication());
+    }
+
+    @And("^Enter Valid Medication in Audit Tab$")
+    public void enterValidMedicationInAuditTab() {
+        assertTrue(actionContainer.homePageActions.EnterValuesInAddMedication());
+    }
 }

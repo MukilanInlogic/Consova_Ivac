@@ -334,13 +334,13 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'Edit Profile Details')]")
     protected WebElement lblEditProfileTabViewPatient;
 
-    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Emergency Contacts')]")
+    @FindBy(how = How.XPATH, using = "//li[@id='ctl01_MainContent_div6']//a[@id='ctl01_MainContent_lnkEmergencyContacts']")
     protected WebElement lblEmergencyContactsTabViewPatient;
 
-    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Additional Information')]")
+    @FindBy(how = How.XPATH, using = "//li[@id='ctl01_MainContent_div8']//a[@id='ctl01_MainContent_lnkAdditionalInformation']")
     protected WebElement lblAdditionalInfoTabViewPatient;
 
-    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Device Information')]")
+    @FindBy(how = How.XPATH, using = "//li[@id='ctl01_MainContent_div9']//a[@id='ctl01_MainContent_lnkDeviceInformation']")
     protected WebElement lblDeviceInfoTabViewPatient;
 
     @FindBy(how = How.XPATH, using = "//span[contains(text(),'Mrs')]")
@@ -366,9 +366,273 @@ public class HomePageUI {
 
     @FindBy(how = How.XPATH, using = "//select[@name='ctl01$MainContent$EditBasicProfile1$ddlTitle']")
     protected WebElement BtnTitleViewPatient;
+//Additional Information Tab View Profile
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Provider  ')]")
+    protected WebElement lblProviderViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Managing Provider  :')]")
+    protected WebElement lblManagingProviderViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Clinical Details')]")
+    protected WebElement lblClinicalDetailsViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='ob_gCc1']//div[text()='Proposed Start Date']")
+    protected WebElement lblProposedStartDateViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[text()='Proposed End Date']")
+    protected WebElement lblEndDateViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[text()='Trial Group']")
+    protected WebElement lblTrialGroupViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[text()='Trial Status']")
+    protected WebElement lblTrialStatusViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//h4[text()='External System Integration']")
+    protected WebElement lblExternalSysIntegViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Patient ID  :')]")
+    protected WebElement lblPatientIdViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Interpreter Service :')]")
+    protected WebElement lblInterpreterServiceViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Interpreter Language  :')]")
+    protected WebElement lblInterpretereViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//h4[text()='Regular GP']")
+    protected WebElement lblRegularGPViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='ob_gCc1']//div[contains(text(),'Hospital Name')]")
+    protected WebElement lblHospitalNameViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='ob_gCc1']//div[contains(text(),'URN (Unique Record Number)')]")
+    protected WebElement lblURNViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_AdditionalInformationUC_lnkEdit']")
+    protected WebElement BtnEditAddInfoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//select[@name='ctl01$MainContent$AdditionalInformationUC$ddlProvider']")
+    protected WebElement TxtBoxManagingProviderViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//option[text()='Dr Willian Bonney']")
+    protected WebElement TxtBoxManagingProviderValueViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//select[@name='ctl01$MainContent$AdditionalInformationUC$ddlClinic']")
+    protected WebElement TxtBoxClicinViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//option[text()='Family']")
+    protected WebElement TxtBoxclinicValueViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$AdditionalInformationUC$txtGPFirstName']")
+    protected WebElement TxtBoxProviderFirstNameViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$AdditionalInformationUC$txtGPLastName']")
+    protected WebElement TxtBoxProviderLastNameViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$AdditionalInformationUC$btnUpdateProfile']")
+    protected WebElement BtnUpdateProfileEditViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$AdditionalInformationUC$btnCancel']")
+    protected WebElement BtnCancelEditViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='Vimal']")
+    protected WebElement TxtBoxProviderFirstNameValueViewPatient;
+//Device Information Details
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Device Name')]")
+    protected WebElement lblDeviceNameViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Serial No.')]")
+    protected WebElement lblSerialNoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='ob_gCc1']//div[contains(text(),'MAC Address')]")
+    protected WebElement lblMACAddressViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='ob_gCc1']//div[contains(text(),'IMEI No.')]")
+    protected WebElement lblIMEINoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$DeviceInformationUC$btnDeviceInformationAdd']")
+    protected WebElement BtnAddViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='Add Device Information']")
+    protected WebElement lblAddDeviceInfoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$DeviceInformationUC$txtSerialNumber']")
+    protected WebElement txtboxSerialNumberViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$DeviceInformationUC$txtIMEINumber']")
+    protected WebElement txtboxIMEINumberViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$DeviceInformationUC$txtIMEINumber']/following::button[@class='ui-state-default ui-corner-all' and text()='Save']")
+    protected WebElement BtnSaveDeviceinfoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$DeviceInformationUC$txtIMEINumber']/following::button[@class='ui-state-default ui-corner-all' and text()='Close']")
+    protected WebElement BtnCloseDeviceinfoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Device :')]")
+    protected WebElement lblDeviceViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$DeviceInformationUC$txtIMEINumber']/following::span[text()='IMEI Number Required']")
+    protected WebElement WarningIMEIDeviceInfoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//select[@name='ctl01$MainContent$DeviceInformationUC$ddlDevice']")
+    protected WebElement TxtBoxDeviceDeviceInfoViewPatient;
+
+    protected String TxtBoxValueDeviceInfoViewPatient = new StringBuilder("//option[text()='")
+            .append("<<REPLACE>>")
+            .append("']").toString();
+
+    protected String CreatedValueDeviceInfoViewPatient = new StringBuilder("//div[text()='")
+            .append("<<REPLACE>>")
+            .append("']").toString();
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$DeviceInformationUC$txtMAC1']")
+    protected WebElement TxtBoxMacaddDeviceInfoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$DeviceInformationUC$txtMAC2']")
+    protected WebElement TxtBoxMacadd1DeviceInfoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$DeviceInformationUC$txtMAC3']")
+    protected WebElement TxtBoxMacadd2DeviceInfoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$DeviceInformationUC$txtMAC4']")
+    protected WebElement TxtBoxMacadd3DeviceInfoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$DeviceInformationUC$txtMAC5']")
+    protected WebElement TxtBoxMacadd4DeviceInfoViewPatient;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$DeviceInformationUC$txtMAC6']")
+    protected WebElement TxtBoxMacadd5DeviceInfoViewPatient;
+    //Clinical Noted Details
+
+    @FindBy(how = How.XPATH, using = "//span[text()='Clinical Note']")
+    protected WebElement lblClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//a[@id='ctl01_MainContent_addNew']//img")
+    protected WebElement BtnAddClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Patient Name / Gender : ')]")
+    protected WebElement lblPatientNameClinicalNotes;
 
 
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Clinical Notes')]")
+    protected WebElement lblTabClinicalNotes;
 
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Health Indicator' )]")
+    protected WebElement lblHealthIndicatorClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Health Indicator' )]")
+    protected WebElement lblContactDetailsClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Notes Details')]")
+    protected WebElement lblNotesClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Medical Warning :')]/following::textarea[@name='ctl01$MainContent$txtMedical']")
+    protected WebElement TxtBoxMedicalWarningClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//select[@name='ctl01$MainContent$ddlPracticeList']")
+    protected WebElement TxtBoxHealthCentreClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Reason for Visit')]/following::textarea[@id='ctl01_MainContent_txtSubject']")
+    protected WebElement TxtBoxReaseonForVisitClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Subjective')]/following::textarea[@id='ctl01_MainContent_txtSubjective']")
+    protected WebElement TxtBoxSubjectiveClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Objective')]/following::textarea[@id='ctl01_MainContent_txtObjective']")
+    protected WebElement TxtBoxObjectiveClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Diagnosis')]/following::textarea[@id='ctl01_MainContent_txtAssessment']")
+    protected WebElement TxtBoxDiagnosisClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_btnSave']")
+    protected WebElement BtnSaveClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_btnCancel']")
+    protected WebElement BtnCancelClinicalNotes;
+
+    protected String CreatedClinicalNotes = new StringBuilder("//td[contains(text(),'")
+            .append("<<REPLACECONTENT>>")
+            .append("')]").toString();
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Prescription')]")
+    protected WebElement BtnPrescriptionTabClinicalNotes;
+
+    protected String ViewClinicalNotes = new StringBuilder("//td[contains(text(),'")
+            .append("<<REPLACECONTENT>>")
+            .append("')]/following::div[contains(@class,'edit')]//img[@title='View']").toString();
+
+    protected String EditClinicalNotes = new StringBuilder("//td[contains(text(),'")
+            .append("<<REPLACECONTENT>>")
+            .append("')]/following::div[contains(@class,'edit')]//img[@title='Edit']").toString();
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Prescription')]")
+    protected WebElement lblStartDatePrescriptionTab;
+
+    @FindBy(how = How.XPATH, using = "//div[text()='Drug Name' and @class='ob_gCc2']")
+    protected WebElement lblDrugNamePrescriptionTab;
+
+    @FindBy(how = How.XPATH, using = "//div[text()='Dosage' and @class='ob_gCc2']")
+    protected WebElement lblDosagePrescriptionTab;
+
+    @FindBy(how = How.XPATH, using = "//div[text()='Strength' and @class='ob_gCc2']")
+    protected WebElement lblStrengthPrescriptionTab;
+
+    @FindBy(how = How.XPATH, using = "//div[text()='Frequency' and @class='ob_gCc2']")
+    protected WebElement lblFrequencyPrescriptionTab;
+
+    @FindBy(how = How.XPATH, using = "//div[text()='Period' and @class='ob_gCc2']")
+    protected WebElement lblPeriodPrescriptionTab;
+
+    @FindBy(how = How.XPATH, using = "//div[text()='Status' and @class='ob_gCc2']")
+    protected WebElement lblStatusPrescriptionTab;
+
+    @FindBy(how = How.XPATH, using = "//div[text()='More Info' and @class='ob_gCc2']")
+    protected WebElement lblMoreInfoPrescriptionTab;
+
+    @FindBy(how = How.XPATH, using = "//div[text()='State' and @class='ob_gCc2']")
+    protected WebElement lblStatePrescriptionTab;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='Reason for Visit']")
+    protected WebElement lblReasonForVisitClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='Date']")
+    protected WebElement lblDateClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='Provider Name']")
+    protected WebElement lblProviderNameClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='Practice Name']")
+    protected WebElement lblPracticeNameClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='Back to Patient Profile']")
+    protected WebElement BtnBackToPatientClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Audit ')]")
+    protected WebElement BtnAuditTabClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='Audit Log']")
+    protected WebElement BtnAuditLogClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//div[contains(text(),'Modified Date :')]")
+    protected WebElement lblmodifieddateClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='ui-dialog-title' and text()='Audit']")
+    protected WebElement AuditWindowClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//span[@id='lblDate']")
+    protected WebElement lblDateTimeAuditWinClinicalNotes;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='ui-dialog-title' and text()='Audit']/following::a[@class='ui-dialog-titlebar-close ui-corner-all']")
+    protected WebElement BtnCloseAuditWinClinicalNotes;
+
+
+    @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_AddNew']")
+    protected WebElement BtnAddMedicationPrescriptionClinicalNotes;
+
+
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Add Medication Details')]")
+    protected WebElement WindowAddMedicationPrescriptionClinicalNotes;
 
 
 }

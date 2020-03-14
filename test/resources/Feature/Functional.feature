@@ -724,7 +724,6 @@ Feature: Functional
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
 
 
-
   @MT-76478
   Scenario Outline: MT-76478:Patient Details in View Profile tab
     Given I am on manage my health home page
@@ -769,9 +768,296 @@ Feature: Functional
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
 
 
+  @MT-76480
+  Scenario Outline: MT-76480:Emergency Contacts
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    And I Click patient Link Patient Search
+    And Click Emergency Contact Tab View Profile
+    And click Add icon the Emergency contact Tab
+    When Enter the required details in the Emergency contacts tab: <FirstName>, <MobilePhone>, <Relationship>, <LastName>
+    And I Click Edit Button
+    And I Edit The Created Contact <EditedFirstName>
+    Then I Verify The Edited Text Got Saved
+    And Delete the Emergency Contacts
+    And click Add icon the Emergency contact Tab
+    Then Click Cancel Button and Verify it redirect to Emergency Contacts tab
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient | FirstName                       | MobilePhone                       | Relationship                       | LastName                       | EditedFirstName |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          | DP:EMERGENCYCONTACTS.FIRSTNAME1 | DP:EMERGENCYCONTACTS.MOBILEPHONE1 | DP:EMERGENCYCONTACTS.RELATIONSHIP1 | DP:EMERGENCYCONTACTS.LASTNAME1 | Jack            |
+
+
+  @MT-76481
+  Scenario Outline: MT-76481:View Additional information
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And I Click Additional Info Tab
+    Then I Should See All Elements In Add Info tab View Profile
+    And Click Additional info Edit Button
+    And Enter Valid Edit Value In Add Info Page
+    Then I Verify The Profile Updated
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+  @MT-76482
+  Scenario Outline: MT-76482:Update Additional Information
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And I Click Additional Info Tab
+    And Click Additional info Edit Button
+    And Click Cancel Button Add Info
+    Then I Verify Add Info Page Return Back From Edit Page
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+
+#  @MT-76483//Hold
+#  Scenario Outline: MT-76483:Add Device to the Patient
+#    Given I am on manage my health home page
+#    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+#    And I click Login button
+#    When I click Search user link
+#    And I Enter InValid Text <SearchPatient> in name text box search patient page
+#    And I Click Search Button Search Patient
+#    When I Click patient Link Patient Search
+#    And I Click Device Info Tab
+#    Then I Verify All elements Displays In Device Info Tab
+#    And I Click Add Button Device Info
+#    And Enter Valid Info In device
+#    Then I Verify Saved value Displays
+#    And I click Logout button
+#
+#
+#    Examples:
+#      | ProviderName          | ProviderPassword          | SearchPatient |
+#      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+
+  @MT-69500
+  Scenario Outline: MT-69500:Clinical Note With Prescription
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    And Click Add Button Clinical Notes
+    Then I Verify All Elements Displays In Clinical Notes
+    And Click Add Button Clinical Notes
+    And I Click Cancel Clinical Notes
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+
+  @MT-69501
+  Scenario Outline: MT-69501:Adding Prescription to the patient
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    And Click Add Button Clinical Notes
+    And Click Prescription Tab
+    And I Click Cancel Clinical Notes
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+
+  @MT-69502
+  Scenario Outline: MT-69502:Prescription Page
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    And Click Add Button Clinical Notes
+    And Click Prescription Tab
+    And I Click Cancel Clinical Notes
+    When I Click View Clinical Notes
+    And Click Prescription Tab
+    Then I See Elements Displays In Prescription Tab
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+
+  @MT-69503
+  Scenario Outline: MT-69503:Clinical Note without Prescription
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    Then I Should See Ui Dsiplays In Clinical Notes Grid And Click Back
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+
+  @MT-69504
+  Scenario Outline: MT-69504:Edit Clinical Notes with and Without Prescription
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    And I Click Edit Clinical Notes
+    Then i Edit And Verify The New Changes in Clinical Notes
+    And I Click ReEdit Clinical Notes
+    And I Click Cancel Clinical Notes
+    And I Click ReEdit Clinical Notes
+    Then I Edit The Clinical Notes Again
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+
+  @MT-69505
+  Scenario Outline: MT-69505:View Clinical Notes with and without Prescription
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    And Click Add Button Clinical Notes
+    And Click Prescription Tab
+    And I Click Cancel Clinical Notes
+    When I Click View Clinical Notes
+    And Click Prescription Tab
+    Then I See Elements Displays In Prescription Tab
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+
+  @MT-69508
+  Scenario Outline: MT-69508:To Verify Prescription Tab is displayed in the Clinical Notes
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    And Click Add Button Clinical Notes
+    And Click Prescription Tab
+    And I Click Cancel Clinical Notes
+    When I Click View Clinical Notes
+    And Click Prescription Tab
+    Then I See Elements Displays In Prescription Tab
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+  @MT-69509
+  Scenario Outline: MT-69509:Check Audit log is generated for the modified clinical note->Prescription
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    When I Click View Clinical Notes
+    And I Click Audit Tab Clinical Notes
+    Then I Verify Audit Tab UI Clinical Notes
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
 
 
 
+  @MT-69510
+  Scenario Outline: MT-69510:Adding Prescription for Existing Clinical Notes.
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    When I Click View Clinical Notes
+    And Click Prescription Tab
+    Then I See Elements Displays In Prescription Tab
+    And Click Add Medication Button
+    And Enter Valid Medication in Audit Tab
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
 
 
 
