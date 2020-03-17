@@ -757,10 +757,10 @@ public class Element implements Comparator {
     public static boolean verifyListOfElements(WebDriver driver, List<String> lstReplaceContents, String strLocator) {
         boolean isVerified = false;
         try {
-            Sync.waitForSeconds(2);
+            Sync.Delay(3000);
             System.out.println("INSIDE verifyListOfElements BEFORE VERIFICATION");
             isVerified = lstReplaceContents.stream().allMatch(strReplaceValue -> Element.verifyElement(
-                    Sync.waitForElement(driver, By.xpath(strLocator.replace("<<REPLACECONTENT>>",
+                    driver.findElement(By.xpath(strLocator.replace("<<REPLACECONTENT>>",
                             Testdata.getValue(strReplaceValue))))));
             System.out.println("verifyListOfElements isVerified value for each xpath is: "+isVerified);
         } catch (Exception e) {

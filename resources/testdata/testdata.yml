@@ -72,3 +72,10 @@ STAFF:
   STAFFNAME: "Balaji"
   TOMRIDDLE: "voldmort@mail.com"
 
+HEALTHSUMMARYGRID:
+  - "Date Given"
+  - "Drug Name"
+  - "Directions"
+  - "Status"
+  - "Entries From"
+  - "More Info"

@@ -1,16 +1,13 @@
 package demotest.action;
 
-import com.google.gson.internal.$Gson$Preconditions;
 import commonpage.toolbox.*;
-import commonpage.util.Testdata;
 import commonpage.util.TestdataConstants;
 import demotest.Repository.HomePageUI;
-import jdk.nashorn.internal.ir.IfNode;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.Collections;
+import java.util.List;
 
 public class HomePageActions extends HomePageUI {
     public HomePageActions(WebDriver driver) {
@@ -55,6 +52,7 @@ public class HomePageActions extends HomePageUI {
         Boolean isClicked = false;
         if (iconLogout.isDisplayed()) {
             isClicked = Element.click(driver, iconLogout);
+            Sync.Delay(5000);
         }
         return isClicked;
 
@@ -631,6 +629,7 @@ public class HomePageActions extends HomePageUI {
         Sync.Delay(4000);
         if (BtnPatientDashBoard.isDisplayed()) {
             isClicked = Element.click(driver, BtnPatientDashBoard);
+            Sync.Delay(4000);
         }
         System.out.println("CLICK status" + isClicked);
         return isClicked;
@@ -1118,11 +1117,109 @@ public class HomePageActions extends HomePageUI {
         return isClicked;
     }
 
-    public boolean EnterValuesInAddMedication() {
-        boolean isEntered = false;
-        if (WindowAddMedicationPrescriptionClinicalNotes.isDisplayed()){
-
+    public boolean ClickHealthSummaryMenu() {
+        boolean isClicked = false;
+        if (BtnHealthSummaryMenu.isDisplayed()) {
+            isClicked = Element.click(driver, BtnHealthSummaryMenu);
+            isClicked = true;
         }
-        return  isEntered;
+        return isClicked;
+    }
+
+    public boolean CLickEntriesFromClinicalStaffRadio() {
+        boolean isClicked = false;
+        if (BtnEntriesFromClinicalStaffHealthSummaryMenu.isDisplayed()) {
+            isClicked = Element.click(driver, BtnEntriesFromClinicalStaffHealthSummaryMenu);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyHealthSummaryUI(List<String> strHealthSummary) {
+        boolean isVerify = false;
+        Sync.Delay(6000);
+        if (lblHealthSummaryMenu.isDisplayed()) {
+            Element.verifyElement(lblPrescriptionsTabHealthSummaryMenu);
+            Element.verifyElement(lblAllergiesTabHealthSummaryMenu);
+            Element.verifyElement(lblImmunisationsTabHealthSummaryMenu);
+            Element.verifyElement(lblLabResultsTabHealthSummaryMenu);
+            Element.verifyListOfElements(driver, strHealthSummary,lblHealthSummaryGrid);
+            isVerify = true;
+
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
+    }
+
+    public boolean ClickMoreInfohealthIndicator() {
+        boolean isClicked = false;
+        if (lblHealthIndicator.isDisplayed()) {
+            isClicked = Element.ClickText(driver, BtnMoreinfoHealthIndicator, TestdataConstants.BMILBL);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean VerifyMoreInfoHealthIndicator() {
+        boolean isVerify = false;
+        Sync.Delay(6000);
+        if (MoreInfoWinHealthIndicator.isDisplayed()) {
+            Element.verifyElement(MoreInfoWinHealthIndicator);
+            Element.click(driver, BtnCloseMoreInfoWinHealthIndicator);
+            isVerify = true;
+
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
+    }
+
+    public boolean ClickHealthIndicatorLink() {
+        boolean isClicked = false;
+        if (btnHealthIndicatorDashBoard.isDisplayed()) {
+            isClicked = Element.click(driver, btnHealthIndicatorDashBoard);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean ClickHealthSummaryPatientView() {
+        boolean isClicked = false;
+        if (btnHealthSummaryDashBoard.isDisplayed()) {
+            isClicked = Element.click(driver, btnHealthSummaryDashBoard);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean ClickMedicationButtonPrescriptiontab() {
+        boolean isClicked = false;
+        if (BtnAddMedicationPrescriptionClinicalNotes.isDisplayed()) {
+            isClicked = Element.click(driver, BtnAddMedicationPrescriptionClinicalNotes);
+            isClicked = true;
+        }
+        return isClicked;
+    }
+
+    public boolean EnterMedicationPrescriptionTab() {
+        boolean isVerify = false;
+        if (WindowAddMedicationPrescription.isDisplayed()) {
+            Textbox.enterValue(driver, TxtBoxDrugNameAddMedicationPrescription, TestdataConstants.DRUG1);
+            Element.click(driver, TxtBoxDrugNameAddMedicationPrescription);
+            Textbox.enterValue(driver, TxtBoxDosageAddMedicationPrescription, TestdataConstants.DOSAGE);
+            Textbox.enterValue(driver, TxtBoxStrengthAddMedicationPrescription, TestdataConstants.STRENGTH);
+            Textbox.enterValue(driver, TxtBoxFrequencyAddMedicationPrescription, TestdataConstants.STRENGTH);
+            Textbox.enterValue(driver, TxtBoxPeriodAddMedicationPrescription, TestdataConstants.DOSAGE);
+            Element.click(driver, BtnDateIconAddMedicationPrescription);
+            Element.click(driver, BtnTodayDateAddMedicationPrescription);
+            Element.click(driver, BtnSaveAddMedicationPrescription);
+
+            isVerify = true;
+
+        } else {
+            System.out.println("Not Displays");
+        }
+        return isVerify;
     }
 }

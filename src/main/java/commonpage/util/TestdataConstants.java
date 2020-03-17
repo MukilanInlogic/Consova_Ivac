@@ -22,7 +22,7 @@ public class TestdataConstants {
     public  static  String JOURNALRGB = "#b388fe";
     public  static  String TODATSLOTBORDERRGB = "#fad42e";
     public  static  String EventTaskCalenderRGB = "#8EC43B";
-    public  static  String AGEVALUE = "20";
+    public  static  String BMILBL = "BMI";
     public  static String AGEVALUEEXP = "25";
     public  static String DOBSEARCHPATIENT = "01011991";
     public  static  String EMAILPATIENT = "testautomation@mail.com";
@@ -31,5 +31,7 @@ public class TestdataConstants {
     public  static  String SERIALNUMADDINFO = "729960023";
     public  static  String DEVICVALUE = "Bluetooth Weigh Scales";
     public  static  String HEALTHCENTRE = "AutomationMedtech";
-
+    public  static  String DRUG1 = "Paracetamol";
+    public  static  String DOSAGE = "4";
+    public  static  String STRENGTH = "Test";
 }

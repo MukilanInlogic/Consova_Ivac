@@ -6,6 +6,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import demotest.util.ActionContainer;
 
+import java.util.List;
+
 import static org.junit.Assert.assertTrue;
 
 public class HomePageSteps {
@@ -482,8 +484,48 @@ public class HomePageSteps {
         assertTrue(actionContainer.homePageActions.ClickAddMedication());
     }
 
-    @And("^Enter Valid Medication in Audit Tab$")
-    public void enterValidMedicationInAuditTab() {
-        assertTrue(actionContainer.homePageActions.EnterValuesInAddMedication());
+    @When("^I Click Health Summary menu$")
+    public void iClickHealthSummaryMenu() {
+        assertTrue(actionContainer.homePageActions.ClickHealthSummaryMenu());
+    }
+
+    @And("^Click Entries From Clinical Staff radio$")
+    public void clickEntriesFromClinicalStaffRadio() {
+        assertTrue(actionContainer.homePageActions.CLickEntriesFromClinicalStaffRadio());
+    }
+
+    @Then("^I Verify Health Summary UI (.*)$")
+    public void iVerifyHealthSummaryUI(List<String> StrHealthSummary) {
+        assertTrue(actionContainer.homePageActions.VerifyHealthSummaryUI(StrHealthSummary));
+    }
+
+    @And("^I Click More Info button$")
+    public void iClickMoreInfoButton() {
+        assertTrue(actionContainer.homePageActions.ClickMoreInfohealthIndicator());
+    }
+
+    @Then("^I Verify More Info Window Details$")
+    public void iVerifyMoreInfoWindowDetails() {
+        assertTrue(actionContainer.homePageActions.VerifyMoreInfoHealthIndicator());
+    }
+
+    @And("^I Click health Indicator Link Patient View$")
+    public void iClickHealthIndicatorLinkPatientView() {
+        assertTrue(actionContainer.homePageActions.ClickHealthIndicatorLink());
+    }
+
+    @And("^I Click Health Summary patient View$")
+    public void iClickHealthSummaryPatientView() {
+        assertTrue(actionContainer.homePageActions.ClickHealthSummaryPatientView());
+    }
+
+    @And("^I Click Medication Button Prescription tab$")
+    public void iClickMedicationButtonPrescriptionTab() {
+        assertTrue(actionContainer.homePageActions.ClickMedicationButtonPrescriptiontab());
+    }
+
+    @When("^I Enter Valid Medication in Prescription Tab$")
+    public void iEnterValidMedicationInPrescriptionTab() {
+        assertTrue(actionContainer.homePageActions.EnterMedicationPrescriptionTab());
     }
 }

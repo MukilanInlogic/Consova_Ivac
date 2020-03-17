@@ -1,5 +1,6 @@
 Feature: Functional
 
+
   @MT-83050
   Scenario Outline: MT-83050:Login with invalid username and password
 
@@ -1036,7 +1037,6 @@ Feature: Functional
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
 
 
-
   @MT-69510
   Scenario Outline: MT-69510:Adding Prescription for Existing Clinical Notes.
     Given I am on manage my health home page
@@ -1050,8 +1050,6 @@ Feature: Functional
     When I Click View Clinical Notes
     And Click Prescription Tab
     Then I See Elements Displays In Prescription Tab
-    And Click Add Medication Button
-    And Enter Valid Medication in Audit Tab
     And I click Logout button
 
 
@@ -1060,4 +1058,300 @@ Feature: Functional
       | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
 
 
+  @MT-69511
+  Scenario Outline: MT-69511:To check whether patient can able to view the prescribed medications from Health Summary
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I Click Health Summary menu
+    And Click Entries From Clinical Staff radio
+    Then I Verify Health Summary UI <HealthSummaryGridList>
+    And I click Logout button
 
+
+    Examples:
+      | ProviderName         | ProviderPassword         | HealthSummaryGridList |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | DP:HEALTHSUMMARYGRID  |
+
+  @MT-69512
+  Scenario Outline: MT-69512:Ensure Prescription can be able to Modify by the provider
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    When I Click View Clinical Notes
+    And I Click Audit Tab Clinical Notes
+    Then I Verify Audit Tab UI Clinical Notes
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+  @MT-69513
+  Scenario Outline: MT-69513:To check Medication is updated in Health Summary when precription is added from the Clinical Notes
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I Click Health Summary menu
+    And Click Entries From Clinical Staff radio
+    Then I Verify Health Summary UI <HealthSummaryGridList>
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName         | ProviderPassword         | HealthSummaryGridList |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD | DP:HEALTHSUMMARYGRID  |
+
+
+  @MT-69514
+  Scenario Outline: MT-69514:To check whether patient can able to view the prescribed medications from Clinical Notes
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    When I Click View Clinical Notes
+    And Click Prescription Tab
+    Then I See Elements Displays In Prescription Tab
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+
+  @MT-69515
+  Scenario Outline: MT-69515:Check provider can able to access the clinical notes in VIEW Mode
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    And Click Add Button Clinical Notes
+    And Click Prescription Tab
+    And I Click Cancel Clinical Notes
+    When I Click View Clinical Notes
+    And Click Prescription Tab
+    Then I See Elements Displays In Prescription Tab
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+
+  @MT-69516
+  Scenario Outline: MT-69516:Entering Data in Clinical Note and Prescription Page
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    When I Click View Clinical Notes
+    And Click Prescription Tab
+    Then I See Elements Displays In Prescription Tab
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |
+
+  @MT-69517
+  Scenario Outline: MT-69517:Health Indicator Data from Medical Devices in Provider View
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Health Indicator
+    And I Click Add Button Healthindicator
+    And I Enter valid inputs health indicator
+    And I Click Save Button Add Health Indicator
+    Then I Should See Alert Displays In Health Indicator
+    And I Click Close Button Health Indicator
+    And I Click More Info button
+    Then I Verify More Info Window Details
+    And I click Logout button
+
+    Examples:
+      | ProviderName         | ProviderPassword         |
+      | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+
+  @MT-69518
+  Scenario Outline: MT-69518:Provider Can Add New Entry to Health Indicator Fields
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    And I Click patient Link Patient Search
+    And I Click health Indicator Link Patient View
+    And I Click Add Button Healthindicator
+    And I Enter valid inputs health indicator
+    And I Click Save Button Add Health Indicator
+    Then I Should See Alert Displays In Health Indicator
+    And I Click Close Button Health Indicator
+    And I click Logout button
+    And I am on manage my health home page
+    And I Enter <PatientName>, <PatientPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Health Indicator
+    And I Click Add Button Healthindicator
+    And I Enter valid inputs health indicator
+    And I Click Save Button Add Health Indicator
+    Then I Should See Alert Displays In Health Indicator
+    And I Click Close Button Health Indicator
+    And I Click More Info button
+    Then I Verify More Info Window Details
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient | PatientName          | PatientPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+
+  @MT-69519
+  Scenario Outline: MT-69519:Add/ Edit Medication to Patient
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And I Click Health Summary patient View
+    Then I Verify Health Summary UI <HealthSummaryGridList>
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient | HealthSummaryGridList |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          | DP:HEALTHSUMMARYGRID  |
+
+
+  @MT-69520
+  Scenario Outline: MT-69520:More Info Medication View from Patient Entries
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    And I Click patient Link Patient Search
+    And I Click health Indicator Link Patient View
+    And I Click Add Button Healthindicator
+    And I Enter valid inputs health indicator
+    And I Click Save Button Add Health Indicator
+    Then I Should See Alert Displays In Health Indicator
+    And I Click Close Button Health Indicator
+    And I click Logout button
+    And I am on manage my health home page
+    And I Enter <PatientName>, <PatientPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Health Indicator
+    And I Click Add Button Healthindicator
+    And I Enter valid inputs health indicator
+    And I Click Save Button Add Health Indicator
+    Then I Should See Alert Displays In Health Indicator
+    And I Click Close Button Health Indicator
+    And I Click More Info button
+    Then I Verify More Info Window Details
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient | PatientName          | PatientPassword          |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          | DP:LOGIN.PATIENTNAME | DP:LOGIN.PATIENTPASSWORD |
+
+
+
+  @MT-69521
+  Scenario Outline: MT-69521:More Info Medication View in Provider entries
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And I Click Health Summary patient View
+    Then I Verify Health Summary UI <HealthSummaryGridList>
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient | HealthSummaryGridList |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          | DP:HEALTHSUMMARYGRID  |
+
+
+  @MT-69522
+  Scenario Outline: MT-69522:More Info Medication View from both patient,Health Center and Provider
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And I Click Health Summary patient View
+    Then I Verify Health Summary UI <HealthSummaryGridList>
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient | HealthSummaryGridList |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          | DP:HEALTHSUMMARYGRID  |
+
+
+  @MT-74113
+  Scenario Outline: MT-74113:More info View under Entries from Health Center
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And I Click Health Summary patient View
+    Then I Verify Health Summary UI <HealthSummaryGridList>
+    And I click Logout button
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient | HealthSummaryGridList |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          | DP:HEALTHSUMMARYGRID  |
+
+
+  @MT-69523
+  Scenario Outline: MT-69523:Reminder icon in Provider side
+    Given I am on manage my health home page
+    And I Enter <ProviderName>, <ProviderPassword> valid credentials in Manage my health page
+    And I click Login button
+    When I click Search user link
+    And I Enter InValid Text <SearchPatient> in name text box search patient page
+    And I Click Search Button Search Patient
+    When I Click patient Link Patient Search
+    And Click Clinical Notes Link
+    And I Click Edit Clinical Notes
+    And Click Prescription Tab
+    And I Click Medication Button Prescription tab
+    When I Enter Valid Medication in Prescription Tab
+    And I click Logout button
+
+
+    Examples:
+      | ProviderName          | ProviderPassword          | SearchPatient |
+      | DP:LOGIN.PROVIDERNAME | DP:LOGIN.PROVIDERPASSWORD | Test          |

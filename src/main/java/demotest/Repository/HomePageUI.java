@@ -134,24 +134,6 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$btnLocMapCancel']")
     protected WebElement BtnCancelMapLocation;
 
-    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Health Indicators')]")
-    protected WebElement BtnHealthIndicatorMainMenu;
-
-    @FindBy(how = How.XPATH, using = "//a[contains(@id,'grid_link_Add_0')]")
-    protected WebElement BtnAddHealthIndicatorMainMenu;
-
-    @FindBy(how = How.XPATH, using = "//label[contains(text(),'BMI')]/following::div[@id='trPHQ9']/following::div[@id='trHIComments']/following::div[@class='up_Section']//div[@class='btn_group btn_linkbtn ec_edit']//input[@value='Save']")
-    protected WebElement BtnSaveAddHealthIndicator;
-
-    @FindBy(how = How.XPATH, using = "//label[contains(text(),'BMI')]/following::div[@id='trPHQ9']/following::div[@id='trHIComments']/following::div[@class='up_Section']/following::div[@class='ui-dialog-buttonpane ui-widget-content ui-helper-clearfix']//button[text()='Close']")
-    protected WebElement BtnCloseAddHealthIndicator;
-
-    @FindBy(how = How.XPATH, using = "//input[@id='txtCurrentValue']")
-    protected WebElement TxtBoxHeightBMIHealthIndicator;
-
-    @FindBy(how = How.XPATH, using = "//input[@id='txtWeight']")
-    protected WebElement TxtBoxWeightBMIHealthIndicator;
-
     @FindBy(how = How.XPATH, using = "//span[@class='menu-img my-account Home']//a[contains(text(),'Home')]")
     protected WebElement BtnHomeMainMenu;
 
@@ -630,9 +612,101 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//input[@id='ctl01_MainContent_AddNew']")
     protected WebElement BtnAddMedicationPrescriptionClinicalNotes;
 
-
     @FindBy(how = How.XPATH, using = "//span[contains(text(),'Add Medication Details')]")
-    protected WebElement WindowAddMedicationPrescriptionClinicalNotes;
+    protected WebElement WindowAddMedicationPrescription;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$txtDrugName']")
+    protected WebElement TxtBoxDrugNameAddMedicationPrescription;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$txtDrugName']")
+    protected WebElement TxtBoxDosageAddMedicationPrescription;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='txtstrength']")
+    protected WebElement TxtBoxStrengthAddMedicationPrescription;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='txtfrequency']")
+    protected WebElement TxtBoxFrequencyAddMedicationPrescription;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$txtperiod']")
+    protected WebElement TxtBoxPeriodAddMedicationPrescription;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$txtperiod']")
+    protected WebElement BtnDateIconAddMedicationPrescription;
+
+    @FindBy(how = How.XPATH, using = "//input[@name='ctl01$MainContent$txtperiod']")
+    protected WebElement BtnTodayDateAddMedicationPrescription;
+
+    @FindBy(how = How.XPATH, using = "//button[@class='ui-state-default ui-corner-all' and text()='Save']")
+    protected WebElement BtnSaveAddMedicationPrescription;
+
+
+
+
+
+
+//Health Summary Menu Details
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Health Summary')]")
+    protected WebElement BtnHealthSummaryMenu;
+
+    @FindBy(how = How.XPATH, using = "//label[text()='Entries From Clinical Staff']/preceding-sibling::input[@name='ctl01$MainContent$rblEntryType']")
+    protected WebElement BtnEntriesFromClinicalStaffHealthSummaryMenu;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='Health Summary']")
+    protected WebElement lblHealthSummaryMenu;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Prescriptions')]")
+    protected WebElement lblPrescriptionsTabHealthSummaryMenu;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Allergies')]")
+    protected WebElement lblAllergiesTabHealthSummaryMenu;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Immunisations')]")
+    protected WebElement lblImmunisationsTabHealthSummaryMenu;
+
+    @FindBy(how = How.XPATH, using = "//li[@id='ctl01_MainContent_HESTabs1_divLabRes']//a[contains(text(),'Lab Results')]")
+    protected WebElement lblLabResultsTabHealthSummaryMenu;
+
+    protected String lblHealthSummaryGrid = new StringBuilder("//div[text()='")
+            .append("<<REPLACECONTENT>>")
+            .append("']").toString();
+//Health Indicator
+    protected String BtnMoreinfoHealthIndicator = new StringBuilder("//div[text()='")
+            .append("<<REPLACECONTENT>>")
+            .append("']/following::img[@alt='More Info']").toString();
+
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Health Indicators')]")
+    protected WebElement BtnHealthIndicatorMainMenu;
+
+    @FindBy(how = How.XPATH, using = "//a[contains(@id,'grid_link_Add_0')]")
+    protected WebElement BtnAddHealthIndicatorMainMenu;
+
+    @FindBy(how = How.XPATH, using = "//label[contains(text(),'BMI')]/following::div[@id='trPHQ9']/following::div[@id='trHIComments']/following::div[@class='up_Section']//div[@class='btn_group btn_linkbtn ec_edit']//input[@value='Save']")
+    protected WebElement BtnSaveAddHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//label[contains(text(),'BMI')]/following::div[@id='trPHQ9']/following::div[@id='trHIComments']/following::div[@class='up_Section']/following::div[@class='ui-dialog-buttonpane ui-widget-content ui-helper-clearfix']//button[text()='Close']")
+    protected WebElement BtnCloseAddHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='txtCurrentValue']")
+    protected WebElement TxtBoxHeightBMIHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//input[@id='txtWeight']")
+    protected WebElement TxtBoxWeightBMIHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(),'Health Indicators')]")
+    protected WebElement lblHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='More Info']")
+    protected WebElement MoreInfoWinHealthIndicator;
+
+    @FindBy(how = How.XPATH, using = "//span[text()='More Info']/following::div[@class='ui-dialog-buttonpane ui-widget-content ui-helper-clearfix']//button[@class='ui-state-default ui-corner-all']")
+    protected WebElement BtnCloseMoreInfoWinHealthIndicator;
+
+
+
+
+
+
+
 
 
 }
