@@ -34,4 +34,7 @@ public class TestdataConstants {
     public  static  String DRUG1 = "Paracetamol";
     public  static  String DOSAGE = "4";
     public  static  String STRENGTH = "Test";
+    public static String loginUserName = "rgregory";
+    public static String loginPassword = "Consova123!";
+
 }

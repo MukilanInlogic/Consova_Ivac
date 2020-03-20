@@ -248,12 +248,4 @@ public class Window {
         }
         return true;
     }
-
-
-
-
-
-
-
-
 }

@@ -61,6 +61,43 @@ public class Sync {
         return element;
     }
 
+    /**
+     * Description:This method is used to make the web driver wait for until the Seconds Ends - Implicity Wait
+     * @param driver,by
+     * @return isElementDisplays
+     * Author Name:vimalan
+     * Date of Development:18-March-2020
+     */
+    public static boolean ImplicityDelay(WebDriver driver,int Value) {
+        boolean isElementDisplays = false;
+        try {
+            driver.manage().timeouts().implicitlyWait(Value,TimeUnit.SECONDS);
+            isElementDisplays = true;
+
+        } catch (Exception e) {
+            log.error(e);
+        }
+        return isElementDisplays;
+    }
+
+    /**
+     * Description:This method is used to make the web driver wait for until the Element Dsiplays - Explicity Wait
+     * @param driver,by
+     * @return isElementDisplays
+     * Author Name:vimalan
+     * Date of Development:18-March-2020
+     */
+    public static boolean ExplicityDelay(WebDriver driver,int Value,By by) {
+        boolean isElementDisplays = false;
+        try {
+            WebDriverWait wait = new WebDriverWait(driver,Value);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+            isElementDisplays = true;
+        } catch (Exception e) {
+            log.error(e);
+        }
+        return isElementDisplays;
+    }
 
     /**
      * Description:This method is used to make the web driver wait for each web element from list of web elements until specified web element is visible(Fluent wait)
