@@ -62,7 +62,22 @@ public class DropDown {
         }
     }
 
-    
+    public static void   VerifyValue(WebDriver driver, WebElement DropDownBtn, String StrDDValue){
+        List<WebElement> listdata = (List<WebElement>) DropDownBtn;
+        System.out.println(listdata.size());
+
+        for (int i = 0;i<listdata.size();i++){
+            System.out.println(listdata.get(i).getText());
+            if (listdata.get(i).getText().equals(StrDDValue)){
+                driver.switchTo().activeElement();
+                listdata.get(i).click();
+                break;
+            }
+        }
+    }
+
+
+
 
 
 

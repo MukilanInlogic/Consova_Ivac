@@ -78,6 +78,8 @@ Feature: Home Page
     And I should verify Dependent's DOB present in Dependent information
     And I should verify Dependent's Gender present in Dependent information
     And I should verify Dependent's relationship present in Dependent information
+    And I should 
+
     Then I should close the wizard window
     And I should click on OK button in popup
     And I should logoff from home screen
