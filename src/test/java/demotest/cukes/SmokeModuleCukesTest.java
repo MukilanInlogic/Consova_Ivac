@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "test/resources/Feature/Employee_Portal_Sprint_1.feature",
-        glue = {"demotest.stepdefinition", "demotest.util"},
+        glue = {"demotest.stepdefinition", "demotest.util"},tags = {"@EVS-825,@EVS-826,@EVS-562,@EVS-714,@EVS-829,@EVS-834,@EVS-557,@EVS-701"},
         format = {"json:cucumber-html-reports/cucumber.json",
-                "html:cucumber-html-reports/MySample"},tags = {"@EVS-551,@EVS-552,@EVS-703,@EVS-704"},monochrome = true
+                "html:cucumber-html-reports/MySample"},monochrome = true
 )
-
+//tags = {"@EVS-825,@EVS-826,@EVS-562,@EVS-714,@EVS-829,@EVS-834,@EVS-557,@EVS-701"},
 public class SmokeModuleCukesTest {
 
 }

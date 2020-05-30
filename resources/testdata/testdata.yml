@@ -1,12 +1,30 @@
 LOGIN:
-  URL: "https://dev-iverify.consova.com/login"
-  USERNAME: "rgregory"
-  PASSWORD: "Consova123!"
-  LASTNAME: "Johnson"
-  CONSOVAID: "136383"
-  SSN: "8503"
-  INCORRECTLASTNAME: "Tony"
+  URL: "https://uat-iverify.consova.com/dashboard"
+  LASTNAME: "Yetchina"
+  CONSOVAID: "4000067"
+  SSN: "0267"
+  INCORRECTLASTNAME: "Stark"
 WIZARD:
   DATE: "date"
   DATEFORMAT: "MM/dd/yyyy"
-
+  CHILD:
+    - Biological Child
+    - Step Child
+  SPOUSE:
+    - Common Law
+    - Legally Married
+CONTACT:
+  COMMENTS: "This is the comment page"
+  CALLBACKNUMBER: "1234567890"
+PROFILE:
+  CONTACTNUMBER: "1234567890"
+  CALLERNAME: "Tony"
+  GOGREENEMAIL: "amukilan@inlogic.in"
+  PASSWORD: "Inlogic123"
+CORE:
+  URL: "https://dev-core.consova.com/"
+  LASTNAME: "Davis"
+  CONSOVAID: "136619"
+  SSN: "8350"
+  USERNAME: "MKumar"
+  PASSWORD: "Consova123!"

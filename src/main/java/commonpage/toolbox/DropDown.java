@@ -62,6 +62,31 @@ public class DropDown {
         }
     }
 
+
+    /**
+     * Description:This method is to Select Drop down Without select Keyword
+     *
+     * @param SelectBtn,IndexValue
+     * Author Name:Vimalan
+     * Date of Development:20-Feb-2020
+     */
+
+    public static boolean SelectValueByIndex(WebElement SelectBtn, int indexValue) {
+        boolean isSelected = false;
+
+        try {
+            if (SelectBtn.isDisplayed()) {
+                Select select = new Select(SelectBtn);
+                select.selectByIndex(indexValue);
+                isSelected = true;
+            }
+
+        } catch (Exception e) {
+            log.error(e);
+        }
+        return true;
+    }
+
     public static void   VerifyValue(WebDriver driver, WebElement DropDownBtn, String StrDDValue){
         List<WebElement> listdata = (List<WebElement>) DropDownBtn;
         System.out.println(listdata.size());
@@ -76,13 +101,18 @@ public class DropDown {
         }
     }
 
+    public static void VerifyDropDownValue(WebDriver driver, WebElement DropDownBtn, String[] StrDDValue){
+        Select select = new Select(DropDownBtn);
+        List<WebElement> options = select.getOptions();
+        for(WebElement we:options)
+        {
+            for (int i=0; i<StrDDValue.length; i++){
+                if (we.getText().equals(StrDDValue[i])){
+                    System.out.println("Matched");
+                }
+            }
 
-
-
-
+        }
+    }
 
 }
-
-
-
-

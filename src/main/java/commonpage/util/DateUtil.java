@@ -116,7 +116,7 @@ public class DateUtil {
         }
         String year = Integer.toString(cal.get(Calendar.YEAR));
         String calDate = month + "/" + date + "/" + year;
-        System.out.println("next month getDate value is: "+calDate);
+        //System.out.println("next month getDate value is: "+calDate);
         return calDate;
     }
 
@@ -496,6 +496,24 @@ public class DateUtil {
         return ActualDate;
     }
 
-
+    public static String getPreviousDate() {
+        DateFormat formatter = new SimpleDateFormat("MM");
+        SimpleDateFormat monthParse = new SimpleDateFormat("MM");
+        DateFormat dformatter = new SimpleDateFormat("DD");
+        SimpleDateFormat dateParse = new SimpleDateFormat("DD");
+        Calendar cal = Calendar.getInstance();
+        String month = Integer.toString(cal.get(Calendar.MONTH) + 1);
+        String date = Integer.toString(cal.get(Calendar.DATE) - 1);
+        try {
+            month = formatter.format(monthParse.parse(month));
+            date = dformatter.format(dateParse.parse(date));
+        } catch (ParseException e) {
+            log.error(e);
+            System.out.println("getTommorrowsDate" + e.getMessage());
+        }
+        String year = Integer.toString(cal.get(Calendar.YEAR));
+        String calDate = month + "/" + date + "/" + year;
+        return calDate;
+    }
 
 }

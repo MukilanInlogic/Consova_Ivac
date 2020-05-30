@@ -20,12 +20,12 @@ public class Checkbox {
         boolean isChecked = false;
         try {
             isChecked = element.isSelected();
-            System.out.println("check bool value" + isChecked);
+            //System.out.println("check bool value" + isChecked);
             if (!isChecked) {
                 Thread.sleep(5000);
-                System.out.println("not selected inside if " + isChecked);
+                //System.out.println("not selected inside if " + isChecked);
                 isChecked = Element.jsClick(driver,element);
-                System.out.println("check inside if isChecked JSClick " + isChecked);
+                //System.out.println("check inside if isChecked JSClick " + isChecked);
             }
         } catch (Exception Ex) {
             System.out.println("check " + Ex.getMessage());
@@ -81,7 +81,6 @@ public class Checkbox {
             System.out.println("isChecked " + Ex.getMessage());
             log.error(Ex);
         }
-
         return isSelected;
     }
 
@@ -110,4 +109,7 @@ public class Checkbox {
         }
         return blResult;
     }
+
+
+
 }
