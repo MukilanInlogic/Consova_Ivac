@@ -65,12 +65,6 @@ public class HomePageSteps {
         System.out.println("iShouldClickOnWarningMessage");
     }
 
-    @And("^I should close the browser$")
-    public void iShouldCloseTheBrowser() {
-        assertTrue(actionContainer.homePageActions.closeDriver());
-        System.out.println("iShouldCloseTheBrowser");
-    }
-
     @Given("^I should enter login url (.*)$")
     public void iShouldEnterLoginUrlURL(String url) {
         assertTrue(actionContainer.homePageActions.enterURL(Testdata.getValue(url)));
@@ -930,5 +924,11 @@ public class HomePageSteps {
     public void iShouldCompleteAllThePackagesInTheQueue() {
         assertTrue(actionContainer.homePageActions.completeAllPackages());
         System.out.println("iShouldCompleteAllThePackagesInTheQueue");
+    }
+
+    @And("^I should close the newly opened tab$")
+    public void iShouldCloseTheNewlyOpenedTab() {
+        assertTrue(actionContainer.homePageActions.closeCurrentTab());
+        System.out.println("iShouldCloseTheNewlyOpenedTab");
     }
 }

@@ -22,6 +22,8 @@ public class HomePageActions extends HomePageUI {
         super(driver);
     }
 
+    public ArrayList<String> tabs_windows;
+
     public boolean verifyLoginPage() {
         boolean isVerified = false;
         Sync.ImplicityDelay(driver,2000);
@@ -132,16 +134,6 @@ public class HomePageActions extends HomePageUI {
             isClicked = true;
         }
         return isClicked;
-    }
-
-    public boolean closeDriver() {
-        boolean isClosed = false;
-        Sync.ImplicityDelay(driver,20000);
-        if (driver!=null){
-            Browser.driverclose(driver);
-            isClosed = true;
-        }
-        return isClosed;
     }
 
     public boolean enterURL(String url) {
@@ -318,7 +310,7 @@ public class HomePageActions extends HomePageUI {
     public boolean wizardButtonCheck() {
         boolean isVerified = false;
         Sync.Delay(5000);
-        //Element.notVerifyElement(driver,wizardStratButton);
+        Element.notVerifyElement(driver,wizardStratButton);
         isVerified=true;
         return isVerified;
     }
@@ -867,7 +859,7 @@ public class HomePageActions extends HomePageUI {
         boolean isClicked = false;
         Sync.Delay(30000);
         if (otersTabInOutlook.isDisplayed()) {
-            Element.click(driver,otersTabInOutlook);
+            //Element.click(driver,otersTabInOutlook);
             Element.click(driver,activationEmail);
             isClicked = true;
         }
@@ -1289,8 +1281,8 @@ public class HomePageActions extends HomePageUI {
     public boolean navigateToNewTab() {
         boolean isDisplayed = false;
         Sync.Delay(5000);
-        if (true) {
-            ArrayList<String> tabs_windows = new ArrayList<String> (driver.getWindowHandles());
+        if (driver!=null) {
+            tabs_windows = new ArrayList<String> (driver.getWindowHandles());
             driver.switchTo().window(tabs_windows.get(1));
             isDisplayed = true;
         }
@@ -1597,5 +1589,17 @@ public class HomePageActions extends HomePageUI {
         }
         return isClicked;
     }
+
+    public boolean closeCurrentTab() {
+        boolean isClosed = false;
+        Sync.ImplicityDelay(driver,20000);
+        if (driver!=null){
+            driver.close();
+            driver.switchTo().window(tabs_windows.get(0));
+            isClosed = true;
+        }
+        return isClosed;
+    }
+
 
 }

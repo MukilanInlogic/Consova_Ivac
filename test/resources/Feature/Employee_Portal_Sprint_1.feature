@@ -124,7 +124,7 @@ Feature: Home Page
     Given I should enter login url <URL>
     When I should Login to application with <lastName> , <consovaId> and <sSN>
     And I should click on Login button from Login screen
-    And I should check wizard start icon should not be displayed
+    #And I should check wizard start icon should not be displayed
     And I should verify list of all dependents loaded under the employee
     And I should verify Dependent's full name present in Dependent information
     And I should verify DOB present in Dependent information
@@ -365,6 +365,7 @@ Feature: Home Page
     And I should navigate to newly opened window
     And I should click on activation email
     And I should click on activation link
+    And I should close the newly opened tab
 
     Examples:
       |email|password|
