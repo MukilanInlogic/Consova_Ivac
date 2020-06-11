@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="eeba7f17-48d7-4872-b9ef-199e2e500a81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/drivers/chromedriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/resources/drivers/chromedriver.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/testdata/testdata.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/testdata/testdata.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demotest/action/HomePageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demotest/action/HomePageActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/demotest/action/HomePageActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/demotest/action/HomePageActions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/demotest/stepdefinition/HomePageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/demotest/stepdefinition/HomePageSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/resources/Feature/Employee_Portal_Sprint_1.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/resources/Feature/Employee_Portal_Sprint_1.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +77,7 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber java.Feature: Employee_Portal_Sprint_1">
+  <component name="RunManager" selected="Cucumber java.Scenario: EVS-553-As a user, I should see dependent section on home dashboard">
     <configuration name="Feature: Employee_Portal_Sprint_1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/test/resources/Feature/Employee_Portal_Sprint_1.feature" />
@@ -102,25 +105,6 @@
       <option name="NAME_FILTER" value="^EVS\-553\-As a user\, I should see dependent section on home dashboard$" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^EVS\-553\-As a user\, I should see dependent section on home dashboard$&quot;" />
       <option name="SUGGESTED_NAME" value="Scenario: EVS-553-As a user, I should see dependent section on home dashboard" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: EVS-703-As a user, when I click on wizard I should see process introduction slide" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/test/resources/Feature/Employee_Portal_Sprint_1.feature" />
-      <option name="GLUE" value="demotest.util demotest.stepdefinition" />
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="Consova-Project_IVAC" />
-      <option name="NAME_FILTER" value="^EVS\-703\-As a user\, when I click on wizard I should see process introduction slide$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^EVS\-703\-As a user\, when I click on wizard I should see process introduction slide$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: EVS-703-As a user, when I click on wizard I should see process introduction slide" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -169,13 +153,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: EVS-828-As a user, I should receive paperless activation email" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/test/resources/Feature/Employee_Portal_Sprint_1.feature" />
+      <option name="GLUE" value="demotest.util demotest.stepdefinition" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="Consova-Project_IVAC" />
+      <option name="NAME_FILTER" value="^EVS\-828\-As a user\, I should receive paperless activation email$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^EVS\-828\-As a user\, I should receive paperless activation email$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: EVS-828-As a user, I should receive paperless activation email" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber java.Feature: Employee_Portal_Sprint_1" />
         <item itemvalue="Cucumber java.Scenario: EVS-553-As a user, I should see dependent section on home dashboard" />
+        <item itemvalue="Cucumber java.Feature: Employee_Portal_Sprint_1" />
+        <item itemvalue="Cucumber java.Scenario: EVS-828-As a user, I should receive paperless activation email" />
         <item itemvalue="Cucumber java.Scenario: EVS-705-As a user, I should be able to see each dependent verification requirements on separate slide" />
         <item itemvalue="Cucumber java.Scenario: EVS-704-As a user, I should see list of dependents on the dependent slide" />
-        <item itemvalue="Cucumber java.Scenario: EVS-703-As a user, when I click on wizard I should see process introduction slide" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591180694631</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Commited by Mukilan - Test Run in Dev">
+      <created>1591181630398</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1591181630398</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -345,10 +355,10 @@
     </state>
     <state x="690" y="289" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585203672119" />
     <state x="2610" y="289" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584774020770" />
-    <state x="544" y="117" key="CommitChangelistDialog2" timestamp="1591180685265">
+    <state x="544" y="117" key="CommitChangelistDialog2" timestamp="1591181626179">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="544" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591180685265" />
+    <state x="544" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591181626179" />
     <state x="544" y="117" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584511200696" />
     <state x="2464" y="117" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584702719602" />
     <state x="740" y="263" key="FileChooserDialogImpl" timestamp="1591181068122">
@@ -359,28 +369,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="829" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590852672331" />
-    <state width="1875" height="207" key="GridCell.Tab.0.bottom" timestamp="1591181099281">
+    <state width="1875" height="207" key="GridCell.Tab.0.bottom" timestamp="1591862415946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="207" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591181099281" />
+    <state width="1875" height="207" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591862415946" />
     <state width="1876" height="364" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584688702630" />
     <state width="1876" height="364" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584801238540" />
-    <state width="1875" height="207" key="GridCell.Tab.0.center" timestamp="1591181099281">
+    <state width="1875" height="207" key="GridCell.Tab.0.center" timestamp="1591862415945">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="207" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591181099281" />
+    <state width="1875" height="207" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591862415945" />
     <state width="1876" height="364" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584688702630" />
     <state width="1876" height="364" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584801238540" />
-    <state width="1875" height="207" key="GridCell.Tab.0.left" timestamp="1591181099281">
+    <state width="1875" height="207" key="GridCell.Tab.0.left" timestamp="1591862415945">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="207" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591181099281" />
+    <state width="1875" height="207" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591862415945" />
     <state width="1876" height="364" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584688702629" />
     <state width="1876" height="364" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584801238540" />
-    <state width="1875" height="207" key="GridCell.Tab.0.right" timestamp="1591181099281">
+    <state width="1875" height="207" key="GridCell.Tab.0.right" timestamp="1591862415946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="207" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591181099281" />
+    <state width="1875" height="207" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591862415946" />
     <state width="1876" height="364" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584688702630" />
     <state width="1876" height="364" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584801238540" />
     <state width="1875" height="342" key="GridCell.Tab.1.bottom" timestamp="1586273412293">
@@ -407,10 +417,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585819387610" />
-    <state x="552" y="275" key="Vcs.Push.Dialog.v2" timestamp="1591181608992">
+    <state x="552" y="275" key="Vcs.Push.Dialog.v2" timestamp="1591181656321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="275" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591181608992" />
+    <state x="552" y="275" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591181656321" />
     <state x="2472" y="275" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584702767143" />
     <state x="667" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1591159926449">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -308,10 +308,12 @@ public class HomePageActions extends HomePageUI {
     }
 
     public boolean wizardButtonCheck() {
-        boolean isVerified = false;
+        boolean isVerified = true;
         Sync.Delay(5000);
-        Element.notVerifyElement(driver,wizardStratButton);
-        isVerified=true;
+        if(wizardStratButton.isDisplayed()) {
+            Element.notVerifyElement(driver, wizardStratButton);
+            isVerified = false;
+        }
         return isVerified;
     }
 

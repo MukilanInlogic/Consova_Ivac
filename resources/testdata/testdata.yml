@@ -1,8 +1,8 @@
 LOGIN:
-  URL: "https://dev-iverify.consova.com/login"
-  LASTNAME: "Keller"
-  CONSOVAID: "136678"
-  SSN: "6958"
+  URL: "https://uat-iverify.consova.com/login"
+  LASTNAME: "Neang"
+  CONSOVAID: "4000030"
+  SSN: "8178"
   INCORRECTLASTNAME: "Stark"
 WIZARD:
   DATE: "date"

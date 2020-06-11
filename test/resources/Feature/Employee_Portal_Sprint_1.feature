@@ -112,7 +112,6 @@ Feature: Home Page
     And I should click on OK button in popup
     And I should verify Next Dependent Slide or click Finish button
     And I should be verifying last summary slide
-    And I should check wizard start icon should not be displayed
     And I should logoff from home screen
 
     Examples:
@@ -124,7 +123,6 @@ Feature: Home Page
     Given I should enter login url <URL>
     When I should Login to application with <lastName> , <consovaId> and <sSN>
     And I should click on Login button from Login screen
-    #And I should check wizard start icon should not be displayed
     And I should verify list of all dependents loaded under the employee
     And I should verify Dependent's full name present in Dependent information
     And I should verify DOB present in Dependent information
@@ -151,6 +149,7 @@ Feature: Home Page
     And I should check the received document type
     And I should click the uploaded document for viewing in modal
     And I should close the modal
+    And I should check wizard start icon should not be displayed
     And I should logoff from home screen
 
     Examples:
