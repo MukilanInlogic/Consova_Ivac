@@ -5,9 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/drivers/chromedriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/resources/drivers/chromedriver.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/testdata/testdata.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/testdata/testdata.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demotest/Repository/HomePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demotest/Repository/HomePageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/demotest/action/HomePageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demotest/action/HomePageActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/demotest/action/HomePageActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/demotest/action/HomePageActions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/resources/Feature/Employee_Portal_Sprint_1.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/resources/Feature/Employee_Portal_Sprint_1.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="framework" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Consova-Project_IRIS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -77,7 +77,7 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber java.Scenario: EVS-553-As a user, I should see dependent section on home dashboard">
+  <component name="RunManager" selected="Cucumber java.Feature: Employee_Portal_Sprint_1">
     <configuration name="Feature: Employee_Portal_Sprint_1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/test/resources/Feature/Employee_Portal_Sprint_1.feature" />
@@ -96,34 +96,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: EVS-553-As a user, I should see dependent section on home dashboard" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: EVS-564-As a user, I should see complete audit details for each dependent" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/test/resources/Feature/Employee_Portal_Sprint_1.feature" />
       <option name="GLUE" value="demotest.util demotest.stepdefinition" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="Consova-Project_IVAC" />
-      <option name="NAME_FILTER" value="^EVS\-553\-As a user\, I should see dependent section on home dashboard$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^EVS\-553\-As a user\, I should see dependent section on home dashboard$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: EVS-553-As a user, I should see dependent section on home dashboard" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: EVS-704-As a user, I should see list of dependents on the dependent slide" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/test/resources/Feature/Employee_Portal_Sprint_1.feature" />
-      <option name="GLUE" value="demotest.util demotest.stepdefinition" />
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="Consova-Project_IVAC" />
-      <option name="NAME_FILTER" value="^EVS\-704\-As a user\, I should see list of dependents on the dependent slide$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^EVS\-704\-As a user\, I should see list of dependents on the dependent slide$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: EVS-704-As a user, I should see list of dependents on the dependent slide" />
+      <option name="NAME_FILTER" value="^EVS\-564\-As a user\, I should see complete audit details for each dependent$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^EVS\-564\-As a user\, I should see complete audit details for each dependent$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: EVS-564-As a user, I should see complete audit details for each dependent" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -172,13 +153,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: EVS-964-As a user, I should see option to translate the site based on the configured language settings" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/test/resources/Feature/Employee_Portal_Sprint_1.feature" />
+      <option name="GLUE" value="demotest.util demotest.stepdefinition" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="Consova-Project_IVAC" />
+      <option name="NAME_FILTER" value="^EVS\-964\-As a user\, I should see option to translate the site based on the configured language settings$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^EVS\-964\-As a user\, I should see option to translate the site based on the configured language settings$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: EVS-964-As a user, I should see option to translate the site based on the configured language settings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber java.Scenario: EVS-553-As a user, I should see dependent section on home dashboard" />
         <item itemvalue="Cucumber java.Feature: Employee_Portal_Sprint_1" />
-        <item itemvalue="Cucumber java.Scenario: EVS-828-As a user, I should receive paperless activation email" />
         <item itemvalue="Cucumber java.Scenario: EVS-705-As a user, I should be able to see each dependent verification requirements on separate slide" />
-        <item itemvalue="Cucumber java.Scenario: EVS-704-As a user, I should see list of dependents on the dependent slide" />
+        <item itemvalue="Cucumber java.Scenario: EVS-964-As a user, I should see option to translate the site based on the configured language settings" />
+        <item itemvalue="Cucumber java.Scenario: EVS-564-As a user, I should see complete audit details for each dependent" />
+        <item itemvalue="Cucumber java.Scenario: EVS-828-As a user, I should receive paperless activation email" />
       </list>
     </recent_temporary>
   </component>
@@ -305,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591181630398</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Commited by Mukilan - Test Run in Dev">
+      <created>1591887555821</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1591887555821</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -329,19 +336,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Commited by Mukilan - Test Run in Dev" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2472" y="200" key="#Notifications" timestamp="1584702836465">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2472" y="200" key="#Notifications/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584702836465" />
     <state x="563" y="187" key="#SmokeModuleCukesTest" timestamp="1586067923387">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="563" y="187" key="#SmokeModuleCukesTest/0.0.1920.1040@0.0.1920.1040" timestamp="1586067923387" />
-    <state x="563" y="187" key="#SmokeModuleCukesTest/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584515078779" />
-    <state x="2613" y="349" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584773429399">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2613" y="349" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584773429399" />
     <state x="603" y="448" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586780131466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -350,49 +348,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="761" y="408" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1586104824276" />
-    <state x="690" y="289" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585203672119">
+    <state x="544" y="117" key="CommitChangelistDialog2" timestamp="1591887546368">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="289" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585203672119" />
-    <state x="2610" y="289" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584774020770" />
-    <state x="544" y="117" key="CommitChangelistDialog2" timestamp="1591181626179">
+    <state x="544" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591887546368" />
+    <state x="740" y="263" key="FileChooserDialogImpl" timestamp="1594180041128">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="544" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591181626179" />
-    <state x="544" y="117" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584511200696" />
-    <state x="2464" y="117" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584702719602" />
-    <state x="740" y="263" key="FileChooserDialogImpl" timestamp="1591181068122">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="263" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591181068122" />
+    <state x="740" y="263" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594180041128" />
     <state x="829" y="417" key="Github.ShareDialog" timestamp="1590852672331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="829" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590852672331" />
-    <state width="1875" height="207" key="GridCell.Tab.0.bottom" timestamp="1591862415946">
+    <state width="1875" height="207" key="GridCell.Tab.0.bottom" timestamp="1594175101380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="207" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591862415946" />
-    <state width="1876" height="364" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584688702630" />
-    <state width="1876" height="364" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584801238540" />
-    <state width="1875" height="207" key="GridCell.Tab.0.center" timestamp="1591862415945">
+    <state width="1875" height="207" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594175101380" />
+    <state width="1875" height="207" key="GridCell.Tab.0.center" timestamp="1594175101380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="207" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591862415945" />
-    <state width="1876" height="364" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584688702630" />
-    <state width="1876" height="364" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584801238540" />
-    <state width="1875" height="207" key="GridCell.Tab.0.left" timestamp="1591862415945">
+    <state width="1875" height="207" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594175101380" />
+    <state width="1875" height="207" key="GridCell.Tab.0.left" timestamp="1594175101380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="207" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591862415945" />
-    <state width="1876" height="364" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584688702629" />
-    <state width="1876" height="364" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584801238540" />
-    <state width="1875" height="207" key="GridCell.Tab.0.right" timestamp="1591862415946">
+    <state width="1875" height="207" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594175101380" />
+    <state width="1875" height="207" key="GridCell.Tab.0.right" timestamp="1594175101380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="207" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591862415946" />
-    <state width="1876" height="364" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584688702630" />
-    <state width="1876" height="364" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584801238540" />
+    <state width="1875" height="207" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594175101380" />
     <state width="1875" height="342" key="GridCell.Tab.1.bottom" timestamp="1586273412293">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -409,24 +392,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1875" height="342" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586273412293" />
-    <state x="2547" y="244" key="NewModule_or_Project.wizard" timestamp="1584702654930">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2547" y="244" key="NewModule_or_Project.wizard/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584702654930" />
     <state x="463" y="151" key="SettingsEditor" timestamp="1585819387610">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585819387610" />
-    <state x="552" y="275" key="Vcs.Push.Dialog.v2" timestamp="1591181656321">
+    <state x="552" y="275" key="Vcs.Push.Dialog.v2" timestamp="1591887600378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="275" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591181656321" />
-    <state x="2472" y="275" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584702767143" />
+    <state x="552" y="275" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591887600378" />
     <state x="667" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1591159926449">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="366" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591159926449" />
-    <state x="2587" y="366" key="com.intellij.ide.util.TipDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584955707767" />
     <state x="616" y="137" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585570385611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -435,28 +412,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="0" width="1486" height="777" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1587713074975" />
-    <state x="2587" y="154" width="585" height="732" key="find.popup" timestamp="1584532451312">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="667" y="154" width="585" height="732" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584511679106" />
-    <state x="2587" y="154" width="585" height="732" key="find.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584532451312" />
-    <state x="712" y="449" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1585052297158">
+    <state x="616" y="245" width="672" height="159" key="run.anything.popup" timestamp="1594052542403">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="712" y="449" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585052297158" />
-    <state x="2088" y="287" key="refactoring.ChangeSignatureDialog" timestamp="1584716632937">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2088" y="287" key="refactoring.ChangeSignatureDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584716632937" />
-    <state x="616" y="245" width="672" height="159" key="run.anything.popup" timestamp="1591170421338">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="245" width="672" height="159" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591170421338" />
-    <state x="2536" y="245" width="672" height="677" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584694325233" />
+    <state x="616" y="245" width="672" height="159" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594052542403" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588049755353">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588049755353" />
-    <state x="623" y="225" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584511681259" />
   </component>
 </project>

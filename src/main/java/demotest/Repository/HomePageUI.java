@@ -26,20 +26,29 @@ public class HomePageUI {
             .append("')]").toString();
 
 
-    @FindBy(how = How.XPATH, using = "//h2[text()='GDPR Notice']")
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(),'GDPR NOTICE')]")
     protected WebElement disclaimer1;
 
-    @FindBy(how = How.XPATH, using = "//h2[text()='HIPAA disclaimer']")
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(),'Privacy by Design')]")
     protected WebElement disclaimer2;
 
-    @FindBy(how = How.XPATH, using = "//h2[text()='Legal disclaimer - Liability waiver']")
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(),'Right to be Forgotten')]")
     protected WebElement disclaimer3;
 
-    @FindBy(how = How.XPATH, using = "//h2[text()='Legal disclaimer - Right to obtain Internet Protocol Address']")
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(),'Right to Access')]")
     protected WebElement disclaimer4;
 
-    @FindBy(how = How.XPATH, using = "//h2[text()='Legal disclaimer - Acknowledgement of Penalties']")
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(),'HIPAA NOTICE – Acknowledgement')]")
     protected WebElement disclaimer5;
+
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(),'Legal Disclaimer - Liability Waiver')]")
+    protected WebElement disclaimer6;
+
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(),'Legal Disclaimer - Right to Obtain Internet Protocol Address')]")
+    protected WebElement disclaimer7;
+
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(),'Legal Disclaimer - Acknowledgement of Penalties')]")
+    protected WebElement disclaimer8;
 
     @FindBy(how = How.XPATH, using = "//p[contains(@class,'text-danger')]")
     protected WebElement errorMessage;

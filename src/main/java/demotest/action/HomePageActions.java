@@ -99,7 +99,13 @@ public class HomePageActions extends HomePageUI {
                 if (disclaimer3.isEnabled()) {
                     if (disclaimer4.isEnabled()) {
                         if (disclaimer5.isEnabled()) {
-                            isVerified = true;
+                            if (disclaimer6.isEnabled()) {
+                                if (disclaimer7.isEnabled()) {
+                                    if (disclaimer8.isEnabled()) {
+                                        isVerified = true;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -161,7 +167,9 @@ public class HomePageActions extends HomePageUI {
         boolean isClicked = false;
         Sync.Delay(5000);
         if (acceptButton.isDisplayed()){
-            Element.click(driver,acceptButton);
+            JavascriptExecutor js=(JavascriptExecutor)driver;
+            js.executeScript("arguments[0].click();",acceptButton);
+            //Element.click(driver,acceptButton);
             isClicked = true;
         }else{
             System.out.println("No disclaimer notice");
@@ -308,11 +316,11 @@ public class HomePageActions extends HomePageUI {
     }
 
     public boolean wizardButtonCheck() {
-        boolean isVerified = true;
+        boolean isVerified = false;
         Sync.Delay(5000);
-        if(wizardStratButton.isDisplayed()) {
+        if(dashboardTitle.isDisplayed()) {
             Element.notVerifyElement(driver, wizardStratButton);
-            isVerified = false;
+            isVerified = true;
         }
         return isVerified;
     }
