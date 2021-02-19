@@ -126,7 +126,7 @@ public class HomePageActions extends HomePageUI {
     public boolean verifyWarning() {
         boolean isVerified = false;
         Sync.Delay(5000);
-        if (warningButton.isDisplayed()) {
+        if (warningMessage.isDisplayed()) {
             isVerified = true;
         }
         return isVerified;

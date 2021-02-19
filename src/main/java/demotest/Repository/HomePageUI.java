@@ -77,6 +77,9 @@ public class HomePageUI {
     @FindBy(how = How.XPATH, using = "//button[@class='btn btn-primary f-20 py-2']")
     protected WebElement warningButton;
 
+    @FindBy(how = How.XPATH, using = "//div[contains(@class,'text-danger')]")
+    protected WebElement warningMessage;
+
     @FindBy(how = How.XPATH, using = "//span[@class='menu_icon logout_icon']")
     protected WebElement logOffButton;
 
